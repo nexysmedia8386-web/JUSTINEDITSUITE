@@ -130,6 +130,10 @@ WHISPER_ALIASES = {
     "erax-turbo": "erax-ai/EraX-WoW-Turbo-V1.1-CT2",   # large-v3-turbo fine-tuned on Vietnamese (MIT)
 }
 
+WHISPER_FP16_MB = 2800          # large-v3-turbo float16, batch 16: 2.3 GB peak + margin
+WHISPER_FP16_MB_LARGE = 4800    # large-v2 / v3 float16 (faster-whisper README: 4.5 GB on an RTX 3070 Ti)
+
+
 def _whisper(model, cuda):
     model = WHISPER_ALIASES.get(model, model)
     """Load Whisper; CUDA is verified with a real 1 s encode (load alone succeeds even when cublas is missing).
@@ -151,7 +155,18 @@ def _whisper(model, cuda):
     from faster_whisper import WhisperModel
     if cuda:
         dirs = _cuda_dll_paths()
-        for ct in ("float16", "int8_float16"):
+        # float16 first (fastest, the reference transcript). int8_float16 only when the free VRAM left by Premiere /
+        # browsers can't hold float16: measured on RTX 3070, large-v3-turbo batch 16 — float16 2.3 GB peak, 8.3× real
+        # time; int8_float16 1.2 GB, 5.6× real time, 3.6 % of words different. Spilling into Windows shared memory
+        # would cost ~10× instead.
+        need = WHISPER_FP16_MB if "turbo" in str(model).lower() else WHISPER_FP16_MB_LARGE
+        v = _gpu.vram()
+        order = ("float16", "int8_float16")
+        if v and v["free"] < need:
+            order = ("int8_float16", "float16")
+            print(f"whisper: VRAM trống {v['free']} MB < {need} MB cho float16 → dùng int8_float16 "
+                  f"(nửa bộ nhớ, chậm hơn ~30% nhưng không tràn sang RAM). Đóng bớt Premiere / trình duyệt để chạy nhanh hơn.", flush=True)
+        for ct in order:
             try:
                 m = WhisperModel(model, device="cuda", compute_type=ct)
                 segs, _ = m.transcribe(np.zeros(16000, np.float32), language="vi", beam_size=1)
