@@ -1,0 +1,27 @@
+# Optional AI pack for Justin EDIT Suite (nxcore.ai). Everything degrades gracefully when missing.
+# Check what a machine can use:  python -m nxcore.ai
+#
+# 1) PyTorch — pick the build for the machine:
+#    NVIDIA (Windows/Linux): pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+#    Mac (Apple Silicon) / CPU-only:  pip install torch torchvision torchaudio
+#
+# 2) Then:  pip install -r requirements-ai.txt
+
+transformers>=4.49        # SigLIP2 search / look-alike / quality (Apache-2.0), wav2vec2 word alignment (Apache-2.0)
+sentencepiece
+protobuf
+beat_this @ https://github.com/CPJKU/beat_this/archive/main.zip   # neural beats + downbeats (MIT, weights ~77 MB)
+transnetv2-pytorch        # shot boundaries in edited files (MIT, weights bundled)
+PyNvVideoCodec; platform_system != "Darwin"   # NVDEC frame access, 3× faster indexing (MIT) — NVIDIA only
+torchlibrosa==0.1.0       # search by sound: PANNs Cnn14_16k front-end (MIT; weights CC-BY-4.0, downloaded by nxcore.ai.sounds)
+scipy                     # who-speaks-when clustering, retention curve analysis
+scikit-learn              # who-speaks-when (spectral clustering); speaker model: WeSpeaker ResNet34-LM ONNX (CC-BY-4.0)
+
+# Not included on purpose:
+#   DOVER     — S-Lab License 1.0 (non-commercial) and pins torch 1.13 → replaced by SigLIP2 zero-shot quality
+#   allin1    — needs madmom (git) + NATTEN (no Windows wheels); used automatically when installed (Linux / Mac)
+#   nguyenvulebinh/wav2vec2-* — CC-BY-NC; the aligner uses dragonSwing/wav2vec2-base-vietnamese (Apache-2.0)
+#   LAION-CLAP / MS-CLAP — no weight licence, partly research-only training data → PANNs (CC-BY-4.0) instead
+#   pyannote  — gated (account + token per user) → WeSpeaker ResNet34-LM (CC-BY-4.0, ungated)
+#
+# Whisper fine-tuned for Vietnamese (MIT), no extra package: transcribe --model erax-turbo

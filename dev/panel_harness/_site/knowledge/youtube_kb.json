@@ -1,0 +1,137 @@
+{
+ "version": "2026-10-08",
+ "sections": [
+  {
+   "id": "yt-retention-structure",
+   "title": "YouTube dài: cấu trúc giữ chân (hook, chương n/N, CTA giữa)",
+   "level": "co-ban",
+   "tags": [
+    "youtube",
+    "giữ chân",
+    "retention",
+    "hook",
+    "chương",
+    "cấu trúc",
+    "kịch bản",
+    "cta",
+    "talking head"
+   ],
+   "body": "- Hook ≤ 25s: câu đầu là con số tín nhiệm (\"1000 giờ…\"), 3–5 shot minh hoạ 1–2s, rồi lời hứa \"xem hết được gì\". Không chào hỏi, không giới thiệu kênh.\n- Khung N chương/cấp độ nói rõ ngay đầu; mỗi chương cùng một khuôn: thẻ chương → định nghĩa → 2 pro tip/ví dụ → demo → câu nối sang chương sau (\"trước khi lên cấp tiếp theo…\").\n- Tag chương cố định góc trên trái \"Chương 2/6 · Tên\" suốt chương: người xem biết còn bao nhiêu, ít bỏ ngang.\n- CTA mềm giữa video (~25–30%) + CTA cuối = câu hỏi cam kết để comment + trỏ sang video kế.\n- Chương cao nhất đặt cuối: kết quả lớn nhất + quan điểm riêng; một khoảng lặng nhạc trước câu chốt.",
+   "tools": "preset youtube_long (script_structure, style_guide); tab Kịch bản thể loại 'YouTube dài'",
+   "sources": []
+  },
+  {
+   "id": "yt-talking-head-pacing",
+   "title": "YouTube dài: nhịp dựng talking head (ASL, 2 góc máy, jump cut)",
+   "level": "co-ban",
+   "tags": [
+    "youtube",
+    "talking head",
+    "nhịp",
+    "pacing",
+    "jump cut",
+    "punch-in",
+    "góc máy",
+    "asl",
+    "a-roll"
+   ],
+   "body": "- Mốc đo từ video tham khảo 15 phút: ~205 shot, ASL 4,4s (trung vị ~4s), 12–16 cắt/phút đều suốt video, không shot nào > 20s.\n- 2 góc máy: trung cảnh chính diện + góc nghiêng rộng; đổi góc mỗi ý mới để che jump cut. Chỉ 1 máy → punch-in 110–120% luân phiên.\n- Cắt sát hơi thở: ~96% thời lượng có tiếng nói; gap im lặng 0,25–0,3s.\n- Nói trước máy tối đa ~9 shot liền (~30–40s) rồi chen hình minh hoạ, kể cả khi chỉ 2–3s.\n- Trong Premiere: Text-Based Editing xoá ngập ngừng; Ctrl+K cắt; punch-in bằng Motion > Scale trên cùng clip.",
+   "tools": "pr_razor, pr_set_param (Motion/Scale), preset youtube_long (silence gap 0.28, punch_in 112%)",
+   "sources": []
+  },
+  {
+   "id": "yt-broll-screen-demo",
+   "title": "YouTube dài: B-roll, screen record, PiP, ô prompt gõ chữ",
+   "level": "nang-cao",
+   "tags": [
+    "youtube",
+    "b-roll",
+    "screen record",
+    "pip",
+    "demo",
+    "tutorial",
+    "minh hoạ",
+    "ẩn dụ",
+    "ai b-roll"
+   ],
+   "body": "- Hình minh hoạ chiếm ~40–45% thời lượng; giọng nói chạy liên tục bên dưới (L/J-cut), mỗi hình 3–6s.\n- Screen record đặt trong khung tối bo góc trên nền navy có glow, không để full màn hình; zoom vào vùng đang thao tác.\n- PiP: người nói nhỏ bên trái (~22% khung) + màn hình bên phải khi cần thấy cả mặt lẫn thao tác.\n- Ô prompt/ô nhập liệu nổi đè lên người nói, chữ gõ từng ký tự theo lời, có tiếng gõ phím.\n- Thẻ bước có số (\"1 · Tạo project\") góc dưới trái khi demo nhiều bước.\n- B-roll AI chỉ cho ẩn dụ (tảng băng, phòng máy) 3–5s; B-roll đời thực (văn phòng, team, khách hàng) làm bằng chứng.",
+   "tools": "pr_add_clip / overlay V2-V3, Essential Graphics, nested sequence cho khung screen record",
+   "sources": []
+  },
+  {
+   "id": "yt-captions-graphics",
+   "title": "YouTube dài: caption từ khoá, tag chương, thẻ chương, nhãn PRO TIP",
+   "level": "co-ban",
+   "tags": [
+    "youtube",
+    "caption",
+    "phụ đề",
+    "kinetic typography",
+    "chữ",
+    "đồ hoạ",
+    "motion graphics",
+    "thẻ chương",
+    "pro tip",
+    "mogrt"
+   ],
+   "body": "- Caption theo TỪ KHOÁ 2–5 chữ, không phụ đề cả câu trên hình chính; ≤ 1 lần mỗi 8–10s, chỉ câu đắt.\n- Trộn 2 kiểu chữ: sans đậm trắng cho câu, serif italic màu nhấn (cyan/brand) cho con số và từ khoá (\"1000\", \"5%\").\n- Tag chương cố định góc trên trái; thẻ chương full khung 2,5–3s (số lớn + tên + icon), chương trước trượt ra.\n- Nhãn bo góc \"PRO TIP\", \"Advanced\" ở góc dưới 2s tại thời điểm đắt.\n- Một bảng màu + 1–2 font cho cả kênh; dựng sẵn thành MOGRT để thay chữ nhanh.",
+   "tools": "Essential Graphics / MOGRT, Ctrl+T, tab Chữ (kinetic text)",
+   "sources": []
+  },
+  {
+   "id": "yt-sound-mix",
+   "title": "YouTube dài: mix giọng, nhạc nền, SFX cho talking head",
+   "level": "co-ban",
+   "tags": [
+    "youtube",
+    "âm thanh",
+    "sfx",
+    "nhạc nền",
+    "mix",
+    "loudness",
+    "lufs",
+    "whoosh",
+    "ducking"
+   ],
+   "body": "- Giọng ~-14 LUFS tích hợp, đỉnh ≤ -1 dBTP; EQ cắt dưới 80 Hz, de-ess nhẹ.\n- Nhạc nền điện tử chậm 70–90 BPM, thấp hơn giọng 18–20 dB (đo trên video tham khảo: nhạc ~-39 dBFS khi giọng ~-20), duck tự động; talking head không cắt theo beat — nhịp đi theo câu nói.\n- SFX có chủ đích: hit mạnh cuối hook; whoosh/riser 1,5–2s mỗi thẻ chương, nhạc dâng theo; click chuột + gõ phím khi demo; pop nhẹ khi thẻ bước hiện.\n- Không gắn SFX cho mọi caption — video sẽ ồn.\n- Một khoảng lặng nhạc có chủ đích trước câu chốt quan trọng nhất.",
+   "tools": "tab Âm thanh (sound_design), Essential Sound > Dialogue/Music ducking, preset youtube_long (bgm_ducking_db -20, sfx_density medium)",
+   "sources": []
+  },
+  {
+   "id": "yt-reference-dan-martell",
+   "title": "Mốc tham khảo: Dan Martell — 1000 hours of Learning Claude (phân tích Reverse 08/10/2026)",
+   "level": "nang-cao",
+   "tags": [
+    "youtube",
+    "tham khảo",
+    "benchmark",
+    "dan martell",
+    "reverse",
+    "phân tích video",
+    "claude"
+   ],
+   "body": "- 15:00 · 1920×1080 · ~205 shot · ASL 4,4s · 12–16 cắt/phút.\n- Tỉ lệ hình: nói trước máy ~56% · màn hình/đồ hoạ ~36% · B-roll đời thực/AI ~8%; nói trước máy tối đa 9 shot liền.\n- Cấu trúc: hook 23s → 6 level (thẻ 3D + whoosh, 2 pro tip, demo) → CTA giữa ~4:00 → outro câu hỏi cam kết + DM + video kế.\n- Đồ hoạ: tag 'Level n/6' góc trên trái, caption từ khoá trắng + serif italic cyan, khung screen record tối bo góc, PiP, ô prompt gõ chữ, nhãn PRO TIP.\n- Âm thanh: nhạc ~72 BPM thấp ~19 dB dưới giọng, 11% điểm cắt trúng beat (không cắt theo nhạc), hit cuối hook, whoosh ở thẻ level.\n- File phân tích: REVERSE/Claude_1000h_ref480 (reverse.json, reverse_ai.json, template.json).",
+   "tools": "tab Reverse + Template sequence",
+   "sources": []
+  },
+  {
+   "id": "yt-workflow-jes",
+   "title": "Quy trình dựng YouTube dài bằng Justin EDIT Suite",
+   "level": "co-ban",
+   "tags": [
+    "youtube",
+    "quy trình",
+    "workflow",
+    "preset",
+    "kịch bản",
+    "align",
+    "build",
+    "template",
+    "checklist"
+   ],
+   "body": "1. Tab Chạy: chọn thể loại 'YouTube dài' (preset youtube_long) → 1 · Phân tích.\n2. Tab Kịch bản: thể loại 'YouTube dài — chương + giữ chân'; AI viết theo style_guide của preset (hook ≤ 25s, chương n/N, pro tip, CTA giữa).\n3. Hoặc dùng kịch bản viết sẵn (.md có Justin: \"…\", [B-ROLL], [TEXT], [TITLE]) → 3 · Align → 4 · Build.\n4. Muốn đúng nhịp một video mẫu: tab Reverse phân tích video mẫu → Template sequence lấp bằng source.\n5. Trước export: chương YouTube tự xuất theo cảnh, giọng ~-14 LUFS, end screen 20s, thumbnail khớp câu hook.",
+   "tools": "preset youtube_long, tab Kịch bản, tab Reverse",
+   "sources": []
+  }
+ ]
+}

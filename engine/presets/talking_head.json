@@ -1,0 +1,43 @@
+{
+  "id": "talking_head",
+  "name": "Talking Head / Video Chuyên gia / Podcast",
+  "description": "Tối ưu cho video chia sẻ một người, máy đặt tripod. Nhịp cắt dồn dập, tự punch-in 112%, ducking sâu -22dB.",
+  "script_structure": {
+    "hook": "0:00-0:10 (hook thẳng mặt, chặn ngón tay 3s đầu, không chào hỏi)",
+    "positioning": "0:10-0:20 (định vị + hứa hẹn: cho ai, được gì, bao lâu)",
+    "body": "0:20-75% (thân bài chia 2-4 luận điểm: ý -> giải thích -> ví dụ -> chốt)",
+    "climax": "75%-90% (điểm nhấn cảm xúc mạnh nhất, chậm lại có chủ đích, cận mặt + dừng lời)",
+    "outro": "90%-100% (chốt đọng lại + CTA rõ ràng kèm text trên màn hình)"
+  },
+  "silence": {
+    "on": true,
+    "gap": 0.25,
+    "pad_in": 0.06,
+    "pad_out": 0.08,
+    "min_piece": 0.25
+  },
+  "punch_in": true,
+  "punch_in_scale": 112.0,
+  "bgm_ducking_db": -22.0,
+  "broll_nat_gain_db": -20.0,
+  "broll_dur": 3.0,
+  "broll_dur_static": 2.5,
+  "sfx_density": "light",
+  "skip_shake_roles": [
+    "a_roll",
+    "screen"
+  ],
+  "skip_transcribe_roles": [
+    "b_roll",
+    "junk"
+  ],
+  "min_speech_rms_db": -32.0,
+  "subs": {
+    "on": true,
+    "max_chars": 26,
+    "highlight_style": "yellow"
+  },
+  "transitions": {
+    "on": false
+  }
+}

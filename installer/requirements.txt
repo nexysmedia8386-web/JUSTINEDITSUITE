@@ -1,0 +1,9 @@
+# Justin EDIT Suite — core Python packages (install.ps1 / nxcore.doctor install these automatically).
+# Optional AI pack: requirements-ai.txt
+numpy>=1.24
+opencv-python>=4.8
+pillow>=9.5
+faster-whisper>=1.0
+python-docx>=0.8.11
+# NVIDIA (Whisper on GPU): nvidia-cublas-cu12  nvidia-cudnn-cu12==9.*
+mlx-whisper>=0.4.1; sys_platform == "darwin" and platform_machine == "arm64"

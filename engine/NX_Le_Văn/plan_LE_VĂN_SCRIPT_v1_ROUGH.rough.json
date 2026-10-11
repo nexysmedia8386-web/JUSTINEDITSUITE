@@ -1,0 +1,35 @@
+{
+ "segments": 57,
+ "total": 658.39,
+ "source": 702.29,
+ "roles": {
+  "broll": 53,
+  "handheld": 1,
+  "slowmo": 3
+ },
+ "skipped": {
+  "LOẠI": 1
+ },
+ "legend": {
+  "dialogue": [
+   "Mango",
+   "Thoại"
+  ],
+  "broll": [
+   "Cerulean",
+   "B-roll"
+  ],
+  "slowmo": [
+   "Teal",
+   "B-roll 50/60p+ (slow-mo được)"
+  ],
+  "handheld": [
+   "Lavender",
+   "Cầm tay / có chuyển động máy"
+  ],
+  "static": [
+   "Yellow",
+   "Máy đặt cố định / timelapse"
+  ]
+ }
+}

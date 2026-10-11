@@ -1,0 +1,431 @@
+{
+ "name": "LE_VĂN_SCRIPT_v1_ROUGH_v1",
+ "bin": "Le_Văn",
+ "src": "D:/Le Văn",
+ "out": "G:/JustinEditSuite/engine/NX_Le_Văn",
+ "seq": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 23.976,
+  "fit": "fill"
+ },
+ "silence": {
+  "on": true,
+  "gap": 0.25,
+  "pad_in": 0.06,
+  "pad_out": 0.08,
+  "min_piece": 0.25
+ },
+ "shake": {
+  "on": true
+ },
+ "subs": {
+  "on": true,
+  "max_chars": 26,
+  "highlight_style": "yellow"
+ },
+ "sfx": {
+  "on": false
+ },
+ "highlights_on": true,
+ "punch_in": true,
+ "punch_in_scale": 112.0,
+ "broll_audio": {
+  "on": true,
+  "gain_db": -20.0
+ },
+ "bgm_ducking_db": -22.0,
+ "chapters": false,
+ "scene_names": {
+  "C1": "PHÂN CẢNH 1 — HOOK - TRẢI NGHIỆM THỰC TẾ (0:00–0:10)",
+  "C2": "PHÂN CẢNH 2 — ĐỊNH VỊ - TRIẾT LÝ THIẾT KẾ (0:10–0:21.4)",
+  "C3": "PHÂN CẢNH 3 — THỰC TRẠNG - SỰ PHỨC TẠP CỦA THIẾT BỊ CŨ (0:21.4–0:41.5)",
+  "C4": "PHÂN CẢNH 4 — GIẢI PHÁP - TÍCH HỢP THÔNG MINH (0:41.5–1:02.8)",
+  "C5": "PHÂN CẢNH 5 — THẤU HIỂU - NGÔI NHÀ TỰ ĐỘNG HÓA (1:02.8–1:14.6)",
+  "C6": "PHÂN CẢNH 6 — CAO TRÀO - ĐỊNH NGHĨA NGÔI NHÀ TỐT (1:14.6–1:29.3)",
+  "C7": "PHÂN CẢNH 7 — OUTRO - SỐNG TIỆN NGHI VÀ PHÙ HỢP (1:29.3–1:36)"
+ },
+ "end_slate": 0,
+ "segments": [
+  {
+   "file": "IMG_1443.MOV",
+   "in": 0.2,
+   "out": 3.55,
+   "scene": "C1",
+   "pinned": true,
+   "script_line": "L002",
+   "label": "B-roll: Cận cảnh trải nghiệm công nghệ không gian sống · 100%",
+   "score": 1.0,
+   "flags": [
+    "đúng nguồn kịch bản (strict)"
+   ],
+   "silence": false,
+   "audio": false,
+   "subs": false,
+   "cues": [
+    {
+     "kind": "text",
+     "line": "L001",
+     "scene": "C1",
+     "text": "Trải nghiệm thực tế",
+     "offset": 0.0,
+     "style": "title",
+     "dur": 2.5
+    }
+   ],
+   "shot_at": 1783996186.2
+  },
+  {
+   "file": "1JTGFRNAO_3019EQ.mp4",
+   "in": 21.79,
+   "out": 28.44,
+   "scene": "C1",
+   "pinned": true,
+   "script_line": "L003",
+   "label": "THOẠI: Bởi có những thứ khi nhìn trên bản vẽ rất khó hình dung, nhưng khi tận mắt thấy,",
+   "score": 1.0,
+   "flags": [
+    "đúng nguồn kịch bản (strict)"
+   ],
+   "silence": false,
+   "audio": true,
+   "shot_at": 1784038697.8
+  },
+  {
+   "file": "1JTGFRNAO_3019EQ.mp4",
+   "in": 0.37,
+   "out": 5.77,
+   "scene": "C2",
+   "pinned": true,
+   "script_line": "L005",
+   "label": "THOẠI: Với tôi, làm kiến trúc không chỉ là tạo ra một căn nhà đẹp trên bản vẽ.",
+   "score": 1.0,
+   "flags": [
+    "đúng nguồn kịch bản (strict)"
+   ],
+   "silence": false,
+   "audio": true,
+   "cues": [
+    {
+     "kind": "text",
+     "line": "L004",
+     "scene": "C2",
+     "text": "Triết lý thiết kế",
+     "offset": 0.0,
+     "style": "title",
+     "dur": 2.5
+    }
+   ],
+   "shot_at": 1784038676.4
+  },
+  {
+   "file": "1JTGFRNAO_3019EQ.mp4",
+   "in": 8.0,
+   "out": 14.0,
+   "scene": "C2",
+   "pinned": true,
+   "script_line": "L006",
+   "label": "B-roll: B-roll không gian kiến trúc chi tiết · 100%",
+   "score": 1.0,
+   "flags": [
+    "đúng nguồn kịch bản (strict)"
+   ],
+   "silence": false,
+   "audio": false,
+   "subs": false,
+   "shot_at": 1784038684.0
+  },
+  {
+   "file": "IMG_1463.MOV",
+   "in": 0.0,
+   "out": 5.167,
+   "scene": "C3",
+   "pinned": true,
+   "script_line": "L008",
+   "label": "THOẠI: Mình cũng không biết là cái đèn nào là đèn nào luôn Ví dụ em muốn tắt đúng cái đèn này đi Thì nhìn vào đây em cũng sẽ",
+   "score": 1.0,
+   "flags": [
+    "đúng nguồn kịch bản (strict)"
+   ],
+   "silence": false,
+   "audio": true,
+   "cues": [
+    {
+     "kind": "text",
+     "line": "L007",
+     "scene": "C3",
+     "text": "Quá nhiều công tắc",
+     "offset": 0.0,
+     "style": "title",
+     "dur": 2.5
+    }
+   ],
+   "shot_at": 1783997548.0
+  },
+  {
+   "file": "IMG_1452.MOV",
+   "in": 0.2,
+   "out": 10.2,
+   "scene": "C3",
+   "pinned": true,
+   "script_line": "L009",
+   "label": "B-roll: B-roll minh họa hệ thống thiết bị và công tắc phức tạp trong không gian sống · 100%",
+   "score": 1.0,
+   "flags": [
+    "đúng nguồn kịch bản (strict)"
+   ],
+   "silence": false,
+   "audio": false,
+   "subs": false,
+   "shot_at": 1783996971.2
+  },
+  {
+   "file": "IMG_1451.MOV",
+   "in": 0.0,
+   "out": 4.68,
+   "scene": "C3",
+   "pinned": true,
+   "script_line": "L010",
+   "label": "THOẠI: trên 1 cái app duy nhất anh không cần phải nhớ 5 -6 cái app",
+   "score": 1.0,
+   "flags": [
+    "đúng nguồn kịch bản (strict)"
+   ],
+   "silence": false,
+   "audio": true,
+   "shot_at": 1783996781.0
+  },
+  {
+   "file": "IMG_1497.MOV",
+   "in": 0.6,
+   "out": 11.96,
+   "scene": "C4",
+   "pinned": true,
+   "script_line": "L011+L012+L013",
+   "label": "THOẠI: Thay vì dùng một cái rổ remote như thế này thì bây giờ mình sẽ dùng cái con này thôi.",
+   "score": 1.0,
+   "flags": [
+    "đúng nguồn kịch bản (strict)",
+    "nghiêng — tự xoay +0.7° khi build"
+   ],
+   "silence": false,
+   "audio": true,
+   "rotate_fix": 0.7,
+   "shot_at": 1783999444.6
+  },
+  {
+   "file": "IMG_1504.MOV",
+   "in": 0.09,
+   "out": 9.97,
+   "scene": "C4",
+   "pinned": true,
+   "script_line": "L014",
+   "label": "THOẠI: À khi mà có Smart Home bảo là cái việc mặc Eco hay là một ca sĩ thì mình kiếm được trên Smart Home luôn",
+   "score": 1.0,
+   "flags": [
+    "đúng nguồn kịch bản (strict)"
+   ],
+   "silence": false,
+   "audio": true,
+   "shot_at": 1783999998.1
+  },
+  {
+   "file": "1JTGFRNAO_3019EQ.mp4",
+   "in": 54.18,
+   "out": 58.02,
+   "scene": "C5",
+   "pinned": true,
+   "script_line": "L015",
+   "label": "THOẠI: là căn nhà có thể hiểu được thói quen và nhu cầu của tầng người.",
+   "score": 1.0,
+   "flags": [
+    "đúng nguồn kịch bản (strict)"
+   ],
+   "silence": false,
+   "audio": true,
+   "shot_at": 1784038730.2
+  },
+  {
+   "file": "IMG_1486.MOV",
+   "in": 0.25,
+   "out": 8.25,
+   "scene": "C5",
+   "pinned": true,
+   "script_line": "L017",
+   "label": "B-roll: B-roll minh họa thiết bị và không gian tự động hóa trong nhà thông minh · 100%",
+   "score": 1.0,
+   "flags": [
+    "đúng nguồn kịch bản (strict)"
+   ],
+   "silence": false,
+   "audio": false,
+   "subs": false,
+   "cues": [
+    {
+     "kind": "text",
+     "line": "L016",
+     "scene": "C5",
+     "text": "Nhà tự động thói quen",
+     "offset": 0.0,
+     "style": "text",
+     "dur": 2.5
+    }
+   ],
+   "shot_at": 1783998773.2
+  },
+  {
+   "file": "1JTGFRNAO_3019EQ.mp4",
+   "in": 80.84,
+   "out": 83.6,
+   "scene": "C6",
+   "pinned": true,
+   "script_line": "L018",
+   "label": "THOẠI: Bởi một ngôi nhà tốt không chỉ để ở,",
+   "score": 1.0,
+   "flags": [
+    "đúng nguồn kịch bản (strict)"
+   ],
+   "silence": false,
+   "audio": true,
+   "shot_at": 1784038756.8
+  },
+  {
+   "file": "IMG_1513.MOV",
+   "in": 0.2,
+   "out": 2.8,
+   "scene": "C6",
+   "pinned": true,
+   "script_line": "L019",
+   "label": "B-roll: Cận cảnh không gian sống tinh tế, ánh sáng ấm áp · 50%",
+   "score": 1.0,
+   "flags": [
+    "đúng nguồn kịch bản (strict)",
+    "tốc độ 50% theo kịch bản"
+   ],
+   "silence": false,
+   "audio": false,
+   "subs": false,
+   "speed": 50.0,
+   "shot_at": 1784000522.2
+  },
+  {
+   "file": "1JTGFRNAO_3019EQ.mp4",
+   "in": 83.51,
+   "out": 90.25,
+   "scene": "C6",
+   "pinned": true,
+   "script_line": "L020",
+   "label": "THOẠI: Nó phải giúp chúng ta sống thoải mái hơn, tiện nghi hơn và phù hợp hơn với chính mình.",
+   "score": 1.0,
+   "flags": [
+    "đúng nguồn kịch bản (strict)"
+   ],
+   "silence": false,
+   "audio": true,
+   "shot_at": 1784038759.5
+  },
+  {
+   "file": "1JTGFRNAO_3019EQ.mp4",
+   "in": 83.51,
+   "out": 90.25,
+   "scene": "C7",
+   "pinned": true,
+   "script_line": "L022",
+   "label": "THOẠI: Nó phải giúp chúng ta sống thoải mái hơn, tiện nghi hơn và phù hợp hơn với chính mình.",
+   "score": 1.0,
+   "flags": [
+    "đúng nguồn kịch bản (strict)"
+   ],
+   "silence": false,
+   "audio": true,
+   "cues": [
+    {
+     "kind": "text",
+     "line": "L021",
+     "scene": "C7",
+     "text": "Sống tiện nghi và phù hợp",
+     "offset": 0.0,
+     "style": "title",
+     "dur": 2.5
+    }
+   ],
+   "shot_at": 1784038759.5
+  }
+ ],
+ "overlays": [],
+ "highlights": [],
+ "missing": [],
+ "broll_requests": [],
+ "vo_lines": [],
+ "unused_speech": [],
+ "report_notes": [
+  "Thời lượng bản dựng ≈ 96s / brief 556s — còn thiếu hình: kịch bản cần thêm shot/cảnh (hoặc giảm thời lượng brief)",
+  "Dựng đúng kịch bản: 17 dòng có Nguồn @ in–out → giữ nguyên file, đoạn cắt, tốc độ và thứ tự",
+  "B-roll tốt chưa dùng (1 take/nhóm): IMG_1445.MOV (A-Roll (Thoại), 4K UHD); IMG_1449.MOV (B-Roll, 4K UHD); IMG_1450.MOV (A-Roll (Thoại), 4K UHD); IMG_1453.MOV (B-Roll, 4K UHD); IMG_1454.MOV (A-Roll (Thoại), 4K UHD); IMG_1469.MOV (A-Roll (Thoại), 4K UHD); IMG_1470.MOV (A-Roll (Thoại), 4K UHD); IMG_1472.MOV (A-Roll (Thoại), 4K UHD); IMG_1474.MOV (B-Roll, 4K UHD); IMG_1474.MOV (B-Roll, 4K UHD); IMG_1474.MOV (B-Roll, 4K UHD); IMG_1474.MOV (B-Roll, 4K UHD)",
+  "Gộp 34 clip thành 9 nhóm take trùng — mỗi nhóm chỉ dùng 1: IMG_1444.MOV/IMG_1445.MOV; IMG_1446.MOV/IMG_1448.MOV/IMG_1449.MOV; IMG_1455.MOV/IMG_1456.MOV/IMG_1457.MOV/IMG_1458.MOV; IMG_1470.MOV/IMG_1471.MOV/IMG_1472.MOV; IMG_1474.MOV/IMG_1475.MOV; IMG_1476.MOV/IMG_1479.MOV; IMG_1480.MOV/IMG_1484.MOV/IMG_1485.MOV; IMG_1490.MOV/IMG_1491.MOV/IMG_1493.MOV",
+  "IMG_1451.MOV: thoại nhỏ (-35.3 LUFS) — cần gain",
+  "IMG_1497.MOV: thoại nhỏ (-35.7 LUFS) — cần gain"
+ ],
+ "source_gaps": [],
+ "chrono": true,
+ "text_lines": [
+  {
+   "kind": "text",
+   "line": "L001",
+   "scene": "C1",
+   "text": "Trải nghiệm thực tế",
+   "offset": 0.0,
+   "style": "title",
+   "dur": 2.5
+  },
+  {
+   "kind": "text",
+   "line": "L004",
+   "scene": "C2",
+   "text": "Triết lý thiết kế",
+   "offset": 0.0,
+   "style": "title",
+   "dur": 2.5
+  },
+  {
+   "kind": "text",
+   "line": "L007",
+   "scene": "C3",
+   "text": "Quá nhiều công tắc",
+   "offset": 0.0,
+   "style": "title",
+   "dur": 2.5
+  },
+  {
+   "kind": "text",
+   "line": "L016",
+   "scene": "C5",
+   "text": "Nhà tự động thói quen",
+   "offset": 0.0,
+   "style": "text",
+   "dur": 2.5
+  },
+  {
+   "kind": "text",
+   "line": "L021",
+   "scene": "C7",
+   "text": "Sống tiện nghi và phù hợp",
+   "offset": 0.0,
+   "style": "title",
+   "dur": 2.5
+  }
+ ],
+ "transitions": {
+  "on": true,
+  "dur": 0.8,
+  "scene": true,
+  "broll_rate": 0.3,
+  "fade_in": 0.8,
+  "fade_out": 1.0,
+  "audio": true
+ },
+ "duration": {
+  "cut_s": 95.8,
+  "target_s": 556.0
+ }
+}

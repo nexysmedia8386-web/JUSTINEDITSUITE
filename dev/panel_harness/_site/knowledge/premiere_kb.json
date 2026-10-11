@@ -1,0 +1,726 @@
+{
+ "version": "2026-09-27",
+ "sections": [
+  {
+   "id": "craft-cutting",
+   "title": "Nguyên tắc dựng: cắt ở đâu, nhịp, J/L-cut",
+   "level": "co-ban",
+   "tags": [
+    "cắt",
+    "nhịp",
+    "pacing",
+    "j-cut",
+    "l-cut",
+    "cut on action",
+    "b-roll",
+    "storytelling",
+    "dựng"
+   ],
+   "body": "- Thứ tự ưu tiên khi chọn điểm cắt (Walter Murch – Rule of Six): cảm xúc > câu chuyện > nhịp > hướng nhìn > mặt phẳng 2D > không gian 3D. Cảm xúc đúng thì lỗi kỹ thuật nhỏ được bỏ qua.\n- Cut on action: cắt giữa động tác (quay đầu, đứng dậy, đưa tay) để che điểm nối; khớp hướng chuyển động giữa 2 shot.\n- J-cut: âm thanh shot sau vào trước hình (người nghe nói trước khi thấy). L-cut: hình chuyển nhưng tiếng shot trước còn chạy. Dùng để câu chuyện trôi, tránh cảm giác \"cắt cụp\". Làm bằng Alt+kéo riêng track audio hoặc Rolling Edit (N) sau khi unlink tạm (Ctrl+L).\n- Phỏng vấn: cắt trước khi người nói hít vào, giữ 4–8 frame sau chữ cuối; lỗi nhảy hình (jump cut) che bằng B-roll, đổi cỡ cảnh (punch-in 110–120% trên cùng clip) hoặc góc máy khác.\n- Nhịp: shot thông tin 2–4s, shot cảm xúc để thở lâu hơn; đổi nhịp theo phần nhạc (cắt vào downbeat, marker M lên beat trước khi dựng).\n- Short-form: hook trong 1–3 giây đầu (câu mạnh nhất/khoảnh khắc lạ nhất lên đầu), bỏ lời chào, mỗi 2–4s nên có thay đổi thị giác (cỡ cảnh, text, B-roll, zoom).\n- Luôn xem lại full-speed, không review chỉ bằng cách scrub.",
+   "tools": "pr_razor, pr_trim_clip, pr_move_clip, pr_set_param (Motion/Scale cho punch-in), pr_add_marker",
+   "sources": [
+    "https://www.adobe.com/learn/premiere-pro",
+    "https://pixflow.net/blog/premiere-pro-multicam-editing-workflow/"
+   ]
+  },
+  {
+   "id": "keys-application-tools",
+   "title": "Phím tắt: Thanh công cụ Application (V, A, Shift+A, B, N, R, C, Y, U, P, H, Z, T, Remix, Mask)",
+   "level": "co-ban",
+   "tags": [
+    "phím tắt",
+    "công cụ",
+    "tool",
+    "toolbox",
+    "selection",
+    "razor",
+    "ripple edit",
+    "rolling edit",
+    "rate stretch",
+    "slip",
+    "slide",
+    "pen",
+    "hand",
+    "zoom",
+    "type",
+    "remix",
+    "mask",
+    "generative extend"
+   ],
+   "body": "- V (Selection Tool): Công cụ chọn cơ bản, di chuyển clip, mở điểm nối (edit point).\n- A (Track Select Forward): Chọn tất cả clip về phía sau trỏ chuột trên mọi track (giữ Shift để chỉ chọn 1 track).\n- Shift+A (Track Select Backward): Chọn tất cả clip về phía trước trỏ chuột.\n- B (Ripple Edit Tool): Co kéo độ dài 1 clip, toàn bộ clip phía sau tự dồn lại theo (tổng thời lượng thay đổi).\n- N (Rolling Edit Tool): Dời điểm nối giữa 2 clip liền kề; tổng thời lượng sequence không đổi (rất hữu ích chỉnh J/L cut).\n- R (Rate Stretch Tool): Kéo co giãn clip trên timeline để tăng/giảm tốc độ playback trực tiếp.\n- C (Razor Tool): Dao cắt clip tại vị trí click chuột (dựng nhanh dùng Ctrl+K tại playhead thay thế).\n- Y (Slip Tool): Giữ nguyên vị trí và độ dài clip trên timeline, trượt nội dung hình ảnh bên trong (cần có handle thừa hai đầu).\n- U (Slide Tool): Trượt vị trí clip dọc timeline, 2 clip xung quanh tự động co giãn bù trừ thời lượng.\n- P (Pen Tool): Vẽ đường path, keyframe âm lượng/motion và vẽ mặt nạ (mask) tự do.\n- H (Hand Tool): Kéo rê không gian timeline.\n- Z (Zoom Tool): Phóng to (click) và thu nhỏ (Alt+click) timeline.\n- T (Type Tool) & Vertical Type Tool: Gõ chữ trực tiếp trên Program Monitor để tạo tiêu đề đồ họa.\n- Rectangle / Ellipse / Polygon Tool: Vẽ hình chữ nhật, hình tròn, đa giác đồ họa.\n- Remix Tool: AI tự động co giãn và remix lại độ dài bài nhạc bám theo nhịp beat để khớp độ dài video.\n- Object Mask Tool / Ellipse / Rectangle / Pen / HSL / Luminance Mask Tool: Các công cụ tạo mặt nạ AI, nhận diện đối tượng hoặc lọc theo dải màu/độ sáng để chỉnh màu Lumetri hoặc che khuyết điểm.\n- Generative Extend Tool: Công cụ AI sinh thêm khung hình kéo dài video hoặc audio ở đầu/đuôi clip một cách tự nhiên.",
+   "tools": "pr_razor (C / Ctrl+K), pr_trim_clip, pr_move_clip, pr_set_speed, pr_menu_command",
+   "sources": [
+    "https://helpx.adobe.com/premiere-pro/using/default-keyboard-shortcuts.html",
+    "https://helpx.adobe.com/premiere-pro/using/tools.html"
+   ]
+  },
+  {
+   "id": "keys-timeline-trim",
+   "title": "Phím tắt: Timeline, Cắt & Trim (Q, W, E, Ctrl+K, Nudge Alt+Mũi tên, Slip, Slide, Close Gap)",
+   "level": "co-ban",
+   "tags": [
+    "phím tắt",
+    "timeline",
+    "trim",
+    "cắt",
+    "q",
+    "w",
+    "e",
+    "ripple trim",
+    "extend edit",
+    "razor",
+    "nudge",
+    "slip",
+    "slide",
+    "ripple delete",
+    "close gap",
+    "lift",
+    "extract"
+   ],
+   "body": "- Q (Ripple Trim Previous Edit To Playhead): Cắt bỏ phần đầu clip từ điểm cắt trước đến playhead và tự động dồn lại. Cách gọt clip nhanh nhất khi xem tới đâu gọt tới đó.\n- W (Ripple Trim Next Edit To Playhead): Cắt bỏ phần đuôi clip từ playhead đến điểm cắt sau và tự động dồn lại.\n- E (Extend Selected Edit to Playhead): Kéo dài điểm nối đã chọn tới vị trí playhead.\n- Ctrl+K (Add Edit): Cắt clip tại playhead trên track đang target.\n- Ctrl+Shift+K (Add Edit to All Tracks): Cắt đồng loạt clip tại playhead trên tất cả các track.\n- Ctrl+Alt+Q / Ctrl+Alt+W: Trim Previous / Next Edit to Playhead (cắt đầu/đuôi tới playhead mà không dồn timeline).\n- Shift+Q / Shift+W: Extend Previous / Next Edit To Playhead.\n- Alt+Left / Alt+Right: Nudge clip sang trái/phải 1 frame.\n- Alt+Shift+Left / Alt+Shift+Right: Nudge clip sang trái/phải 5 frame.\n- Alt+Up / Alt+Down: Nudge clip lên/xuống track trên/dưới.\n- Alt+, / Alt+. : Slide clip sang trái/phải 1 frame (Alt+Shift+,/. dịch 5 frame).\n- Ctrl+Alt+Left / Ctrl+Alt+Right: Slip nội dung clip sang trái/phải 1 frame (Ctrl+Alt+Shift+Left/Right dịch 5 frame).\n- Shift+Delete hoặc Alt+Backspace: Ripple Delete (xóa clip hoặc khoảng trống và dồn toàn bộ timeline lại).\n- Delete: Clear (xóa clip để lại khoảng đen).\n- Close Gap: Tự động đóng toàn bộ khoảng trống trên sequence (Sequence > Close Gap).\n- ; (Lift): Cắt bỏ đoạn giữa In/Out và để lại khoảng đen.\n- ' (Extract): Cắt bỏ đoạn giữa In/Out và dồn timeline lại.\n- Ctrl+Shift+T: Toggle Trim Type (chuyển đổi chế độ trim Ripple/Roll/Regular).",
+   "tools": "pr_razor, pr_trim_clip, pr_remove_clips (ripple=true), pr_move_clip, pr_close_gap, pr_menu_command",
+   "sources": [
+    "https://helpx.adobe.com/premiere-pro/using/default-keyboard-shortcuts.html"
+   ]
+  },
+  {
+   "id": "keys-playback-nav",
+   "title": "Phím tắt: Playback, Điều hướng & Zoom (Space, JKL, In/Out, Markers, Edit Points, Zoom)",
+   "level": "co-ban",
+   "tags": [
+    "phím tắt",
+    "playback",
+    "điều hướng",
+    "navigation",
+    "jkl",
+    "space",
+    "in out",
+    "markers",
+    "edit point",
+    "zoom",
+    "fit",
+    "full screen"
+   ],
+   "body": "- Space: Play-Stop Toggle (phát hoặc dừng video).\n- J / K / L: Shuttle Left / Stop / Right. Bấm L nhiều lần để tăng tốc độ phát 2x, 4x, 8x. Giữ K + J hoặc K + L để phát chậm từng frame.\n- Shift+J / Shift+L: Shuttle Slow Left / Right (tua chậm từng bước).\n- Left / Right: Tiến / lùi 1 frame. Shift+Left / Shift+Right: Tiến / lùi 5 frame.\n- Up / Down: Nhảy về điểm cắt (edit point) trước / sau trên track đang target.\n- Shift+Up / Shift+Down: Nhảy về điểm cắt trước / sau trên bất kỳ track nào (All Tracks).\n- Home / End: Nhảy về đầu / cuối sequence.\n- Shift+Home / Shift+End: Nhảy về đầu / cuối clip đang chọn.\n- D: Chọn clip nằm ngay dưới playhead.\n- Ctrl+Up / Ctrl+Down: Chọn clip trước / sau trên track.\n- I / O: Đặt điểm In / Out.\n- X: Mark Clip (đặt In/Out bao trọn clip đang chọn); /: Mark Selection.\n- Shift+I / Shift+O: Nhảy tới điểm In / Out; Ctrl+Shift+I / Ctrl+Shift+O: Xóa điểm In / Out; Ctrl+Shift+X: Xóa cả In và Out.\n- M: Thêm marker tại playhead. Shift+M / Ctrl+Shift+M: Nhảy tới marker tiếp theo / trước đó.\n- Ctrl+Alt+M: Xóa marker đang chọn; Ctrl+Alt+Shift+M: Xóa toàn bộ marker.\n- Ctrl+Shift+Space: Play In to Out; Shift+Space: Play In to Out kèm Preroll/Postroll; Shift+K: Play Around playhead; Ctrl+Space: Play từ playhead tới Out.\n- = / -: Zoom In / Zoom Out timeline.\n- \\ (dấu gạch chéo ngược): Zoom to Sequence (fit toàn bộ sequence vào màn hình timeline).\n- ` (dấu huyền cạnh số 1): Maximize or Restore Frame Under Cursor (phóng to cực đại bảng dưới trỏ chuột).\n- Shift+` : Maximize or Restore Active Frame; Ctrl+` : Toggle Full Screen (toàn màn hình video không viền).\n- Ctrl+Shift+0: Zoom Program Monitor to Fit; Ctrl+Shift+1: Zoom Program Monitor to 100%.\n- Ctrl+Alt+Shift+0: Zoom Source Monitor to Fit; Ctrl+Alt+Shift+1: Zoom Source Monitor to 100%.",
+   "tools": "pr_set_playhead, pr_set_in_out, pr_add_marker, pr_zoom_to_sequence, pr_menu_command",
+   "sources": [
+    "https://helpx.adobe.com/premiere-pro/using/default-keyboard-shortcuts.html"
+   ]
+  },
+  {
+   "id": "keys-menu-file-edit",
+   "title": "Phím tắt: Menu File & Edit (Lưu, Mở, Export, Undo, Paste Attributes, Duplicate, Label)",
+   "level": "co-ban",
+   "tags": [
+    "phím tắt",
+    "file",
+    "edit",
+    "save",
+    "export",
+    "import",
+    "undo",
+    "redo",
+    "copy",
+    "paste",
+    "paste attributes",
+    "duplicate",
+    "label",
+    "preferences"
+   ],
+   "body": "- Ctrl+Alt+N: New Project... (tạo project mới).\n- Ctrl+N: New Sequence... (tạo sequence mới).\n- Ctrl+/: New Bin (trong Project/Effects).\n- Ctrl+O: Open Project... (mở project).\n- Ctrl+W: Đóng cửa sổ/panel hiện tại; Ctrl+Shift+W: Đóng project.\n- Ctrl+S: Lưu project; Ctrl+Shift+S: Save As...; Ctrl+Alt+S: Save a Copy...\n- Ctrl+I: Import file media; Ctrl+Alt+I: Import từ Media Browser.\n- Ctrl+M: Export Media (mở cửa sổ xuất video); Alt+Shift+M: Send to Adobe Media Encoder.\n- Ctrl+Q: Thoát Premiere Pro.\n- Ctrl+Z / Ctrl+Shift+Z: Undo / Redo.\n- Ctrl+X / Ctrl+C / Ctrl+V: Cut / Copy / Paste.\n- Ctrl+Shift+V: Paste Insert (dán chèn, tự dồn các clip phía sau ra).\n- Ctrl+Alt+V: Paste Attributes (dán Motion, Opacity, Lumetri, Crop, Audio Volume đã copy sang clip khác).\n- Delete: Clear (xóa clip giữ khoảng trống); Shift+Delete: Ripple Delete (xóa và dồn).\n- Ctrl+Shift+/: Duplicate (nhân bản clip hoặc sequence).\n- Ctrl+A / Ctrl+Shift+A: Select All / Deselect All.\n- Ctrl+F: Find (tìm kiếm trong timeline hoặc bin).\n- Ctrl+E: Edit Original (mở file gốc trong Photoshop/Audition/ứng dụng ngoài).\n- Ctrl+Alt+K: Mở bảng tùy biến phím tắt Keyboard Shortcuts.\n- Nhãn màu (Labels): Violet, Iris, Caribbean, Lavender, Cerulean, Forest, Rose, Mango, Purple, Blue, Teal, Magenta, Tan, Green, Brown, Yellow — phân loại trực quan theo Camera, B-roll, Music, SFX.",
+   "tools": "pr_save_project, pr_export, pr_import, pr_menu_command",
+   "sources": [
+    "https://helpx.adobe.com/premiere-pro/using/default-keyboard-shortcuts.html"
+   ]
+  },
+  {
+   "id": "keys-clip-sequence",
+   "title": "Phím tắt: Menu Clip & Sequence (Subclip, Speed, Gain, Nest, Transitions, Render, Match Frame)",
+   "level": "co-ban",
+   "tags": [
+    "phím tắt",
+    "clip",
+    "sequence",
+    "subclip",
+    "speed",
+    "gain",
+    "nest",
+    "transition",
+    "render",
+    "match frame",
+    "enable",
+    "link",
+    "group",
+    "fit to frame"
+   ],
+   "body": "- Ctrl+U: Make Subclip (tạo clip con từ đoạn In/Out trong Source Monitor).\n- Shift+G: Modify > Audio Channels (đổi kênh mono/stereo, chọn mic L/R).\n- G: Audio Gain (chỉnh dB gain gốc của clip, Normalize Peak).\n- Ctrl+R: Speed/Duration (đổi % tốc độ, Reverse, Ripple, nội suy Frame Blending / Optical Flow).\n- Shift+Z: Fit to frame (co giãn clip vừa khít khung hình sequence giữ tỷ lệ).\n- Scale to Frame Size / Fill frame: lấp đầy khung hình sequence.\n- Shift+E: Enable / Disable clip trên timeline.\n- Ctrl+L: Link / Unlink video và audio.\n- Ctrl+G / Ctrl+Shift+G: Group / Ungroup nhiều clip.\n- Shift+X: Nest... (lồng các clip đã chọn thành Sequence con).\n- , (dấu phẩy): Insert clip từ Source Monitor vào timeline.\n- . (dấu chấm): Overwrite clip từ Source Monitor vào timeline.\n- F: Match Frame (mở clip gốc đúng frame playhead vào Source Monitor).\n- Shift+R: Reverse Match Frame (tìm vị trí frame Source Monitor trên Timeline).\n- Ctrl+D: Apply Video Transition (Cross Dissolve mặc định).\n- Ctrl+Shift+D: Apply Audio Transition (Constant Power mặc định).\n- Shift+D: Apply Default Transitions to Selection.\n- Enter: Render Effects in Work Area; Shift+Enter: Render Entire Work Area.\n- Shift+U: Make Subsequence (tạo sequence mới từ đoạn In/Out hoặc các clip đang chọn).\n- S: Snap in Timeline (bật/tắt hít nam châm).\n- Auto Reframe Sequence: AI tự nhận diện chủ thể và chuyển khung hình (16:9 sang 9:16).\n- Scene Edit Detection: AI tự phân tích và cắt video dài thành từng shot riêng biệt.\n- Enable Enhance Speech: AI khử nhiễu lọc giọng nói.",
+   "tools": "pr_match_frame, pr_fit_to_frame, pr_apply_default_transition, pr_set_speed, pr_add_transition, pr_close_gap, pr_menu_command",
+   "sources": [
+    "https://helpx.adobe.com/premiere-pro/using/default-keyboard-shortcuts.html"
+   ]
+  },
+  {
+   "id": "keys-markers",
+   "title": "Phím tắt: Markers toàn diện (In/Out, Marker clip & sequence, Range marker, Màu marker)",
+   "level": "co-ban",
+   "tags": [
+    "phím tắt",
+    "marker",
+    "in out",
+    "range marker",
+    "color marker",
+    "clear marker"
+   ],
+   "body": "- M: Add Marker tại playhead (bấm lần nữa mở hộp thoại đặt tên, màu, ghi chú).\n- Ctrl+Alt+Shift+N: Add Range Marker (marker có độ dài).\n- Alt+Shift+N: Add Range Marker to In and Out (tạo range marker bao trọn vùng In/Out).\n- Shift+M: Go to Next Marker; Ctrl+Shift+M: Go to Previous Marker.\n- Ctrl+Alt+M: Clear Selected Marker; Ctrl+Alt+Shift+M: Clear Markers (xóa toàn bộ marker).\n- I / O: Mark In / Out; X: Mark Clip; /: Mark Selection.\n- Ctrl+Shift+I / Ctrl+Shift+O: Clear In / Clear Out; Ctrl+Shift+X: Clear In and Out.\n- Đặt màu Marker nhanh: Blue, Cyan, Green, Magenta, Orange, Red, White, Yellow — dùng để phân loại beat nhạc, lỗi hình, đoạn cần lồng B-roll hoặc sửa voice.\n- Ripple Sequence Markers: marker tự di chuyển theo clip khi thực hiện ripple edit.",
+   "tools": "pr_add_marker, pr_set_in_out, pr_menu_command",
+   "sources": [
+    "https://helpx.adobe.com/premiere-pro/using/default-keyboard-shortcuts.html"
+   ]
+  },
+  {
+   "id": "keys-graphics-titles",
+   "title": "Phím tắt: Graphics, Text & Titles (Chữ Ctrl+T, Shapes, Align, Đổi thứ tự Layer, Cỡ chữ)",
+   "level": "co-ban",
+   "tags": [
+    "phím tắt",
+    "graphics",
+    "text",
+    "title",
+    "layer",
+    "align",
+    "arrange",
+    "font size",
+    "leading",
+    "kerning"
+   ],
+   "body": "- Ctrl+T: New Layer > Text (tạo layer chữ mới trong Essential Graphics).\n- Ctrl+Alt+R: New Layer > Rectangle (vẽ hình chữ nhật).\n- Ctrl+Alt+E: New Layer > Ellipse (vẽ hình elip/tròn).\n- Ctrl+Alt+': Begin Text Editing for a Graphic Layer.\n- Ctrl+Shift+C: Center align text (căn giữa chữ).\n- Ctrl+Shift+L: Left align text (căn trái chữ); Ctrl+Shift+R: Right align text (căn phải chữ).\n- Ctrl+Alt+Left / Ctrl+Alt+Right: Decrease / Increase Font Size by 1 Unit.\n- Ctrl+Alt+Shift+Left / Ctrl+Alt+Shift+Right: Decrease / Increase Font Size by 5 Units.\n- Alt+Down / Alt+Up: Decrease / Increase Leading by 1 Unit (khoảng cách dòng).\n- Alt+Shift+Down / Alt+Shift+Up: Decrease / Increase Leading by 5 Units.\n- Ctrl+Shift+]: Bring to Front (đưa layer lên trên cùng).\n- Ctrl+]: Bring Forward (đưa layer lên một bậc).\n- Ctrl+[: Send Backward (đưa layer xuống một bậc).\n- Ctrl+Shift+[: Send to Back (đưa layer xuống dưới cùng).\n- Ctrl+Alt+] / Ctrl+Alt+[: Select Next / Previous Layer.\n- Align to Video Frame / Align to Selection: Căn trái, giữa, phải, trên, tâm, dưới khung hình video.",
+   "tools": "pr_insert_clip, pr_menu_command",
+   "sources": [
+    "https://helpx.adobe.com/premiere-pro/using/default-keyboard-shortcuts.html"
+   ]
+  },
+  {
+   "id": "keys-audio-sound",
+   "title": "Phím tắt: Âm thanh & Audio Mixer (Clip Volume [ / ], Gain G, Mixer Shift+6 / Shift+9, Pan, Mute)",
+   "level": "co-ban",
+   "tags": [
+    "phím tắt",
+    "âm thanh",
+    "audio",
+    "volume",
+    "gain",
+    "mixer",
+    "mute",
+    "pan",
+    "ducking",
+    "constant power"
+   ],
+   "body": "- [ : Decrease Clip Volume 1 dB.\n- ] : Increase Clip Volume 1 dB.\n- Shift+[ : Decrease Clip Volume Many (6 dB).\n- Shift+] : Increase Clip Volume Many (6 dB).\n- G : Audio Gain (Normalize Max Peak về -1 dBTP hoặc chỉnh dB thủ công).\n- Shift+6 : Audio Track Mixer (bảng trộn âm theo từng track A1, A2, A3...).\n- Shift+9 : Audio Clip Mixer (bảng trộn âm cho từng clip riêng lẻ).\n- Ctrl+Alt+T : Show/Hide Tracks trong Audio Track Mixer.\n- Ctrl+L : Loop trong mixer.\n- Ctrl+Shift+I : Meter Input(s) Only.\n- Shift+S : Toggle Audio During Scrubbing (bật/tắt tiếng khi rê chuột trên timeline).\n- Ctrl+9 : Toggle All Audio Targets (bật/tắt target track audio).\n- Ctrl+Alt+9 : Toggle All Source Audio (bật/tắt patch nguồn audio).\n- Ctrl+Shift+D : Apply Audio Transition (Constant Power crossfade).\n- Nudge Volume: +1dB, +3dB, -1dB, -3dB.\n- Set Clip Pan to Left, Center, Right.",
+   "tools": "pr_set_param (Volume/Level), pr_add_keyframe, pr_toggle_track, pr_menu_command",
+   "sources": [
+    "https://helpx.adobe.com/premiere-pro/using/default-keyboard-shortcuts.html"
+   ]
+  },
+  {
+   "id": "keys-multicam",
+   "title": "Phím tắt: Multicam: Chuyển góc & Ghi hình (Cắt góc 1-8 Ctrl+1..8, Chọn góc 1-9, Shift+0, Rec 0)",
+   "level": "nang-cao",
+   "tags": [
+    "phím tắt",
+    "multicam",
+    "nhiều máy",
+    "góc máy",
+    "camera",
+    "cut camera",
+    "record multicam"
+   ],
+   "body": "- Shift+0 : Toggle Multi-Camera View (bật/tắt màn hình lưới nhiều góc máy trên Program Monitor).\n- 0 : Multi-Camera Record On/Off Toggle (bật chế độ ghi hình live đổi góc).\n- Ctrl+1 .. Ctrl+8 : Cut to Camera 1 .. 8 (vừa phát vừa cắt và chuyển góc máy trực tiếp).\n- 1 .. 9 : Select Camera 1 .. 9 (đổi góc máy của clip đang chọn trên timeline mà không thêm điểm cắt mới).\n- Multi-Camera Audio Follows Video: tiếng tự chuyển theo góc máy đang chọn.\n- Chuột phải clip multicam > Multi-Camera > Flatten: rã multicam thành clip gốc độc lập trước khi xuất XML hoặc chỉnh màu ngoài.",
+   "tools": "pr_razor, pr_menu_command",
+   "sources": [
+    "https://helpx.adobe.com/premiere-pro/using/default-keyboard-shortcuts.html"
+   ]
+  },
+  {
+   "id": "keys-panels-workspace",
+   "title": "Phím tắt: Workspace, Mở Panel & Điều khiển Cửa sổ (Shift+1..9, Workspace Alt+Shift+1..9, Maximize)",
+   "level": "co-ban",
+   "tags": [
+    "phím tắt",
+    "workspace",
+    "panel",
+    "cửa sổ",
+    "shift 1 9",
+    "maximize",
+    "full screen",
+    "effects",
+    "lumetri"
+   ],
+   "body": "- Shift+1 : Projects Panel (quản lý file dự án).\n- Shift+2 : Source Monitor (xem clip gốc).\n- Shift+3 : Timelines Panel (dòng thời gian).\n- Shift+4 : Program Monitor (màn hình dựng chính).\n- Shift+5 : Effect Controls (chỉnh hiệu ứng & keyframe).\n- Shift+6 : Audio Track Mixer (bàn trộn âm thanh track).\n- Shift+7 : Effects Panel (danh sách effect).\n- Shift+8 : Media Browser (duyệt ổ cứng).\n- Shift+9 : Audio Clip Mixer (bàn trộn clip).\n- Alt+Shift+1 .. Alt+Shift+9 : Chuyển nhanh giữa Workspace 1 .. 9 (Editing, Color, Audio, Graphics, Effects...).\n- Alt+Shift+0 : Reset to Saved Layout (khôi phục giao diện chuẩn khi bị vỡ layout).\n- ` (dấu huyền cạnh số 1): Maximize or Restore Frame Under Cursor (phóng to cực đại bảng dưới trỏ chuột).\n- Shift+` : Maximize or Restore Active Frame (phóng to bảng đang active).\n- Ctrl+` : Toggle Full Screen (toàn màn hình video không viền).\n- Ctrl+Shift+. / Ctrl+Shift+, : Select Next / Previous Panel.",
+   "tools": "pr_menu_command",
+   "sources": [
+    "https://helpx.adobe.com/premiere-pro/using/default-keyboard-shortcuts.html"
+   ]
+  },
+  {
+   "id": "keys-text-panel",
+   "title": "Phím tắt: Text Panel, Transcript & Subtitle (Edit Segment Enter, Split Alt+S, Merge Alt+M, Captions)",
+   "level": "co-ban",
+   "tags": [
+    "phím tắt",
+    "text panel",
+    "transcript",
+    "caption",
+    "subtitle",
+    "split segment",
+    "merge segments",
+    "text-based editing"
+   ],
+   "body": "- Window > Text: mở Text Panel.\n- Enter : Edit Segment (vào chỉnh sửa nội dung câu thoại/phụ đề).\n- Alt+S : Split Segment (tách câu thoại/phụ đề tại vị trí con trỏ thành 2 câu).\n- Alt+M : Merge Segments (gộp các câu phụ đề đang chọn thành 1 câu liền mạch).\n- Backspace / Alt+Backspace : Ripple Delete (xóa chữ trong Transcript đồng thời cắt bỏ đoạn hình/tiếng tương ứng trên Timeline).\n- Shift+C : Follow Active Monitor (transcript tự cuộn theo playhead video đang phát).\n- Shift+X : Show Program Transcript (transcript của sequence đang dựng).\n- Shift+Z : Show Source Transcript (transcript của clip gốc).\n- Ctrl+Alt+A : Add Captions Track... (thêm track phụ đề mới).\n- Ctrl+Alt+C : Add new caption segment at playhead (thêm 1 block phụ đề mới tại playhead).\n- Ctrl+Alt+Down / Ctrl+Alt+Up : Go to next / previous caption segment.",
+   "tools": "pr_menu_command",
+   "sources": [
+    "https://helpx.adobe.com/premiere-pro/using/default-keyboard-shortcuts.html"
+   ]
+  },
+  {
+   "id": "keys-project-media",
+   "title": "Phím tắt: Project Panel, Media Browser & Production (Bin Ctrl+B, List/Icon, Hover Scrub, Delete Options)",
+   "level": "co-ban",
+   "tags": [
+    "phím tắt",
+    "project panel",
+    "media browser",
+    "production",
+    "bin",
+    "hover scrub",
+    "list view",
+    "icon view"
+   ],
+   "body": "- Ctrl+B : New Bin trong Project Panel.\n- Shift+B : New Bin From Selection (gom các clip đang chọn vào bin mới).\n- Ctrl+Page Up : List View (chế độ xem danh sách chi tiết).\n- Ctrl+Page Down : Icon View (chế độ xem thumbnail).\n- Shift+H : Hover Scrub (rê chuột qua thumbnail để xem lướt video).\n- Shift+O : Open in Source Monitor (mở clip từ Project hoặc Media Browser sang Source).\n- Shift+[ / Shift+] : Thumbnail Size Previous / Next (phóng to/thu nhỏ thumbnail trong bin).\n- Shift+\\ : Toggle View (chuyển đổi qua lại giữa Icon và List).\n- Ctrl+Delete : Delete Selection with Options.\n- Tab / Enter : Next Column Field / Next Row Field khi nhập tên/metadata.\n- Production shortcuts: Ctrl+Alt+N (New Project in Production), Ctrl+B (New Folder), Ctrl+Shift+W (Close Project), Ctrl+Shift+/ (Make a Copy), Ctrl+Backspace (Move To Trash).",
+   "tools": "pr_import, pr_get_project, pr_menu_command",
+   "sources": [
+    "https://helpx.adobe.com/premiere-pro/using/default-keyboard-shortcuts.html"
+   ]
+  },
+  {
+   "id": "keys-monitors-program-source",
+   "title": "Phím tắt: Program & Source Monitor (Rulers Ctrl+R, Guides Ctrl+;, Snap, Nudge Object, Safe Margins, Fit)",
+   "level": "co-ban",
+   "tags": [
+    "phím tắt",
+    "program monitor",
+    "source monitor",
+    "rulers",
+    "guides",
+    "snap",
+    "nudge object",
+    "safe margins",
+    "export frame"
+   ],
+   "body": "- Ctrl+R : Show Rulers (hiện thước đo pixel quanh Program Monitor).\n- Ctrl+; : Show Guides (hiện các đường gióng căn chỉnh bố cục).\n- Ctrl+Shift+; : Snap in Program Monitor (bật hít nam châm căn giữa hoặc bám đường gióng).\n- Ctrl+Alt+Shift+R : Lock Guides (khóa đường gióng tránh kéo nhầm).\n- Ctrl+Left/Right/Up/Down : Nudge Selected Object 1 pixel (dịch chữ/layer đồ họa 1 px).\n- Ctrl+Shift+Left/Right/Up/Down : Nudge Selected Object 5 pixels.\n- Ctrl+Shift+E : Export Frame (xuất ảnh tĩnh PNG/JPEG đúng khung hình hiện tại).\n- Ctrl+Shift+0 : Zoom Program Monitor to Fit; Ctrl+Shift+1 : 100%.\n- Ctrl+Alt+Shift+0 : Zoom Source Monitor to Fit; Ctrl+Alt+Shift+1 : 100%.\n- Safe Margins: hiển thị khung an toàn tránh bị che bởi UI TikTok/Reels hoặc mép TV.\n- Playback Resolution: Full, 1/2, 1/4 (giảm tải lag khi dựng footage 4K).",
+   "tools": "pr_look_at_frame, pr_menu_command",
+   "sources": [
+    "https://helpx.adobe.com/premiere-pro/using/default-keyboard-shortcuts.html"
+   ]
+  },
+  {
+   "id": "modern-features-premiere",
+   "title": "Tính năng Premiere Pro hiện đại & AI (Remix, Generative Extend, Object Mask, Text-Based Editing, Enhance Speech)",
+   "level": "nang-cao",
+   "tags": [
+    "tính năng",
+    "hiện đại",
+    "ai",
+    "remix tool",
+    "generative extend",
+    "object mask",
+    "hsl mask",
+    "luminance mask",
+    "enhance speech",
+    "scene edit detection",
+    "auto reframe"
+   ],
+   "body": "1. Remix Tool: kéo bài nhạc trên timeline để khớp chính xác thời lượng video. AI phân tích cấu trúc bài hát (intro, verse, chorus, outro) và cắt ghép mượt mà không lộ điểm nối. Tùy chỉnh trong Essential Sound > Duration.\n2. Generative Extend (AI sinh hình): kéo dài đầu hoặc đuôi shot video bị thiếu vài frame mà không cần đóng băng hình ảnh. AI sinh thêm chuyển động tự nhiên.\n3. Object Mask Tool: tạo mask tự động bám theo người hoặc đồ vật; kết hợp HSL Mask và Luminance Mask để chỉnh màu thứ cấp (Secondary Color) chính xác.\n4. Text-Based Editing: dựng phim bằng văn bản. Premiere tự phiên âm tiếng nói thành văn bản, người dựng chỉ cần bôi đen chữ trong Text Panel và bấm Delete (hoặc Backspace) — clip trên timeline tự động cắt và dồn (ripple).\n5. Enhance Speech: thuật toán khử nhiễu và phục hồi âm thanh giọng nói của Adobe Podcast tích hợp sẵn, loại bỏ tiếng vang phòng, tiếng ồn quạt/xe cộ, giúp giọng ấm và rõ như thu âm studio.\n6. Scene Edit Detection: chuột phải clip video dài đã render sẵn > Scene Edit Detection > Cut point/Markers: tự động dò mọi điểm cắt và tách thành từng shot riêng lẻ.\n7. Auto Reframe Sequence: Sequence > Auto Reframe Sequence, chọn tỷ lệ dọc 9:16 (cho Shorts/Reels/TikTok) hoặc 1:1, AI tự động dò tâm mặt người và di chuyển Motion/Position bám theo chủ thể.",
+   "tools": "pr_menu_command, pr_apply_effect, pr_razor",
+   "sources": [
+    "https://helpx.adobe.com/premiere-pro/using/whats-new.html"
+   ]
+  },
+  {
+   "id": "trim-advanced",
+   "title": "Trim nâng cao: ripple, roll, slip, slide",
+   "level": "nang-cao",
+   "tags": [
+    "trim",
+    "ripple",
+    "roll",
+    "slip",
+    "slide",
+    "rolling edit",
+    "ripple edit"
+   ],
+   "body": "- Ripple (B): đổi độ dài 1 clip, các clip sau dồn theo → timeline dài/ngắn lại.\n- Roll (N): dời điểm nối giữa 2 clip, tổng độ dài không đổi (clip này dài ra, clip kia ngắn lại). Dùng để chỉnh J/L-cut, khớp beat.\n- Slip (Y): giữ vị trí + độ dài clip trên timeline, trượt nội dung bên trong (chọn khoảnh khắc khác của cùng shot). Cần handle (media thừa) ở hai đầu.\n- Slide (U): giữ nội dung clip, trượt clip dọc timeline, 2 clip hai bên tự co/giãn.\n- Trim trong Program Monitor: double-click điểm nối để vào Trim Mode, dùng J/K/L để trim khi đang phát.\n- Luôn kiểm tra đủ handle trước khi thêm transition (transition cần media thừa ở cả hai clip).",
+   "tools": "pr_trim_clip (đổi start/end), pr_move_clip (slide), pr_run_extendscript cho slip (projectItem inPoint/outPoint)",
+   "sources": [
+    "https://www.adobe.com/learn/premiere-pro",
+    "https://academyclass.com/blog/premiere-pro-keyboard-shortcuts-cheat-sheet/"
+   ]
+  },
+  {
+   "id": "organize",
+   "title": "Tổ chức project, bin, đặt tên, quản lý media",
+   "level": "co-ban",
+   "tags": [
+    "tổ chức",
+    "bin",
+    "project",
+    "đặt tên",
+    "media",
+    "naming",
+    "productions",
+    "archive",
+    "project manager",
+    "team"
+   ],
+   "body": "- Một thư mục cho mỗi dự án, có subfolder media/ (footage, audio, gfx, music, exports). Đường dẫn giống nhau trên mọi máy để tránh \"media offline\".\n- Bin theo loại + ngày quay/camera: 01_FOOTAGE (A-cam, B-cam, theo ngày), 02_AUDIO, 03_MUSIC, 04_GFX, 05_SEQUENCES, 06_EXPORTS. Color label theo camera.\n- Đặt tên sequence có version: TENDUAN_9x16_v01, v02… không ghi đè bản đã duyệt (Justin EDIT Suite build cũng tự tăng _vN).\n- Dự án lớn/nhiều người: dùng Productions (nhiều project nhỏ chia theo tập/phần), bật project locking để một người sửa, người khác chỉ đọc. Project chỉ cập nhật khi mở lại.\n- Stringout/selects: dựng sequence gom các đoạn dùng được trước khi dựng thật.\n- Kết thúc: File → Project Manager → Collect Files and Copy to New Location (có thể trim media, giữ handle) để lưu trữ trọn gói.",
+   "tools": "pr_get_project, pr_import (bin), pr_rename_sequence, pr_backup_sequence, pr_save_project",
+   "sources": [
+    "https://workflow.frame.io/guide/collaborative-editing-premiere-pro",
+    "https://blog.frame.io/2024/09/30/ultimate-guide-to-premiere-pro-productions/",
+    "https://pixflow.net/blog/premiere-pro-multicam-editing-workflow/"
+   ]
+  },
+  {
+   "id": "proxy",
+   "title": "Proxy & hiệu năng playback",
+   "level": "co-ban",
+   "tags": [
+    "proxy",
+    "hiệu năng",
+    "lag",
+    "giật",
+    "playback",
+    "4k",
+    "vfr",
+    "render"
+   ],
+   "body": "- Tạo proxy: chuột phải clip → Proxy → Create Proxies (hoặc Ingest Settings khi import). Bật nút Toggle Proxies trên Program Monitor (thêm qua Button Editor \"+\").\n- Proxy chỉ dùng khi dựng; export luôn dùng media gốc (trừ khi chọn \"Use Proxies\" trong Export).\n- Playback resolution 1/2 hoặc 1/4, tắt High Quality Playback khi dựng.\n- Footage điện thoại VFR (variable frame rate) gây lệch tiếng/giật: convert sang CFR trước khi dựng (FFmpeg hoặc Media Encoder).\n- Render previews (Enter) cho đoạn có effect nặng; xóa media cache định kỳ (Preferences → Media Cache).\n- Justin EDIT Suite có proxy riêng 360p cho AI phân tích (nxcore.proxy) — không phải proxy dựng của Premiere.",
+   "tools": "",
+   "sources": [
+    "https://pixflow.net/blog/premiere-pro-multicam-editing-workflow/",
+    "https://workflow.frame.io/guide/collaborative-editing-premiere-pro"
+   ]
+  },
+  {
+   "id": "multicam",
+   "title": "Multicam: sync, cắt góc, flatten",
+   "level": "nang-cao",
+   "tags": [
+    "multicam",
+    "nhiều máy",
+    "sync",
+    "đồng bộ",
+    "góc máy",
+    "angle",
+    "flatten",
+    "podcast",
+    "phỏng vấn"
+   ],
+   "body": "1. Chuẩn bị: bin theo camera, mọi máy có tiếng tham chiếu liên tục; proxy cho 4K.\n2. Chọn các clip → chuột phải → Create Multi-Camera Source Sequence. Sync bằng: Timecode (máy jam-sync, nhanh nhất) · Audio (phổ biến nhất, so waveform) · Clip Marker · In/Out.\n3. Audio: Camera 1 (một nguồn tiếng sạch) · All Cameras (trộn nhiều mic) · Switch Audio (tiếng theo góc đang chọn).\n4. Kéo multicam source vào sequence mới, bật chế độ Multi-Camera trên Program Monitor (icon lưới). Space để phát, bấm 1–9 để đổi góc — mỗi lần bấm tạo một điểm cắt thật.\n5. Tinh chỉnh: click clip trên timeline + bấm số để đổi góc; Ctrl+K thêm điểm cắt; Q/W ripple trim.\n6. Màu: grade trong multicam source sequence (Open in Timeline) để mọi đoạn cắt tự nhận; hoặc Match Frame (F) để grade clip gốc một lần.\n7. Trước khi finish/xuất XML: chuột phải → Multi-Camera → Flatten.\nHiệu năng: 1/2–1/4 playback, proxy, CFR.",
+   "tools": "pr_get_sequence (xem angle), pr_razor + pr_run_extendscript cho thao tác multicam; Justin EDIT Suite align đã hỗ trợ role master/angle cho B-roll",
+   "sources": [
+    "https://pixflow.net/blog/premiere-pro-multicam-editing-workflow/",
+    "https://massive.io/tutorials/multicam-editing-in-adobe-premiere/"
+   ]
+  },
+  {
+   "id": "color-basic",
+   "title": "Màu cơ bản với Lumetri",
+   "level": "co-ban",
+   "tags": [
+    "màu",
+    "color",
+    "lumetri",
+    "white balance",
+    "exposure",
+    "correction",
+    "scopes",
+    "cân màu"
+   ],
+   "body": "Thứ tự: 1) White Balance (Temperature/Tint, hoặc eyedropper vào vùng trắng/xám) → 2) Tone (Exposure, Contrast, Highlights, Shadows, Whites, Blacks) → 3) Saturation. Làm ngược thứ tự sẽ làm lệch quyết định exposure.\n- Luôn nhìn Lumetri Scopes (Shift+5): Waveform để set đen/trắng (không cắt 0/100 trừ chủ ý), Vectorscope để kiểm tra da người nằm trên skin-tone line, Parade RGB để thấy ám màu.\n- Input LUT (footage log: S-Log, V-Log, C-Log…) chuyển về Rec.709 trước rồi mới chỉnh; Creative Look đặt sau cùng, giảm Intensity.\n- Correction (sửa cho đúng) tách khỏi Grade (tạo look): dùng 2 lớp Lumetri trên một clip hoặc Lumetri trên Adjustment Layer cho look chung.\n- Đồng bộ màu giữa các cảnh: Color Match (Comparison View) rồi tinh chỉnh bằng tay.",
+   "tools": "pr_apply_effect 'Lumetri Color' → pr_get_clip_components (xem tên param) → pr_set_param; pr_look_at_frame để kiểm tra kết quả",
+   "sources": [
+    "https://helpx.adobe.com/premiere/desktop/correct-color/color-correction-fundamentals/basic-color-correction-options.html",
+    "https://helpx.adobe.com/premiere-pro/using/color-management-and-lumetri-color.html",
+    "https://helpx.adobe.com/premiere/desktop/correct-color/color-correction-fundamentals/create-and-edit-multiple-lumetri-color-effects.html"
+   ]
+  },
+  {
+   "id": "color-advanced",
+   "title": "Màu nâng cao: HSL Secondary, nhiều lớp Lumetri, color management",
+   "level": "nang-cao",
+   "tags": [
+    "màu",
+    "hsl",
+    "secondary",
+    "skin",
+    "da",
+    "mask",
+    "look",
+    "lut",
+    "color management",
+    "hdr",
+    "color mode"
+   ],
+   "body": "- HSL Secondary: chọn một dải màu (key theo Hue/Saturation/Luminance) để sửa riêng — ví dụ làm da ấm hơn, trời xanh hơn mà không ảnh hưởng phần còn lại. Bật \"Show mask\" để kiểm tra vùng key, dùng Denoise/Blur trong key để viền mịn.\n- Curves: RGB curve cho contrast chính xác; Hue vs Sat / Hue vs Hue / Luma vs Sat để xử lý chọn lọc.\n- Nhiều Lumetri trên một clip (đổi tên từng instance): lớp 1 correction, lớp 2 secondary, lớp 3 look. Dễ bật/tắt so sánh.\n- Vignette nhẹ để kéo mắt vào chủ thể.\n- Color management: kiểm tra sequence working color space (Rec.709 cho web/social); footage log có thể dùng auto tone-mapping. Bản mới có Color mode (beta) — workspace màu riêng.\n- Xuất bản duyệt màu: kiểm tra trên màn hình đã calibrate; social xem thử trên điện thoại.",
+   "tools": "pr_apply_effect 'Lumetri Color' nhiều lần; pr_set_param; pr_look_at_frame",
+   "sources": [
+    "https://helpx.adobe.com/premiere/desktop/correct-color/add-color-effects/correct-color-using-hsl-secondary-controls.html",
+    "https://helpx.adobe.com/premiere/desktop/correct-color/color-correction-fundamentals/create-and-edit-multiple-lumetri-color-effects.html",
+    "https://helpx.adobe.com/premiere-pro/using/color-management-and-lumetri-color.html",
+    "https://helpx.adobe.com/premiere/desktop/correct-color/color-mode-fundamentals/color-mode-basics.html"
+   ]
+  },
+  {
+   "id": "audio",
+   "title": "Âm thanh: Essential Sound, loudness, ducking",
+   "level": "co-ban",
+   "tags": [
+    "âm thanh",
+    "audio",
+    "loudness",
+    "lufs",
+    "essential sound",
+    "enhance speech",
+    "ducking",
+    "nhạc",
+    "noise",
+    "mix"
+   ],
+   "body": "- Essential Sound: gán loại Dialogue / Music / SFX / Ambience cho từng clip → có preset đúng loại. Dialogue: Loudness Auto-Match, Repair (Reduce Noise, Reduce Rumble, DeHum, DeEss), Clarity (EQ, Enhance Speech).\n- Enhance Speech (AI) cứu tiếng thu kém; trộn lại một phần tiếng gốc (mix amount) để khỏi giống robot.\n- Ducking nhạc dưới lời: clip nhạc gán Music → Ducking → Duck against Dialogue → Generate Keyframes.\n- Chuẩn loudness tham khảo: social/YouTube khoảng -14 LUFS integrated, true peak ≤ -1 dBTP; broadcast EBU R128 -23 LUFS (Mỹ ATSC A/85 -24 LKFS). Kiểm bằng Loudness Meter hoặc Loudness Normalization khi export.\n- Thoại luôn ưu tiên: nhạc nền thường thấp hơn thoại 12–20 dB khi có lời.\n- Crossfade audio mặc định Constant Power (Ctrl+Shift+D) giữa 2 clip để tránh tiếng \"tách\".\n- Justin EDIT Suite QC đo ebur128 + silence cho mỗi clip — xem report trước khi mix.",
+   "tools": "pr_add_transition 'Constant Power', pr_set_param (Volume/Level), pr_add_keyframe (ducking tay), pr_apply_effect 'DeNoise'",
+   "sources": [
+    "https://www.adobe.com/learn/premiere-pro"
+   ]
+  },
+  {
+   "id": "text-captions",
+   "title": "Chữ, caption, text-based editing",
+   "level": "co-ban",
+   "tags": [
+    "chữ",
+    "text",
+    "caption",
+    "phụ đề",
+    "srt",
+    "essential graphics",
+    "transcript",
+    "text-based editing",
+    "title"
+   ],
+   "body": "- Text-based editing: Window → Text → Transcript: Premiere transcribe, xóa chữ trong transcript = cắt đoạn tương ứng trên timeline; có thể tìm và xóa khoảng lặng/từ đệm.\n- Captions: từ transcript → Create Captions (chỉnh số ký tự/dòng, thời lượng tối thiểu) hoặc import file .srt. Style caption bằng Essential Graphics, lưu Track Style để áp cho cả track.\n- Short-form: caption to, 1–4 từ/lần hiện, nằm trong safe zone (tránh 15–20% dưới cùng và cột phải nơi có nút của TikTok/Reels).\n- Title/lower third: Essential Graphics (Graphics template .mogrt), keyframe Position/Opacity để animate; animation mượt dùng ease (Temporal Interpolation → Ease In/Out).\n- Justin EDIT Suite: build tạo sẵn caption track từ SRT + highlight text; sửa text highlight bằng AI Assist (set_highlight).",
+   "tools": "set_highlight / add_highlight (plan), pr_insert_clip (.mogrt/graphic), pr_add_keyframe",
+   "sources": [
+    "https://www.adobe.com/learn/premiere-pro"
+   ]
+  },
+  {
+   "id": "speed",
+   "title": "Tốc độ: speed/duration, time remapping, frame hold",
+   "level": "nang-cao",
+   "tags": [
+    "tốc độ",
+    "speed",
+    "slow motion",
+    "time remapping",
+    "ramp",
+    "frame hold",
+    "optical flow",
+    "reverse"
+   ],
+   "body": "- Speed/Duration (Ctrl+R): % tốc độ, Reverse, Ripple Edit (dồn clip sau), Time Interpolation: Frame Sampling / Frame Blending / Optical Flow (mượt nhất cho slow-mo từ footage fps thấp, dễ lỗi vật thể chồng nhau).\n- Slow-mo đẹp nhất: quay 50/60/120 fps, sequence 25/30 → Interpret Footage về fps sequence (không nội suy).\n- Speed ramp: chuột phải clip → Show Clip Keyframes → Time Remapping → Speed, Ctrl+click tạo keyframe, kéo tách keyframe để ramp mượt.\n- Frame Hold: chuột phải → Add Frame Hold / Insert Frame Hold Segment (freeze frame).\n- Warp Stabilizer không áp chung với speed thay đổi trên cùng clip → nest clip trước.",
+   "tools": "pr_set_speed (percent, ripple); time remapping → pr_run_extendscript/QE",
+   "sources": [
+    "https://www.adobe.com/learn/premiere-pro"
+   ]
+  },
+  {
+   "id": "stabilize-fix",
+   "title": "Ổn định hình & sửa lỗi hình",
+   "level": "nang-cao",
+   "tags": [
+    "rung",
+    "stabilize",
+    "warp stabilizer",
+    "ổn định",
+    "lỗi hình",
+    "flicker",
+    "noise",
+    "crop"
+   ],
+   "body": "- Warp Stabilizer: Smoothness 5–15% cho handheld nhẹ (mặc định 50% thường gây méo \"jelly\"); Method: Subspace Warp (mặc định) → nếu méo đổi sang Position, Scale, Rotation hoặc Perspective. Framing: Stabilize, Crop, Auto-scale.\n- Yêu cầu: clip cùng kích thước sequence và không đổi speed — nếu không phải nest.\n- Đoạn rung quá nặng: tốt nhất là không dùng (Justin EDIT Suite quét shake và tránh đoạn rung khi align).\n- Flicker đèn: effect Flicker Reduction/Anti-flicker hoặc thay shot; Noise: Lumetri không khử noise — dùng effect Noise Reduction/Median nhẹ hoặc plugin chuyên dụng.\n- Punch-in (Scale 110–120%) để che rung nhẹ/jump cut; footage 4K trên sequence 1080 punch-in không mất nét.",
+   "tools": "pr_apply_effect 'Warp Stabilizer', pr_set_param (Smoothness), pr_set_param Motion/Scale",
+   "sources": [
+    "https://www.adobe.com/learn/premiere-pro"
+   ]
+  },
+  {
+   "id": "nest-adjust",
+   "title": "Nested sequence, adjustment layer, subclip",
+   "level": "nang-cao",
+   "tags": [
+    "nest",
+    "nested",
+    "adjustment layer",
+    "subclip",
+    "lồng sequence"
+   ],
+   "body": "- Nest (chuột phải → Nest): gom nhiều clip thành 1 để áp effect chung, stabilize sau khi đổi speed, hoặc quản lý đoạn phức tạp. Double-click để mở lại. Nest làm khó xuất XML/finishing → flatten/unnest trước khi giao màu ngoài.\n- Adjustment Layer (Project → New Item → Adjustment Layer): đặt trên track cao hơn, effect áp cho mọi track bên dưới trong thời lượng layer — dùng cho look màu chung, film grain, vignette.\n- Subclip (chọn In/Out ở Source → Make Subclip, Ctrl+U): cắt sẵn đoạn hay từ clip dài để tìm nhanh.",
+   "tools": "pr_run_extendscript (nest/adjustment layer chưa có tool riêng)",
+   "sources": [
+    "https://www.adobe.com/learn/premiere-pro"
+   ]
+  },
+  {
+   "id": "social-vertical",
+   "title": "Dựng video dọc 9:16 cho TikTok/Reels/Shorts",
+   "level": "co-ban",
+   "tags": [
+    "9:16",
+    "dọc",
+    "vertical",
+    "tiktok",
+    "reels",
+    "shorts",
+    "auto reframe",
+    "social",
+    "safe zone"
+   ],
+   "body": "- Sequence 1080×1920, 25/30 fps (theo footage), square pixels.\n- Chuyển từ 16:9: Sequence → Auto Reframe Sequence (AI theo chủ thể), sau đó rà lại từng đoạn chỉnh Motion/Position tay.\n- Safe zone: chữ/khuôn mặt quan trọng tránh ~15–20% dưới (caption + mô tả) và dải phải (nút tim/comment); đặt Safe Margins trong Program Monitor để nhìn.\n- Hook 1–3s, caption to, nhạc/âm thanh bắt tai, cắt nhanh; độ dài theo nền tảng và nội dung (casting/tuyển dụng thường 60–180s).\n- Export H.264 1080×1920, bitrate cao (VBR 2-pass 12–20 Mbps), AAC 320 kbps, loudness khoảng -14 LUFS.",
+   "tools": "pr_get_sequence (kiểm tra khung), pr_set_param Motion/Position/Scale, pr_export",
+   "sources": [
+    "https://www.adobe.com/learn/premiere-pro"
+   ]
+  },
+  {
+   "id": "export",
+   "title": "Export & giao file",
+   "level": "co-ban",
+   "tags": [
+    "export",
+    "xuất",
+    "render",
+    "h.264",
+    "prores",
+    "media encoder",
+    "master",
+    "bitrate",
+    "youtube"
+   ],
+   "body": "- Ctrl+M: Export mode. Web/social: H.264, Match Source – High Bitrate hoặc preset YouTube/TikTok; VBR 2-pass cho chất lượng/dung lượng tốt nhất.\n- Master lưu trữ: ProRes 422 HQ (hoặc DNxHR HQ) + audio PCM 48 kHz; từ master encode các bản social.\n- Queue vào Adobe Media Encoder để export nền trong khi tiếp tục dựng; có thể xuất nhiều bản cùng lúc.\n- Chỉ xuất đoạn: đặt In/Out, Range = Source In/Out.\n- Loudness Normalization trong Export (Effects) nếu cần ép chuẩn LUFS.\n- Kiểm tra trước khi giao: xem lại file đã xuất (không phải timeline), đúng khung/fps, không frame đen/flash frame ở điểm cắt, chữ đúng chính tả, tiếng không clip.",
+   "tools": "pr_set_in_out, pr_export (preset_path, range), pr_look_at_frame",
+   "sources": [
+    "https://www.adobe.com/learn/premiere-pro"
+   ]
+  },
+  {
+   "id": "qc-checklist",
+   "title": "Checklist QC trước khi giao",
+   "level": "co-ban",
+   "tags": [
+    "qc",
+    "kiểm tra",
+    "checklist",
+    "giao",
+    "flash frame",
+    "lỗi",
+    "deliver"
+   ],
+   "body": "1. Hình: không flash frame (mảnh clip 1–2 frame sót lại ở điểm cắt), không frame đen ngoài ý muốn, không media offline, không watermark proxy.\n2. Màu: da người đúng, các cảnh cùng buổi đồng màu, không cháy trắng/đen mất chi tiết.\n3. Tiếng: thoại rõ, không clip (peak ≤ -1 dBTP), loudness đúng nền tảng, không hụt tiếng ở điểm cắt (thêm crossfade 2–4 frame).\n4. Chữ: chính tả, tên riêng, safe zone, caption khớp tiếng.\n5. Kỹ thuật: khung hình/fps/bitrate đúng spec, độ dài đúng brief, tên file đúng quy ước + version.\nJustin EDIT Suite: QC FFmpeg (blur/black/freeze/silence/loudness) chạy ở bước Phân tích; agent có thể dùng pr_look_at_frame để soi điểm cắt.",
+   "tools": "pr_get_sequence (tìm clip rất ngắn = flash frame), pr_look_at_frame, pr_remove_clips",
+   "sources": [
+    "https://www.adobe.com/learn/premiere-pro"
+   ]
+  },
+  {
+   "id": "keyframe-motion",
+   "title": "Keyframe, Motion, animate",
+   "level": "nang-cao",
+   "tags": [
+    "keyframe",
+    "motion",
+    "zoom",
+    "ken burns",
+    "animate",
+    "ease",
+    "scale",
+    "position"
+   ],
+   "body": "- Effect Controls: Motion (Position, Scale, Rotation, Anchor Point), Opacity (+ blend mode), Time Remapping. Bấm đồng hồ để bật keyframe.\n- Zoom chậm (Ken Burns) cho ảnh tĩnh/B-roll: Scale 100 → 110 trong suốt clip; chuột phải keyframe → Ease In/Ease Out cho mượt.\n- Punch-in nhấn mạnh câu nói: nhảy Scale 100 → 115 tại điểm nhấn (không cần keyframe mượt).\n- Copy/paste attributes (Ctrl+Alt+V) để áp cùng Motion/effect cho nhiều clip.",
+   "tools": "pr_set_param, pr_add_keyframe, pr_get_clip_components",
+   "sources": [
+    "https://www.adobe.com/learn/premiere-pro"
+   ]
+  },
+  {
+   "id": "agent-map",
+   "title": "Bản đồ ý định editor → tool của agent",
+   "level": "agent",
+   "tags": [
+    "agent",
+    "tool",
+    "mapping",
+    "làm thế nào",
+    "thao tác",
+    "ai assist"
+   ],
+   "body": "- \"Quản lý dự án\" → pr_create_project, pr_open_project, pr_save_project, pr_save_project_as, pr_get_project_info.\n- \"Media & Bin\" → pr_import_media, pr_import_folder, pr_create_bin, pr_list_project_items (cây thư mục dự án).\n- \"Sequence (Timeline)\" → pr_create_sequence (tùy chỉnh WxH, fps), pr_duplicate_sequence, pr_delete_sequence, pr_list_sequences, pr_list_sequence_tracks.\n- \"Cắt ghép timeline\" → pr_razor (hoặc pr_split_clip), pr_remove_clips (hoặc pr_remove_from_timeline với ripple=true), pr_move_clip, pr_trim_clip, pr_insert_clip (pr_add_to_timeline).\n- \"Đóng khoảng trống / dồn clip\" → pr_close_gap. \"Fit/Scale khung hình\" → pr_fit_to_frame. \"Khớp frame Source/Timeline\" → pr_match_frame.\n- \"Transition / Chuyển cảnh\" → pr_add_transition, pr_add_transition_to_clip, hoặc pr_apply_default_transition (video: Ctrl+D, audio: Ctrl+Shift+D).\n- \"Zoom toàn bộ timeline\" → pr_zoom_to_sequence. \"Bật/tắt mute/solo/lock/target track\" → pr_toggle_track hoặc pr_mute_track.\n- \"Chạy lệnh Premiere theo tên/phím tắt\" (Close Gap, Nest, Speed/Duration, Audio Gain, Scene Edit Detection...) → pr_menu_command.\n- \"Chỉnh màu & LUT\" → pr_color_correct (Lumetri Color exposure, contrast...), pr_apply_lut (.cube/.look), pr_look_at_frame để kiểm tra hình ảnh thị giác.\n- \"Âm thanh & Keyframe\" → pr_adjust_audio_levels (dB), pr_add_audio_keyframes, Essential Sound Ducking.\n- \"Hiệu ứng & Chống rung\" → pr_apply_effect, pr_remove_effect, pr_stabilize_clip (Warp Stabilizer).\n- \"Tính năng nâng cao\" → pr_create_proxy_media, pr_auto_edit_to_music (dựng theo beat nhạc), pr_create_multicam_sequence, pr_set_speed (pr_speed_change).\n- \"Xuất file\" → pr_set_in_out (nếu một đoạn) → pr_export (pr_export_sequence qua Adobe Media Encoder).\n- Thao tác sâu ExtendScript/QE DOM → pr_run_extendscript theo cú pháp ES3.",
+   "tools": "pr_create_project, pr_open_project, pr_save_project, pr_save_project_as, pr_import_media, pr_import_folder, pr_create_bin, pr_create_sequence, pr_duplicate_sequence, pr_delete_sequence, pr_list_sequences, pr_list_sequence_tracks, pr_add_to_timeline, pr_remove_from_timeline, pr_move_clip, pr_trim_clip, pr_split_clip, pr_apply_effect, pr_remove_effect, pr_add_transition, pr_adjust_audio_levels, pr_add_audio_keyframes, pr_mute_track, pr_color_correct, pr_apply_lut, pr_stabilize_clip, pr_create_proxy_media, pr_auto_edit_to_music, pr_create_multicam_sequence, pr_speed_change, pr_export_sequence, toàn bộ pr_*",
+   "sources": [
+    "https://ppro-scripting.docsforadobe.dev/"
+   ]
+  },
+  {
+   "id": "dev-extendscript",
+   "title": "Ghi chú kỹ thuật ExtendScript/QE (cho pr_run_extendscript)",
+   "level": "agent",
+   "tags": [
+    "extendscript",
+    "qe",
+    "script",
+    "es3",
+    "api",
+    "ticks",
+    "dev"
+   ],
+   "body": "- ExtendScript = ES3: không let/const/arrow/template string/class; không Array.forEach/map/filter/indexOf trên mảng, không Object.keys; key trùng từ khóa phải để trong ngoặc kép ({\"in\": 1}). JSON có thể không có sẵn (host.jsx có polyfill).\n- Thời gian: Time object, .seconds; 1 giây = 254016000000 ticks.\n- app.project.activeSequence; videoTracks[i].clips[j] (start/end/inPoint/outPoint là Time); clip.components[k].properties[m].setValue(v, true).\n- QE DOM (app.enableQE(); qe.project.getActiveSequence()) cho razor, thêm effect/transition, speed — index item QE tính cả khoảng trống, nên khớp theo thời gian bắt đầu.\n- Hàm có sẵn trong host.jsx: jesProject, jesSequence, jesRazor, jesImport, jesExport, jesCloneSequence, jesEval…\n- Tương lai: Adobe đưa UXP thành chuẩn từ Premiere 2026, CEP/ExtendScript vẫn chạy nhưng sẽ bị thay thế (chưa công bố ngày) — code mới nên viết sao cho dễ port.",
+   "tools": "pr_run_extendscript",
+   "sources": [
+    "https://ppro-scripting.docsforadobe.dev/",
+    "https://developer.adobe.com/premiere-pro/uxp/ppro-reference/",
+    "https://developer.adobe.com/premiere-pro/uxp/resources/migration_guides/extendscript",
+    "https://hyperbrew.co/blog/uxp-plugins-in-premiere-2026/"
+   ]
+  },
+  {
+   "id": "sound-design-flow",
+   "title": "Sound design: soundtrack theo đoạn nhạc + SFX (tab Âm thanh)",
+   "level": "nang-cao",
+   "tags": [
+    "sfx",
+    "soundtrack",
+    "nhạc",
+    "whoosh",
+    "riser",
+    "hit",
+    "drop",
+    "beat",
+    "sound design",
+    "ducking",
+    "ambience"
+   ],
+   "body": "- Soundtrack chọn theo cấu trúc: tool phân tích BPM + đoạn intro/build/drop/break/outro, đặt marker '♪ DROP'… trên timeline. Dựng theo đoạn: intro chậm (shot 2–4s, dissolve), build tăng nhịp, drop = montage cắt bám beat (shot 0.5–1.5s), break/outro lắng lại.\n- Kết nhạc: cắt ở cuối một đoạn nhạc gần độ dài video + fade 1.5–2s (không cắt giữa câu nhạc).\n- SFX đặt theo peak: whoosh peak trùng điểm cắt; riser peak trùng drop; hit ngay đầu drop; pop khi chữ hiện. Không lặp cùng file liên tiếp.\n- Mức: Nhẹ (chỉ đổi đoạn + drop — video cảm xúc/doc), Vừa (thêm whoosh một phần điểm cắt + pop chữ — promo), Dày (mọi điểm cắt + accent — TikTok/ads).\n- Mix: nhạc khoảng -4 dB clip gain, duck -10…-12 dB khi có thoại/âm thanh gốc; SFX để dưới nhạc, hit to hơn whoosh; ambience rất nhỏ (-30 dB) chỉ để lấp khoảng lặng. Master khoảng -14 LUFS cho social.\n- Track chuẩn: A1–A2 âm thanh gốc/thoại · A3–A4 SFX (luân phiên để không đè nhau) · A5 nhạc · A7 ambience.",
+   "tools": "sound_info, sound_design (place=false xem trước, place=true đặt)",
+   "sources": []
+  }
+ ]
+}

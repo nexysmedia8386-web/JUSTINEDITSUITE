@@ -1,0 +1,41 @@
+{
+  "id": "vlog_travel",
+  "name": "Vlog / Du lịch / Lifestyle",
+  "description": "Tối ưu cho nhịp điệu trải nghiệm. B-roll theo nhịp 3-5s, tự slow-mo 50%, giữ âm thanh môi trường -9dB, quét rung đầy đủ cho B-roll.",
+  "script_structure": {
+    "hook": "0:00-0:15 (chặn ngón tay 3s đầu, trích câu kịch tính/khoảnh khắc gây sốc từ giữa video)",
+    "intro": "0:15-0:40 (bối cảnh, mục tiêu hôm nay, lý do nên ở lại xem)",
+    "body": "0:40-70% (3-5 chặng nhỏ có tiến triển: Mở -> Diễn biến -> Chốt)",
+    "climax": "70%-90% (khoảnh khắc đắt giá nhất, dồn B-roll đẹp & nhạc cao trào, ít thoại)",
+    "outro": "90%-100% (khép lại vòng tròn với hook, đúc kết bài học/kết quả + CTA)"
+  },
+  "silence": {
+    "on": true,
+    "gap": 0.45,
+    "pad_in": 0.1,
+    "pad_out": 0.12,
+    "min_piece": 0.45
+  },
+  "punch_in": false,
+  "auto_slowmo_60p": true,
+  "slowmo_speed": 50,
+  "bgm_ducking_db": -16.0,
+  "broll_nat_gain_db": -9.0,
+  "broll_dur": 3.5,
+  "broll_dur_static": 3.0,
+  "sfx_density": "medium",
+  "skip_shake_roles": [],
+  "skip_transcribe_roles": [
+    "b_roll",
+    "junk"
+  ],
+  "min_speech_rms_db": -32.0,
+  "subs": {
+    "on": false
+  },
+  "transitions": {
+    "on": true,
+    "dur": 0.6,
+    "broll_rate": 0.3
+  }
+}

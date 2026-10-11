@@ -1,0 +1,42 @@
+{
+  "id": "interview_casting",
+  "name": "Phỏng vấn / Casting / Reality Show",
+  "description": "Tối ưu cho phỏng vấn 2 máy hoặc casting nhiều take. Bắt cặp hỏi-đáp, bỏ qua quét rung trên A-Roll tripod.",
+  "script_structure": {
+    "hook": "0:00-0:10 (trích câu thoại/cảm xúc kịch tính nhất từ diễn xuất)",
+    "intro": "0:10-0:30 (giới thiệu ứng viên/nhân vật, vị trí ứng tuyển)",
+    "body": "0:30-70% (bắt cặp Hỏi - Đáp liên tục, các câu hỏi chuyên môn/thách thức)",
+    "climax": "70%-90% (thử thách diễn xuất/tình huống khó nhất, take diễn đỉnh nhất)",
+    "outro": "90%-100% (nhận xét giám khảo, quyết định nhận/loại + CTA)"
+  },
+  "silence": {
+    "on": true,
+    "gap": 0.4,
+    "pad_in": 0.1,
+    "pad_out": 0.15,
+    "min_piece": 0.35
+  },
+  "punch_in": false,
+  "multicam_switch_s": 6.0,
+  "bgm_ducking_db": -20.0,
+  "broll_nat_gain_db": -15.0,
+  "broll_dur": 3.0,
+  "sfx_density": "minimal",
+  "skip_shake_roles": [
+    "a_roll",
+    "screen"
+  ],
+  "skip_transcribe_roles": [
+    "b_roll",
+    "junk"
+  ],
+  "min_speech_rms_db": -32.0,
+  "subs": {
+    "on": true,
+    "max_chars": 30,
+    "highlight_style": "gold"
+  },
+  "transitions": {
+    "on": false
+  }
+}

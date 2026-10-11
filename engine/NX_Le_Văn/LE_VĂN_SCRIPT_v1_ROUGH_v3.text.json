@@ -1,0 +1,46 @@
+{
+ "name": "LE_VĂN_SCRIPT_v1_ROUGH_v3",
+ "fps": 29.97002997002997,
+ "w": 1920,
+ "h": 1080,
+ "cues": [],
+ "highlights": [],
+ "titles": [
+  {
+   "s": 0.0,
+   "e": 2.502,
+   "text": "Trải nghiệm thực tế",
+   "style": "title",
+   "line": "L001"
+  },
+  {
+   "s": 9.977,
+   "e": 12.479,
+   "text": "Triết lý thiết kế",
+   "style": "title",
+   "line": "L004"
+  },
+  {
+   "s": 21.388,
+   "e": 23.891,
+   "text": "Quá nhiều công tắc",
+   "style": "title",
+   "line": "L007"
+  },
+  {
+   "s": 66.3,
+   "e": 68.802,
+   "text": "Nhà tự động thói quen",
+   "style": "text",
+   "line": "L016"
+  },
+  {
+   "s": 89.022,
+   "e": 91.525,
+   "text": "Sống tiện nghi và phù hợp",
+   "style": "title",
+   "line": "L021"
+  }
+ ],
+ "vo": []
+}

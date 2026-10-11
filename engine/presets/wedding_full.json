@@ -1,0 +1,62 @@
+{
+  "id": "wedding_full",
+  "name": "Wedding Full Film 15–40 phút (theo giờ quay)",
+  "description": "Phim cưới đầy đủ theo trình tự giờ quay: giữ trọn lời thề, phát biểu, nghi lễ (bỏ trùng khi quay 2 máy), cầu nối B-roll ổn định nhất giữa các đoạn nói, cắt im lặng nhẹ, dissolve khi đổi cảnh. Mặc định 25 phút.",
+  "mode": "story",
+  "script_structure": {
+    "prologue": "0:00-2:00 (montage mở đầu + câu nói hay nhất)",
+    "getting_ready": "chuẩn bị hai bên gia đình",
+    "ceremony": "rước dâu, lễ gia tiên, lễ đường — giữ trọn lời thề, trao nhẫn",
+    "reception": "tiệc: phát biểu, nâng ly, nhảy",
+    "epilogue": "kết: hai người + cảm ơn, credit"
+  },
+  "target_dur": 1500,
+  "pace": 1.0,
+  "story_shot_s": 3.5,
+  "story_speech_share": 0.65,
+  "story_scene_gap_min": 20.0,
+  "story_bridge_shots": 3,
+  "min_stab": 0.45,
+  "w_stab": 0.45,
+  "w_quality": 0.3,
+  "w_motion": 0.05,
+  "w_speech": 0.2,
+  "chrono": "auto",
+  "nat_sound": true,
+  "broll_nat_gain_db": -12.0,
+  "auto_slowmo_60p": true,
+  "slowmo_speed": 50,
+  "silence": {
+    "on": true,
+    "gap": 0.8,
+    "pad_in": 0.15,
+    "pad_out": 0.25,
+    "min_piece": 0.8
+  },
+  "punch_in": false,
+  "bgm_ducking_db": -20.0,
+  "sfx_density": "none",
+  "skip_shake_roles": [],
+  "skip_transcribe_roles": [
+    "junk"
+  ],
+  "skip_roles": [
+    "junk",
+    "audio_master",
+    "screen"
+  ],
+  "min_speech_rms_db": -34.0,
+  "subs": {
+    "on": false,
+    "max_chars": 36
+  },
+  "transitions": {
+    "on": true,
+    "dur": 1.0,
+    "scene": true,
+    "broll_rate": 0.25,
+    "fade_in": 1.5,
+    "fade_out": 2.5,
+    "audio": true
+  }
+}

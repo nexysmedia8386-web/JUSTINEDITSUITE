@@ -1,0 +1,76 @@
+{
+  "id": "youtube_long",
+  "name": "YouTube dài 8–30 phút (chương + giữ chân)",
+  "description": "YouTube dài talking head + demo: hook ≤ 25s, chương có tag 'n/N' và thẻ chương + whoosh, nói trước máy ≤ 9 shot liền rồi chen hình minh hoạ (~40% thời lượng), cắt sát hơi thở (0.28s), punch-in luân phiên, caption từ khoá, nhạc nền -18…-20 dB dưới giọng, tự xuất chương YouTube.",
+  "mode": "script",
+  "chapters": true,
+  "script_structure": {
+    "cold_open": "0:00-0:25 (câu tín nhiệm có con số + 3-5 shot minh hoạ nhanh 1-2s + lời hứa 'xem hết được gì'; không chào hỏi)",
+    "intro": "0:25-0:45 (khung N chương/cấp độ, nói rõ người xem đang ở đâu và sẽ lên tới đâu)",
+    "chapters": "0:45-90% (3-7 chương cùng một khuôn: thẻ chương → định nghĩa → 2 pro tip / ví dụ → demo màn hình → câu nối sang chương sau; CTA giữa video ở ~25-30%)",
+    "climax": "90%-95% (chương cao nhất: kết quả lớn nhất + quan điểm riêng, có 1 khoảng lặng nhạc trước câu chốt)",
+    "outro": "95%-100% (câu hỏi cam kết để comment + CTA + end screen 20s)"
+  },
+  "silence": {
+    "on": true,
+    "gap": 0.28,
+    "pad_in": 0.06,
+    "pad_out": 0.1,
+    "min_piece": 0.3
+  },
+  "punch_in": true,
+  "punch_in_scale": 112.0,
+  "bgm_ducking_db": -20.0,
+  "broll_nat_gain_db": -16.0,
+  "broll_dur": 4.0,
+  "broll_dur_static": 3.5,
+  "broll_dur_max": 6.0,
+  "sfx_density": "medium",
+  "skip_shake_roles": [
+    "a_roll",
+    "screen"
+  ],
+  "skip_transcribe_roles": [
+    "b_roll",
+    "junk"
+  ],
+  "min_speech_rms_db": -32.0,
+  "subs": {
+    "on": true,
+    "max_chars": 42,
+    "highlight_style": "yellow"
+  },
+  "transitions": {
+    "on": true,
+    "dur": 0.4,
+    "scene": false,
+    "broll_rate": 0.05,
+    "fade_in": 0,
+    "fade_out": 1.0,
+    "audio": true
+  },
+  "style_guide": {
+    "pacing": "ASL 4-5s (trung vị ~4s), 12-16 cắt/phút đều suốt video, không shot nào > 20s; mật độ cắt cao nhất ở hook.",
+    "a_roll": "2 góc máy (trung cảnh chính diện + góc nghiêng rộng), đổi góc mỗi ý mới để che jump cut; tối đa ~9 shot nói trước máy liền nhau (~30-40s) rồi chen hình minh hoạ.",
+    "broll": "Hình minh hoạ ~40-45% thời lượng: screen record trong khung tối bo góc (không full màn hình), PiP người nói khi cần thấy mặt, B-roll đời thực làm bằng chứng, B-roll AI chỉ cho ẩn dụ; mỗi hình 3-6s, giọng nói chạy liên tục bên dưới.",
+    "graphics": "Tag chương cố định góc trên trái 'Chương n/N · Tên'; thẻ chương full khung 2,5-3s; thẻ bước có số ở góc dưới; nhãn PRO TIP; một bảng màu + font cho toàn kênh.",
+    "captions": "Caption theo TỪ KHOÁ 2-5 chữ (không phụ đề cả câu trên hình chính), sans đậm trắng; con số / từ khoá dùng serif italic màu nhấn; ≤ 1 lần mỗi 8-10s, chỉ câu đắt.",
+    "sound": "Giọng ~-14 LUFS, đỉnh ≤ -1 dBTP; nhạc nền chậm 70-90 BPM thấp hơn giọng 18-20 dB, duck tự động, không cắt theo beat; SFX: hit cuối hook, whoosh/riser 1,5-2s ở thẻ chương, click/gõ phím khi demo, pop nhẹ khi thẻ bước hiện; không SFX cho mọi caption.",
+    "cta": "CTA mềm giữa video (~25-30%, tài liệu/quà) + cuối video (câu hỏi cam kết để comment + video tiếp theo)."
+  },
+  "benchmarks": [
+    {
+      "ref": "Dan Martell — 1000 hours of Learning Claude in 15 Minutes (phân tích Reverse 08/10/2026)",
+      "dur_s": 897,
+      "shots": 205,
+      "asl_s": 4.4,
+      "cuts_per_min": "12-16",
+      "talking_head_pct": 56,
+      "illustration_pct": 44,
+      "max_talking_run": 9,
+      "speech_pct": 96,
+      "music_bpm": 72,
+      "music_under_voice_db": -19
+    }
+  ]
+}

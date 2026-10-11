@@ -1,0 +1,68 @@
+{
+  "id": "wedding_teaser",
+  "name": "Wedding Teaser 60s dọc 9:16 (theo nhạc)",
+  "description": "Teaser cưới 60s khung dọc: những khoảnh khắc đẹp nhất, nhịp nhanh hơn highlight, 1 câu nói mở đầu trên nhạc, cắt đúng beat, kết slow-mo.",
+  "mode": "beat",
+  "music_driven": true,
+  "script_structure": {
+    "hook": "0:00-0:05 (khoảnh khắc đắt nhất + 1 câu nói)",
+    "build": "0:05-0:35 (chi tiết, lễ, cảm xúc — cắt theo beat)",
+    "peak": "0:35-0:52 (cao trào: nụ hôn, tung hoa, nhảy)",
+    "end": "0:52-1:00 (hai người, slow-mo, tên + ngày)"
+  },
+  "seq": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 29.97,
+    "fit": "fill"
+  },
+  "target_dur": 60,
+  "pace": 0.85,
+  "min_shot": 0.5,
+  "max_shot": 3.0,
+  "min_stab": 0.5,
+  "w_stab": 0.45,
+  "w_quality": 0.35,
+  "w_motion": 0.1,
+  "w_speech": 0.3,
+  "w_chrono": 0.1,
+  "chrono": "auto",
+  "speech_moments": 1,
+  "speaker_shot_s": 2.5,
+  "duck_db": -14.0,
+  "music_gain_db": -3.0,
+  "music_fade_out": 1.5,
+  "xfade_slow": false,
+  "nat_sound": false,
+  "auto_slowmo_60p": true,
+  "slowmo_speed": 50,
+  "silence": {
+    "on": false
+  },
+  "punch_in": false,
+  "sfx_density": "light",
+  "skip_shake_roles": [],
+  "skip_transcribe_roles": [
+    "b_roll",
+    "junk"
+  ],
+  "skip_roles": [
+    "junk",
+    "audio_master",
+    "screen"
+  ],
+  "min_speech_rms_db": -32.0,
+  "subs": {
+    "on": false,
+    "max_chars": 20
+  },
+  "transitions": {
+    "on": true,
+    "dur": 0.4,
+    "scene": false,
+    "broll_rate": 0,
+    "fade_in": 0.3,
+    "fade_out": 1.2,
+    "audio": true
+  }
+}

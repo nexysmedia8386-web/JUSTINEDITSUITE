@@ -1,0 +1,1444 @@
+{
+ "name": "VIDEO_GOPRO_SCRIPT_v6",
+ "bin": "video_Gopro",
+ "src": "G:/PQ/SOURCE/video Gopro",
+ "out": "G:/JustinEditSuite/engine/NX_video_Gopro",
+ "mode": "beat",
+ "preset": "beat_cut",
+ "seq": {
+  "w": 1920,
+  "h": 1080,
+  "fps": 29.97,
+  "fit": "fill"
+ },
+ "silence": {
+  "on": false
+ },
+ "shake": {
+  "on": false
+ },
+ "subs": {
+  "on": false
+ },
+ "sfx": {
+  "on": false
+ },
+ "highlights_on": false,
+ "punch_in": false,
+ "broll_audio": {
+  "on": false
+ },
+ "transitions": {
+  "on": true,
+  "dur": 0.4,
+  "scene": false,
+  "broll_rate": 0,
+  "fade_in": 0.3,
+  "fade_out": 1.2,
+  "audio": false
+ },
+ "autofix": {
+  "slowmo": true,
+  "rotate": true
+ },
+ "end_slate": 0,
+ "scene_names": {
+  "M01": "♪ Intro 0:00",
+  "M02": "♪ Break 0:06",
+  "M03": "♪ Break 0:13",
+  "M04": "♪ Break 0:20",
+  "M05": "♪ Break 0:30",
+  "M06": "♪ Main 0:37",
+  "M07": "♪ Main 0:58",
+  "M08": "♪ Main 1:03",
+  "M09": "♪ Main 1:16",
+  "M10": "♪ Main 1:31"
+ },
+ "segments": [
+  {
+   "file": "GX019666.MP4",
+   "in": 2.1,
+   "out": 4.64,
+   "tl": [
+    0.0,
+    5.08
+   ],
+   "scene": "M01",
+   "label": "♪ Intro · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.062,
+   "stab": 0.98,
+   "flags": [
+    "slow-mo 50%"
+   ],
+   "exclude": [],
+   "script_line": "",
+   "speed": 50.0,
+   "beat": "intro"
+  },
+  {
+   "file": "GX019696.MP4",
+   "in": 15.5,
+   "out": 16.437,
+   "tl": [
+    5.08,
+    6.954
+   ],
+   "scene": "M01",
+   "label": "♪ Intro · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.059,
+   "stab": 0.98,
+   "flags": [
+    "slow-mo 50%"
+   ],
+   "exclude": [],
+   "script_line": "",
+   "speed": 50.0,
+   "beat": "intro"
+  },
+  {
+   "file": "GX019677.MP4",
+   "in": 3.3,
+   "out": 4.653,
+   "tl": [
+    6.954,
+    9.66
+   ],
+   "scene": "M02",
+   "label": "♪ Break · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.009,
+   "stab": 0.98,
+   "flags": [
+    "slow-mo 50%"
+   ],
+   "exclude": [],
+   "script_line": "",
+   "speed": 50.0,
+   "beat": "break"
+  },
+  {
+   "file": "GX019706.MP4",
+   "in": 4.9,
+   "out": 6.972,
+   "tl": [
+    9.66,
+    13.804
+   ],
+   "scene": "M02",
+   "label": "♪ Break · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.005,
+   "stab": 1.0,
+   "flags": [
+    "slow-mo 50%"
+   ],
+   "exclude": [],
+   "script_line": "",
+   "speed": 50.0,
+   "beat": "break"
+  },
+  {
+   "file": "GX019702.MP4",
+   "in": 2.9,
+   "out": 4.738,
+   "tl": [
+    13.804,
+    17.48
+   ],
+   "scene": "M03",
+   "label": "♪ Break · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.016,
+   "stab": 0.99,
+   "flags": [
+    "slow-mo 50%"
+   ],
+   "exclude": [],
+   "script_line": "",
+   "speed": 50.0,
+   "beat": "break"
+  },
+  {
+   "file": "GX019701.MP4",
+   "in": 3.2,
+   "out": 4.578,
+   "tl": [
+    17.48,
+    20.236
+   ],
+   "scene": "M03",
+   "label": "♪ Break · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.017,
+   "stab": 1.0,
+   "flags": [
+    "slow-mo 50%"
+   ],
+   "exclude": [],
+   "script_line": "",
+   "speed": 50.0,
+   "beat": "break"
+  },
+  {
+   "file": "GX019683.MP4",
+   "in": 3.5,
+   "out": 5.332,
+   "tl": [
+    20.236,
+    23.9
+   ],
+   "scene": "M04",
+   "label": "♪ Break · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.004,
+   "stab": 1.0,
+   "flags": [
+    "slow-mo 50%"
+   ],
+   "exclude": [],
+   "script_line": "",
+   "speed": 50.0,
+   "beat": "break"
+  },
+  {
+   "file": "GX019714.MP4",
+   "in": 4.2,
+   "out": 6.03,
+   "tl": [
+    23.9,
+    27.56
+   ],
+   "scene": "M04",
+   "label": "♪ Break · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.003,
+   "stab": 1.0,
+   "flags": [
+    "slow-mo 50%"
+   ],
+   "exclude": [],
+   "script_line": "",
+   "speed": 50.0,
+   "beat": "break"
+  },
+  {
+   "file": "GX019688.MP4",
+   "in": 2.9,
+   "out": 4.498,
+   "tl": [
+    27.56,
+    30.755
+   ],
+   "scene": "M04",
+   "label": "♪ Break · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.004,
+   "stab": 0.96,
+   "flags": [
+    "slow-mo 50%"
+   ],
+   "exclude": [],
+   "script_line": "",
+   "speed": 50.0,
+   "beat": "break"
+  },
+  {
+   "file": "GX019728.MP4",
+   "in": 4.5,
+   "out": 6.333,
+   "tl": [
+    30.755,
+    34.42
+   ],
+   "scene": "M05",
+   "label": "♪ Break · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.0,
+   "stab": 1.0,
+   "flags": [
+    "slow-mo 50%"
+   ],
+   "exclude": [],
+   "script_line": "",
+   "speed": 50.0,
+   "beat": "break"
+  },
+  {
+   "file": "GX019731.MP4",
+   "in": 5.9,
+   "out": 7.504,
+   "tl": [
+    34.42,
+    37.628
+   ],
+   "scene": "M05",
+   "label": "♪ Break · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 0.992,
+   "stab": 0.98,
+   "flags": [
+    "slow-mo 50%"
+   ],
+   "exclude": [],
+   "script_line": "",
+   "speed": 50.0,
+   "beat": "break"
+  },
+  {
+   "file": "GX019747.MP4",
+   "in": 2.7,
+   "out": 4.512,
+   "tl": [
+    37.628,
+    39.44
+   ],
+   "scene": "M06",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.059,
+   "stab": 0.97,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019746.MP4",
+   "in": 11.2,
+   "out": 13.02,
+   "tl": [
+    39.44,
+    41.26
+   ],
+   "scene": "M06",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.021,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019739.MP4",
+   "in": 2.0,
+   "out": 3.84,
+   "tl": [
+    41.26,
+    43.1
+   ],
+   "scene": "M06",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.009,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019743.MP4",
+   "in": 3.1,
+   "out": 6.74,
+   "tl": [
+    43.1,
+    46.74
+   ],
+   "scene": "M06",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.042,
+   "stab": 0.98,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019736.MP4",
+   "in": 5.0,
+   "out": 8.64,
+   "tl": [
+    46.74,
+    50.38
+   ],
+   "scene": "M06",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.009,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019729.MP4",
+   "in": 5.8,
+   "out": 7.62,
+   "tl": [
+    50.38,
+    52.2
+   ],
+   "scene": "M06",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.043,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019735.MP4",
+   "in": 5.5,
+   "out": 7.34,
+   "tl": [
+    52.2,
+    54.04
+   ],
+   "scene": "M06",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.031,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019741.MP4",
+   "in": 3.8,
+   "out": 5.62,
+   "tl": [
+    54.04,
+    55.86
+   ],
+   "scene": "M06",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.009,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019742.MP4",
+   "in": 3.0,
+   "out": 5.736,
+   "tl": [
+    55.86,
+    58.596
+   ],
+   "scene": "M06",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.017,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019738.MP4",
+   "in": 1.6,
+   "out": 3.424,
+   "tl": [
+    58.596,
+    60.42
+   ],
+   "scene": "M07",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.005,
+   "stab": 1.0,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019745.MP4",
+   "in": 2.2,
+   "out": 4.02,
+   "tl": [
+    60.42,
+    62.24
+   ],
+   "scene": "M07",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 0.997,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019737.MP4",
+   "in": 1.0,
+   "out": 2.371,
+   "tl": [
+    62.24,
+    63.611
+   ],
+   "scene": "M07",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 0.815,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019672.MP4",
+   "in": 7.4,
+   "out": 9.209,
+   "tl": [
+    63.611,
+    65.42
+   ],
+   "scene": "M08",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 0.805,
+   "stab": 0.98,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019708.MP4",
+   "in": 7.0,
+   "out": 8.82,
+   "tl": [
+    65.42,
+    67.24
+   ],
+   "scene": "M08",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.04,
+   "stab": 0.98,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019690.MP4",
+   "in": 5.0,
+   "out": 6.82,
+   "tl": [
+    67.24,
+    69.06
+   ],
+   "scene": "M08",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.034,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019722.MP4",
+   "in": 6.4,
+   "out": 8.22,
+   "tl": [
+    69.06,
+    70.88
+   ],
+   "scene": "M08",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.032,
+   "stab": 0.98,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019692.MP4",
+   "in": 2.6,
+   "out": 3.5,
+   "tl": [
+    70.88,
+    71.78
+   ],
+   "scene": "M08",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.027,
+   "stab": 0.98,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019721.MP4",
+   "in": 6.0,
+   "out": 6.92,
+   "tl": [
+    71.78,
+    72.7
+   ],
+   "scene": "M08",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.021,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019717.MP4",
+   "in": 1.1,
+   "out": 2.0,
+   "tl": [
+    72.7,
+    73.6
+   ],
+   "scene": "M08",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.012,
+   "stab": 0.98,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019713.MP4",
+   "in": 1.8,
+   "out": 2.7,
+   "tl": [
+    73.6,
+    74.5
+   ],
+   "scene": "M08",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.054,
+   "stab": 0.97,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019693.MP4",
+   "in": 3.6,
+   "out": 4.52,
+   "tl": [
+    74.5,
+    75.42
+   ],
+   "scene": "M08",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.021,
+   "stab": 0.98,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019727.MP4",
+   "in": 5.3,
+   "out": 6.634,
+   "tl": [
+    75.42,
+    76.754
+   ],
+   "scene": "M08",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.005,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019732.MP4",
+   "in": 4.1,
+   "out": 5.926,
+   "tl": [
+    76.754,
+    78.58
+   ],
+   "scene": "M09",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.003,
+   "stab": 1.0,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019730.MP4",
+   "in": 2.3,
+   "out": 4.12,
+   "tl": [
+    78.58,
+    80.4
+   ],
+   "scene": "M09",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.0,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019725.MP4",
+   "in": 5.6,
+   "out": 7.42,
+   "tl": [
+    80.4,
+    82.22
+   ],
+   "scene": "M09",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 0.997,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019723.MP4",
+   "in": 0.9,
+   "out": 1.8,
+   "tl": [
+    82.22,
+    83.12
+   ],
+   "scene": "M09",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.005,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019720.MP4",
+   "in": 6.0,
+   "out": 6.92,
+   "tl": [
+    83.12,
+    84.04
+   ],
+   "scene": "M09",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.004,
+   "stab": 1.0,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019684.MP4",
+   "in": 15.8,
+   "out": 16.7,
+   "tl": [
+    84.04,
+    84.94
+   ],
+   "scene": "M09",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.017,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019681.MP4",
+   "in": 16.6,
+   "out": 17.5,
+   "tl": [
+    84.94,
+    85.84
+   ],
+   "scene": "M09",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.012,
+   "stab": 0.98,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019675.MP4",
+   "in": 1.8,
+   "out": 2.72,
+   "tl": [
+    85.84,
+    86.76
+   ],
+   "scene": "M09",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.012,
+   "stab": 0.94,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019705.MP4",
+   "in": 4.9,
+   "out": 5.82,
+   "tl": [
+    86.76,
+    87.68
+   ],
+   "scene": "M09",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.033,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019670.MP4",
+   "in": 2.7,
+   "out": 4.48,
+   "tl": [
+    87.68,
+    89.46
+   ],
+   "scene": "M09",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.036,
+   "stab": 0.98,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019668.MP4",
+   "in": 3.9,
+   "out": 5.729,
+   "tl": [
+    89.46,
+    91.289
+   ],
+   "scene": "M09",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.018,
+   "stab": 0.98,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019664.MP4",
+   "in": 5.6,
+   "out": 7.411,
+   "tl": [
+    91.289,
+    93.1
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.013,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019671.MP4",
+   "in": 1.8,
+   "out": 3.6,
+   "tl": [
+    93.1,
+    94.9
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.013,
+   "stab": 0.97,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019707.MP4",
+   "in": 7.0,
+   "out": 7.92,
+   "tl": [
+    94.9,
+    95.82
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.012,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019674.MP4",
+   "in": 6.4,
+   "out": 7.3,
+   "tl": [
+    95.82,
+    96.72
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.009,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019703.MP4",
+   "in": 6.1,
+   "out": 7.0,
+   "tl": [
+    96.72,
+    97.62
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.009,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019686.MP4",
+   "in": 7.4,
+   "out": 8.3,
+   "tl": [
+    97.62,
+    98.52
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.007,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019733.MP4",
+   "in": 3.2,
+   "out": 4.12,
+   "tl": [
+    98.52,
+    99.44
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.001,
+   "stab": 1.0,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019724.MP4",
+   "in": 2.4,
+   "out": 3.3,
+   "tl": [
+    99.44,
+    100.34
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.001,
+   "stab": 0.98,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019691.MP4",
+   "in": 1.2,
+   "out": 2.12,
+   "tl": [
+    100.34,
+    101.26
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.0,
+   "stab": 1.0,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019748.MP4",
+   "in": 5.9,
+   "out": 6.82,
+   "tl": [
+    101.26,
+    102.18
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 0.997,
+   "stab": 0.93,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019744.MP4",
+   "in": 7.0,
+   "out": 7.9,
+   "tl": [
+    102.18,
+    103.08
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 0.992,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "20260523_083511.mp4",
+   "in": 3.6,
+   "out": 4.5,
+   "tl": [
+    103.08,
+    103.98
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 0.805,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "20260523_165855.mp4",
+   "in": 2.9,
+   "out": 3.8,
+   "tl": [
+    103.98,
+    104.88
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 0.805,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019712.MP4",
+   "in": 3.3,
+   "out": 5.1,
+   "tl": [
+    104.88,
+    106.68
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 0.757,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019711.MP4",
+   "in": 3.6,
+   "out": 4.52,
+   "tl": [
+    106.68,
+    107.6
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.004,
+   "stab": 0.98,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019715.MP4",
+   "in": 4.1,
+   "out": 5.02,
+   "tl": [
+    107.6,
+    108.52
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.0,
+   "stab": 0.99,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019685.MP4",
+   "in": 3.0,
+   "out": 4.8,
+   "tl": [
+    108.52,
+    110.32
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 1.0,
+   "stab": 1.0,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019687.MP4",
+   "in": 18.4,
+   "out": 20.18,
+   "tl": [
+    110.32,
+    112.1
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 0.996,
+   "stab": 0.96,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "20260523_093317.mp4",
+   "in": 7.1,
+   "out": 8.92,
+   "tl": [
+    112.1,
+    113.92
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 0.998,
+   "stab": 1.0,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019667.MP4",
+   "in": 2.5,
+   "out": 4.3,
+   "tl": [
+    113.92,
+    115.72
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 0.556,
+   "stab": 1.0,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "GX019699.MP4",
+   "in": 1.5,
+   "out": 3.32,
+   "tl": [
+    115.72,
+    117.54
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 0.804,
+   "stab": 1.0,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  },
+  {
+   "file": "20260523_093317.mp4",
+   "in": 40.9,
+   "out": 43.605,
+   "tl": [
+    117.54,
+    120.245
+   ],
+   "scene": "M10",
+   "label": "♪ Main · ",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "score": 0.878,
+   "stab": 1.0,
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "beat": "main"
+  }
+ ],
+ "overlays": [],
+ "highlights": [],
+ "music": [
+  {
+   "file": "G:/PQ/INTRO 1.mp3",
+   "name": "INTRO 1.mp3",
+   "start": 0.0,
+   "in": 0.0,
+   "end": 120.245,
+   "gain_db": -3.0,
+   "fade_in": 0.0,
+   "fade_out": 1.5,
+   "duck": [],
+   "duck_db": -16.0
+  }
+ ],
+ "audio_inserts": [],
+ "vo_track": [],
+ "sub_cues": [],
+ "markers": [],
+ "missing": [],
+ "broll_requests": [],
+ "vo_lines": [],
+ "unused_speech": [],
+ "report_notes": [],
+ "montage": {
+  "music": "INTRO 1.mp3",
+  "bpm": 130.4,
+  "mood": "fast-dynamic",
+  "music_dur": 199.464,
+  "end": 120.245
+ }
+}

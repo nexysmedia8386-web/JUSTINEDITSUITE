@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(cd G:\\\\JustinEditSuite\\\\engine\\\\nxcore; $f=\"$PWD\\\\stability.py\"; $c=[IO.File]::ReadAllText\\($f\\); $c=$c.Replace\\('progress\\(f\"stability: {len\\(need_qc\\)} clip','progress\\(f\"{len\\(need_qc\\)} clip'\\).Replace\\('progress\\(f\"stability: {g} luồng GPU','progress\\(f\"{g} luồng GPU'\\); [IO.File]::WriteAllText\\($f,$c,\\(New-Object Text.UTF8Encoding $false\\)\\); $f=\"$PWD\\\\qc.py\"; $c=[IO.File]::ReadAllText\\($f\\); $c=$c.Replace\\('progress\\(f\"QC: {g} luồng GPU','progress\\(f\"{g} luồng GPU'\\); [IO.File]::WriteAllText\\($f,$c,\\(New-Object Text.UTF8Encoding $false\\)\\); python -m py_compile stability.py qc.py; if \\($?\\) {\"ok\"})"
+    ]
+  }
+}

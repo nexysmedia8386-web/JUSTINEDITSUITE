@@ -1,0 +1,252 @@
+{
+ "name": "LE_VĂN_SCRIPT_v1_ROUGH_v2",
+ "fps": 23.976023976023978,
+ "w": 1080,
+ "h": 1920,
+ "cues": [
+  {
+   "s": 3.587,
+   "e": 5.667,
+   "text": "Bởi có những thứ khi"
+  },
+  {
+   "s": 5.667,
+   "e": 6.827,
+   "text": "nhìn trên bản vẽ rất"
+  },
+  {
+   "s": 6.827,
+   "e": 7.797,
+   "text": "khó hình dung"
+  },
+  {
+   "s": 8.027,
+   "e": 9.897,
+   "text": "nhưng khi tận mắt thấy"
+  },
+  {
+   "s": 10.218,
+   "e": 12.618,
+   "text": "Với tôi, làm kiến trúc không"
+  },
+  {
+   "s": 12.618,
+   "e": 13.918,
+   "text": "chỉ là tạo ra một căn"
+  },
+  {
+   "s": 13.918,
+   "e": 15.268,
+   "text": "nhà đẹp trên bản vẽ."
+  },
+  {
+   "s": 21.375,
+   "e": 22.015,
+   "text": "Mình cũng không biết là"
+  },
+  {
+   "s": 22.015,
+   "e": 23.015,
+   "text": "cái đèn nào là đèn nào luôn"
+  },
+  {
+   "s": 23.015,
+   "e": 24.395,
+   "text": "Ví dụ em muốn tắt đúng"
+  },
+  {
+   "s": 24.395,
+   "e": 25.715,
+   "text": "cái đèn này đi Thì nhìn"
+  },
+  {
+   "s": 25.715,
+   "e": 26.725,
+   "text": "vào đây em cũng sẽ"
+  },
+  {
+   "s": 36.536,
+   "e": 38.036,
+   "text": "trên 1 cái app duy nhất"
+  },
+  {
+   "s": 38.036,
+   "e": 39.596,
+   "text": "anh không cần phải nhớ"
+  },
+  {
+   "s": 39.596,
+   "e": 41.458,
+   "text": "5 -6 cái app khác"
+  },
+  {
+   "s": 41.458,
+   "e": 44.178,
+   "text": "Thay vì dùng một cái rổ"
+  },
+  {
+   "s": 44.178,
+   "e": 45.118,
+   "text": "remote như thế này thì"
+  },
+  {
+   "s": 45.118,
+   "e": 46.098,
+   "text": "bây giờ mình sẽ dùng"
+  },
+  {
+   "s": 46.098,
+   "e": 46.948,
+   "text": "cái con này thôi."
+  },
+  {
+   "s": 47.318,
+   "e": 48.118,
+   "text": "Con này là con remote"
+  },
+  {
+   "s": 48.118,
+   "e": 49.568,
+   "text": "gọi là đa năng."
+  },
+  {
+   "s": 49.778,
+   "e": 51.018,
+   "text": "Nó sẽ thay thế hết tất cả"
+  },
+  {
+   "s": 51.018,
+   "e": 51.578,
+   "text": "những cái remote trong"
+  },
+  {
+   "s": 51.578,
+   "e": 52.468,
+   "text": "cái phòng này của mình."
+  },
+  {
+   "s": 52.802,
+   "e": 55.602,
+   "text": "À khi mà có Smart Home bảo"
+  },
+  {
+   "s": 55.602,
+   "e": 58.702,
+   "text": "là cái việc mặc Eco hay là"
+  },
+  {
+   "s": 58.702,
+   "e": 60.922,
+   "text": "một ca sĩ thì mình kiếm được"
+  },
+  {
+   "s": 60.922,
+   "e": 62.332,
+   "text": "trên Smart Home luôn"
+  },
+  {
+   "s": 62.687,
+   "e": 63.867,
+   "text": "là căn nhà có thể hiểu"
+  },
+  {
+   "s": 63.867,
+   "e": 65.207,
+   "text": "được thói quen và nhu"
+  },
+  {
+   "s": 65.207,
+   "e": 66.177,
+   "text": "cầu của tầng người."
+  },
+  {
+   "s": 74.533,
+   "e": 75.793,
+   "text": "Bởi một ngôi nhà tốt"
+  },
+  {
+   "s": 75.793,
+   "e": 76.943,
+   "text": "không chỉ để ở"
+  },
+  {
+   "s": 82.499,
+   "e": 83.779,
+   "text": "Nó phải giúp chúng ta"
+  },
+  {
+   "s": 83.779,
+   "e": 85.049,
+   "text": "sống thoải mái hơn"
+  },
+  {
+   "s": 85.839,
+   "e": 87.599,
+   "text": "tiện nghi hơn và phù hợp"
+  },
+  {
+   "s": 87.599,
+   "e": 88.889,
+   "text": "hơn với chính mình."
+  },
+  {
+   "s": 89.256,
+   "e": 90.536,
+   "text": "Nó phải giúp chúng ta"
+  },
+  {
+   "s": 90.536,
+   "e": 91.806,
+   "text": "sống thoải mái hơn"
+  },
+  {
+   "s": 92.596,
+   "e": 94.356,
+   "text": "tiện nghi hơn và phù hợp"
+  },
+  {
+   "s": 94.356,
+   "e": 95.396,
+   "text": "hơn với chính mình."
+  }
+ ],
+ "highlights": [],
+ "titles": [
+  {
+   "s": 0.0,
+   "e": 2.502,
+   "text": "Trải nghiệm thực tế",
+   "style": "title",
+   "line": "L001"
+  },
+  {
+   "s": 9.968,
+   "e": 12.471,
+   "text": "Triết lý thiết kế",
+   "style": "title",
+   "line": "L004"
+  },
+  {
+   "s": 21.355,
+   "e": 23.857,
+   "text": "Quá nhiều công tắc",
+   "style": "title",
+   "line": "L007"
+  },
+  {
+   "s": 66.275,
+   "e": 68.777,
+   "text": "Nhà tự động thói quen",
+   "style": "text",
+   "line": "L016"
+  },
+  {
+   "s": 89.006,
+   "e": 91.508,
+   "text": "Sống tiện nghi và phù hợp",
+   "style": "title",
+   "line": "L021"
+  }
+ ],
+ "vo": []
+}

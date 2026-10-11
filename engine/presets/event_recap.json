@@ -1,0 +1,59 @@
+{
+  "id": "event_recap",
+  "name": "Event / Recap Sự kiện / Lễ hội",
+  "description": "Video sự kiện dựng theo nhạc: tắt Whisper (tiết kiệm GPU), montage cắt đúng beat theo trình tự giờ quay, giữ tiếng không khí -14dB, đoạn ổn định nhất. Chọn nhạc rồi Align; chưa có nhạc → lưới 120 BPM.",
+  "script_structure": {
+    "hook": "0:00-0:08 (cú đập thị giác, cảnh đắt nhất/đông nhất/cảm xúc nhất đưa lên đầu, không logo)",
+    "positioning": "0:08-0:20 (định vị: cái gì - ở đâu - khi nào - quy mô bằng text ≤ 6 từ)",
+    "body": "0:20-65% (thân bài theo thời gian thực: chuẩn bị -> khai mạc -> cao điểm hoạt động)",
+    "climax": "65%-85% (đỉnh cảm xúc: pháo hoa/vỗ tay/trao giải, nhạc dâng, cắt nhanh 1-2s theo beat)",
+    "outro": "85%-100% (hạ nhịp slow-mo, câu chốt cảm xúc/con số ấn tượng, logo BTC + CTA)"
+  },
+  "disable_transcribe": true,
+  "music_driven": true,
+  "silence": {
+    "on": false
+  },
+  "punch_in": false,
+  "auto_slowmo_60p": true,
+  "slowmo_speed": 50,
+  "bgm_ducking_db": 0.0,
+  "broll_nat_gain_db": -14.0,
+  "broll_dur": 2.0,
+  "broll_dur_static": 1.8,
+  "sfx_density": "medium",
+  "skip_shake_roles": [],
+  "skip_transcribe_roles": [
+    "a_roll",
+    "b_roll",
+    "junk"
+  ],
+  "min_speech_rms_db": -32.0,
+  "subs": {
+    "on": false
+  },
+  "transitions": {
+    "on": true,
+    "dur": 0.5,
+    "broll_rate": 0.4
+  },
+  "mode": "beat",
+  "target_dur": 90,
+  "pace": 0.9,
+  "min_stab": 0.45,
+  "w_stab": 0.45,
+  "w_quality": 0.25,
+  "w_motion": 0.15,
+  "w_speech": 0.3,
+  "w_chrono": 0.25,
+  "chrono": "auto",
+  "speech_moments": 0,
+  "nat_sound": true,
+  "xfade_slow": false,
+  "music_gain_db": -4.0,
+  "skip_roles": [
+    "junk",
+    "audio_master",
+    "screen"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "shortform_9x16",
+  "name": "Short-form (TikTok / Reels / Shorts 9:16)",
+  "description": "Tối ưu khung dọc 9:16, nhịp siêu nhanh, cắt im lặng cực gắt 0.18s, punch-in 115%, SFX dồn dập, kinetic text.",
+  "script_structure": {
+    "hook": "0:00-0:03 (chặn ngón tay 3s đầu, hình + text + thoại gây tò mò/sốc ngay)",
+    "retention": "0:03-60% (giữ chân: duy trì nợ chưa trả, hứa hẹn điều sắp tới, không lộ kết quả sớm)",
+    "payoff": "60%-85% (trả nợ lời hứa: giao đúng thứ hook đã hứa - câu trả lời, cú twist, mẹo)",
+    "loop": "85%-95% (chốt vòng lặp loop: câu/cảnh nối liền về đầu video để kích thích xem lại)",
+    "cta": "95%-100% (CTA nhẹ: 1 lời mời duy nhất - lưu/follow/xem tiếp)"
+  },
+  "seq": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 29.97,
+    "fit": "fill"
+  },
+  "silence": {
+    "on": true,
+    "gap": 0.18,
+    "pad_in": 0.04,
+    "pad_out": 0.06,
+    "min_piece": 0.2
+  },
+  "punch_in": true,
+  "punch_in_scale": 115.0,
+  "bgm_ducking_db": -18.0,
+  "broll_nat_gain_db": -18.0,
+  "broll_dur": 1.8,
+  "broll_dur_static": 1.5,
+  "sfx_density": "heavy",
+  "skip_shake_roles": [
+    "screen"
+  ],
+  "skip_transcribe_roles": [
+    "b_roll",
+    "junk"
+  ],
+  "min_speech_rms_db": -32.0,
+  "subs": {
+    "on": true,
+    "max_chars": 18,
+    "highlight_style": "yellow"
+  },
+  "transitions": {
+    "on": false
+  }
+}

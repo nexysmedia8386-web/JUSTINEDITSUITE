@@ -1,0 +1,20 @@
+{
+ "punch_in": {"mod": "assemble", "type": "bool", "label": "Punch-in (zoom nhẹ) khi nối 2 take cùng khung"},
+ "punch_in_scale": {"mod": "assemble", "type": "num", "lo": 100, "hi": 130, "unit": "%", "label": "Mức zoom punch-in"},
+ "broll_dur": {"mod": "assemble", "type": "num", "lo": 1.0, "hi": 6.0, "unit": "s", "label": "Độ dài B-roll thường"},
+ "broll_dur_max": {"mod": "assemble", "type": "num", "lo": 1.5, "hi": 8.0, "unit": "s", "label": "B-roll dài nhất"},
+ "auto_slowmo": {"mod": "assemble", "type": "bool", "label": "Tự slow-mo cảnh quay 50/60p"},
+ "slowmo_speed": {"mod": "assemble", "type": "num", "lo": 20, "hi": 90, "unit": "%", "label": "Tốc độ slow-mo"},
+ "j_l_cut": {"mod": "assemble", "type": "bool", "label": "J/L-cut: tiếng thoại kéo dưới B-roll"},
+ "jump_cover": {"mod": "assemble", "type": "bool", "label": "Che jump cut bằng B-roll ngắn"},
+ "dissolve_s": {"mod": "transition", "type": "num", "lo": 0.3, "hi": 1.5, "unit": "s", "label": "Độ dài dissolve"},
+ "pace": {"mod": "montage", "type": "num", "lo": 0.5, "hi": 2.0, "unit": "×", "label": "Nhịp cắt montage (nhân với preset; < 1 nhanh hơn, > 1 chậm hơn)"},
+ "min_shot": {"mod": "montage", "type": "num", "lo": 0.3, "hi": 3.0, "unit": "s", "label": "Shot ngắn nhất (montage)"},
+ "max_shot": {"mod": "montage", "type": "num", "lo": 1.0, "hi": 10.0, "unit": "s", "label": "Shot dài nhất (montage)"},
+ "music_gain_db": {"mod": "montage", "type": "num", "lo": -20, "hi": 0, "unit": "dB", "label": "Âm lượng nhạc montage"},
+ "xfade_slow": {"mod": "montage", "type": "bool", "label": "Dissolve thay cắt ở đoạn nhạc chậm"},
+ "sfx_density": {"mod": "sound", "type": "enum", "values": ["light", "medium", "heavy"], "names": {"light": "nhẹ", "medium": "vừa", "heavy": "dày"}, "label": "Mức SFX"},
+ "sfx_gain_db": {"mod": "sound", "type": "num", "lo": -12, "hi": 6, "unit": "dB", "label": "Âm lượng SFX (cộng thêm vào mức tự chọn)"},
+ "mg_scale": {"mod": "motion", "type": "num", "lo": 0.6, "hi": 1.6, "unit": "×", "label": "Cỡ đồ họa / logo"},
+ "mg_dur": {"mod": "motion", "type": "num", "lo": 1.5, "hi": 8.0, "unit": "s", "label": "Thời lượng đồ họa"}
+}

@@ -1,0 +1,27 @@
+﻿dist/
+build/
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+_nexys_work/
+*.mp4
+*.mov
+*.mxf
+*.wav
+*.exe
+.env
+
+# --- AI models (không commit) ---
+manifests/
+manifests-v2/
+blobs/
+metadata/
+models/
+*.gguf
+*.safetensors
+*.bin
+*.onnx
+*.pt
+*.pth

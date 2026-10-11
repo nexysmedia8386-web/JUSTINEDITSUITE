@@ -1,0 +1,60 @@
+{
+  "id": "explainer_vo",
+  "name": "Explainer — VO + B-roll",
+  "description": "Video giải thích: voice-over thu sẵn (hoặc VoiceStudio tạo) → tự transcribe, chia câu, mỗi câu một B-roll khớp nội dung (AI mô tả × độ ổn định), cắt đúng đầu câu, phụ đề từ VO, nhạc nền tự duck dưới giọng.",
+  "mode": "vo",
+  "script_structure": {
+    "hook": "0:00-0:08 (câu hỏi/vấn đề người xem đang gặp)",
+    "promise": "0:08-0:20 (video này giải thích gì, trong bao lâu)",
+    "explain": "0:20-80% (2-4 ý: khái niệm → ví dụ hình ảnh → hệ quả; mỗi câu VO = 1 hình)",
+    "recap": "80%-92% (tóm tắt 3 ý bằng text)",
+    "cta": "92%-100% (hành động tiếp theo)"
+  },
+  "vo_shot_max": 4.5,
+  "vo_shot_min": 1.5,
+  "vo_lead": 0.5,
+  "vo_tail": 1.2,
+  "vo_music_db": -22.0,
+  "music_gain_db": -6.0,
+  "min_stab": 0.4,
+  "w_stab": 0.4,
+  "w_quality": 0.3,
+  "w_motion": 0.05,
+  "w_speech": 0.5,
+  "nat_sound": false,
+  "auto_slowmo_60p": true,
+  "slowmo_speed": 50,
+  "broll_min_score": 0.12,
+  "silence": {
+    "on": false
+  },
+  "punch_in": false,
+  "bgm_ducking_db": -22.0,
+  "sfx_density": "light",
+  "skip_shake_roles": [
+    "screen"
+  ],
+  "skip_transcribe_roles": [
+    "b_roll",
+    "junk"
+  ],
+  "skip_roles": [
+    "junk",
+    "audio_master"
+  ],
+  "min_speech_rms_db": -32.0,
+  "subs": {
+    "on": true,
+    "max_chars": 32,
+    "highlight_style": "yellow"
+  },
+  "transitions": {
+    "on": true,
+    "dur": 0.4,
+    "scene": false,
+    "broll_rate": 0,
+    "fade_in": 0.4,
+    "fade_out": 1.0,
+    "audio": true
+  }
+}

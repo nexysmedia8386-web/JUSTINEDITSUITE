@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head><script src="shim.js?v=1791714153"></script>
+<meta charset="utf-8">
+<title>Justin EDIT Suite</title>
+<link rel="stylesheet" href="css/app.css?v=1791714153">
+<link rel="stylesheet" href="css/theme2.css?v=1791714153">
+</head>
+<body>
+<div id="topPin">
+<header><div class="logo">J</div><b>JUSTIN EDIT SUITE</b><span class="muted">v2.6.1</span><span id="status">…</span></header>
+<div id="log" title="Nhật ký — kéo mép dưới để đổi chiều cao"></div>
+<div id="progress"><div id="pbar"><i></i></div><span id="pLabel"></span><button class="btn" id="bCancel">Hủy</button></div>
+<nav>
+  <button data-tab="run" class="on" title="Chạy pipeline: quét · phân tích · align · build"><svg viewBox="0 0 16 16"><path d="M5 3.5v9l7.5-4.5z"/></svg><span>Chạy</span></button>
+  <button data-tab="scriptTab" title="Kịch bản ghim nguồn: brief → AI chọn shot → kiểm tra hình → KichBan_*.md · cắt theo nhạc · label màu source · marker timeline"><svg viewBox="0 0 16 16"><path d="M4 1.8h5.5L12.5 5v9.2H4z"/><path d="M9.5 1.8V5h3M6 8.2h4.5M6 10.7h3"/></svg><span>Kịch bản</span></button>
+  <button data-tab="review" title="Review bản dựng: đổi shot, trim, đồng bộ timeline · report lần Align gần nhất"><svg viewBox="0 0 16 16"><path d="M2.5 4h2M2.5 8h2M2.5 12h2M6.5 4h7M6.5 8h7M6.5 12h7"/></svg><span>Review</span></button>
+  <button data-tab="ai" title="AI: trò chuyện với agent · rà lỗi · ra lệnh sửa · transcript · hậu kỳ · YouTube"><svg viewBox="0 0 16 16"><path d="M8 2l1.4 3.6L13 7l-3.6 1.4L8 12l-1.4-3.6L3 7l3.6-1.4z"/><path d="M12.5 11.5l.6 1.4 1.4.6-1.4.6-.6 1.4-.6-1.4-1.4-.6 1.4-.6z"/></svg><span>AI</span></button>
+  <button data-tab="snd" title="Nhạc + SFX cho sequence đang mở"><svg viewBox="0 0 16 16"><path d="M2 8h1.5M4.5 5v6M7 2.5v11M9.5 5.5v5M12 4v8M14 7v2"/></svg><span>Âm thanh</span></button>
+  <button data-tab="hl" title="Chữ động (JIZURA) và highlight trên timeline"><svg viewBox="0 0 16 16"><path d="M3 3.5h10M8 3.5v9M5.5 12.5h5"/></svg><span>Chữ</span></button>
+  <button data-tab="voice" title="Giọng nói AI — VoiceStudio (clone giọng, thiết kế giọng, lồng tiếng, đọc kịch bản)"><svg viewBox="0 0 16 16"><rect x="5.5" y="1.8" width="5" height="8" rx="2.5"/><path d="M3 7.5a5 5 0 0 0 10 0M8 12.5v2M5.5 14.5h5"/></svg><span>Giọng</span></button>
+  <button data-tab="revTab" title="Phân tích video tham khảo → ngôn ngữ dựng + prompt Seedance 2.5 + template sequence"><svg viewBox="0 0 16 16"><rect x="1.8" y="3.2" width="9" height="9.6" rx="1.6"/><path d="M10.8 6.4l3.4-1.9v7l-3.4-1.9"/><circle cx="6.3" cy="8" r="1.7"/></svg><span>Reverse</span></button>
+  <button data-tab="set" title="Cài đặt, model AI, kiểm tra hệ thống"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="2.2"/><path d="M8 1.8v1.6M8 12.6v1.6M1.8 8h1.6M12.6 8h1.6M3.6 3.6l1.1 1.1M11.3 11.3l1.1 1.1M3.6 12.4l1.1-1.1M11.3 4.7l1.1-1.1"/></svg><span>Cài đặt</span></button>
+</nav>
+</div>
+
+<section id="run" class="on">
+  <div class="card">
+    <h3>Source <span class="sp muted" id="srcMeta"></span></h3>
+    <div class="row"><input id="src" placeholder="F:/NEXIS/HR 2509 — quét cả thư mục con"><button class="btn" id="pickSrc" title="Chọn folder">…</button><button class="btn" id="bScan" title="Quét nhanh: tìm clip trong mọi thư mục con + đọc thông số (có cache)">Quét</button><button class="btn" id="bAutoDesc" title="Mô tả tự động sau khi quét" style="white-space:nowrap">🤖 Mô tả</button></div>
+    <div class="row sessRow"><select id="sessSel" title="Phiên làm việc gần đây (tự lưu)"><option value="">↺ Phiên gần đây…</option></select><button class="btn" id="bSessOpen" title="Mở lại phiên đã chọn">Mở lại</button><button class="btn" id="bCache" title="Xem dung lượng và xóa cache của source này">🧹 Cache</button></div>
+    <div id="sessBanner" class="muted" style="display:none"></div>
+    <div id="dash"><div class="empty">Chọn folder source rồi bấm <b>Quét</b> — tool đọc cả thư mục con, thống kê clip, thời lượng, độ ổn định, cảnh báo.</div></div>
+  </div>
+
+  <div class="card" id="presetCard">
+    <h3>Thể loại video</h3>
+    <div class="row">
+      <select id="presetSel">
+        <option value="talking_head" selected>🎙️ Talking Head / Podcast / Chuyên gia</option>
+        <option value="vlog_travel">✈️ Vlog / Du lịch / Lifestyle</option>
+        <option value="interview_casting">🎭 Phỏng vấn / Casting / Reality Show</option>
+        <option value="shortform_9x16">📱 Short-form (TikTok / Reels / Shorts 9:16)</option>
+        <option value="event_recap">🎉 Event / Recap Sự kiện / Lễ hội (theo nhạc)</option>
+        <option value="beat_cut">🥁 Cut on beat — chỉ nhạc, không thoại</option>
+        <option value="wedding_highlight">💍 Wedding Highlight 3–5 phút</option>
+        <option value="wedding_full">💒 Wedding Full Film 15–40 phút</option>
+        <option value="wedding_teaser">💐 Wedding Teaser 60s dọc 9:16</option>
+        <option value="explainer_vo">🧩 Explainer — VO + B-roll</option>
+        <option value="youtube_long">▶️ YouTube dài 8–30 phút (chương)</option>
+        <option value="documentary">🎬 Phóng sự / Documentary</option>
+      </select>
+    </div>
+    <div class="hint" id="presetDesc">
+      ⚡ Tối ưu: Bỏ qua quét rung trên A-Roll tripod, Whisper chỉ chạy trên clip có giọng nói (VAD), cắt im lặng gap 0.25s, punch-in 112%, ducking -22dB.
+    </div>
+    <div class="row" id="montageRow" style="display:none;margin-top:6px;gap:6px;align-items:center">
+      <span class="muted" id="montageLbl" style="white-space:nowrap">♪ Nhạc</span>
+      <input id="montageFile" readonly style="flex:1;min-width:0">
+      <button class="btn" id="montagePick" title="Chọn file">Chọn…</button>
+      <button class="btn" id="montageClear" title="Bỏ chọn">✕</button>
+    </div>
+    <div class="hint" id="montageInfo" style="display:none"></div>
+    <label class="chk" id="chronoRow" style="margin:6px 0 0; font-size:11px;" title="B-roll và kịch bản AI đi theo trình tự giờ quay (sáng → tối, ngày trước → ngày sau). Vlog / Event: bật sẵn. Preset khác: tool hỏi trước khi quét, nhớ theo từng folder.">
+      <input type="checkbox" id="chronoChk" style="width:auto"> 🕒 Theo mạch thời gian quay <span class="muted" id="chronoNote"></span></label>
+  </div>
+
+  <div class="card">
+    <h3>Pipeline <span class="sp muted" id="pipeMeta"></span></h3>
+    <div class="pipe">
+      <div class="pst" id="pst_an"><b>●</b>Phân tích</div>
+      <div class="pst" id="pst_rc"><b>●</b>Rough cut</div>
+      <div class="pst" id="pst_sc"><b>●</b>Kịch bản</div>
+      <div class="pst" id="pst_al"><b>●</b>Align</div>
+      <div class="pst" id="pst_bu"><b>●</b>Build</div>
+    </div>
+    <div class="lanes" id="lanes" style="display:none"></div>
+    <div class="steps">
+      <button class="btn" id="bAnalyze" title="Probe + transcribe (GPU) song song với QC + độ ổn định/bố cục — chỉ xử lý clip mới/đổi">1 · Phân tích</button>
+      <button class="btn" id="bRough" title="Không cần kịch bản: dựng MỌI đoạn đạt chuẩn của toàn bộ source theo giờ quay, cắt bỏ đoạn rung/đen/mờ/đứng hình, màu clip theo vai trò → sequence _ROUGH">2 · Rough cut</button>
+      <button class="btn" id="bAlign" title="align kịch bản → plan.json">3 · Align</button>
+      <button class="btn" id="bBuild" title="plan → sequence trong project đang mở">4 · Build</button>
+    </div>
+    <div class="row" style="margin-top:5px;gap:6px;align-items:center">
+      <button class="btn chip" id="bAudio">🎙 Âm thanh</button>
+      <span class="muted" id="audioNote" style="font-size:var(--fs-xs)"></span>
+    </div>
+    <button class="btn main cta" id="bAll">▶ Chạy Phân tích → Align → Build</button>
+    <div class="hint" id="roughHint" style="display:none"></div>
+    <div class="hint" id="tagHint"></div>
+  </div>
+
+  <details class="card q-card" id="qCard"><summary>🌙 Hàng đợi chạy đêm <span class="sp muted" id="qMeta"></span></summary>
+    <div class="hint">Thả nhiều folder: tool chạy lần lượt <b>Phân tích → Dựng → Build</b> trong project đang mở. Câu hỏi giữa chừng được tự trả lời theo gợi ý
+      (ghi lại trong log); folder thiếu kịch bản / nhạc chỉ chạy Phân tích. Một folder lỗi không dừng cả hàng. Sáng ra xem báo cáo, rồi ghi chú ở <b>AI → 📍 Ghi chú</b>.</div>
+    <div id="qList" class="q-list"></div>
+    <div class="row" style="gap:6px;margin-top:6px;flex-wrap:wrap">
+      <button class="btn" id="qAdd" title="Chọn folder source để thêm vào hàng đợi">＋ Thêm folder…</button>
+      <button class="btn" id="qAddCur" title="Thêm folder source đang mở ở trên">＋ Folder đang mở</button>
+      <label class="chk" style="font-size:11px;margin-left:auto" title="Máy không tự ngủ khi hàng đợi đang chạy (tự thôi khi xong)"><input type="checkbox" id="qAwake" checked> Giữ máy không ngủ</label>
+    </div>
+    <div class="row" style="gap:6px;margin-top:6px">
+      <button class="btn main" id="qStart" style="flex:1">▶ Chạy hàng đợi</button>
+      <button class="btn" id="qStop" style="display:none;flex:1">Dừng sau folder này</button>
+      <button class="btn" id="qKill" style="display:none">■ Hủy ngay</button>
+    </div>
+    <div id="qReport" style="margin-top:6px"></div>
+  </details>
+
+  <div class="card">
+    <h3>Sequence</h3>
+    <div class="row"><div style="flex:1"><label>Tên sequence</label><input id="name" placeholder="CASTING_IDOL_9x16_SCRIPT_v1"></div></div>
+    <div class="row seqRow">
+      <div><label>Khung hình</label><select id="seqRatio">
+        <option value="auto">Tự theo source</option><option value="9:16">9:16 dọc (TikTok/Reels)</option><option value="16:9">16:9 ngang (YouTube)</option>
+        <option value="1:1">1:1 vuông</option><option value="4:5">4:5 (feed)</option><option value="4:3">4:3</option><option value="21:9">21:9 cinema</option></select></div>
+      <div><label>Độ phân giải</label><select id="seqRes"><option value="1080">1080p</option><option value="1440">1440p</option><option value="2160">4K</option></select></div>
+      <div><label>FPS</label><select id="seqFps"><option value="auto">Theo source</option><option value="23.976">23.976</option><option value="25">25</option><option value="29.97">29.97</option><option value="50">50</option><option value="59.94">59.94</option></select></div>
+    </div>
+    <details style="margin:-2px 0 6px"><summary>Đặt hình · chuyển cảnh · tiếng B-roll <span class="muted">(mặc định theo thể loại)</span></summary>
+    <div class="row seqRow">
+      <div><label>Đặt hình</label><select id="seqFit"><option value="fill">Lấp đầy (crop)</option><option value="fit">Vừa khung (viền)</option></select></div>
+      <div><label>Chuyển cảnh</label><select id="seqTrans" title="Theo preset = chuyển cảnh của thể loại video đã chọn; chọn khác để ghi đè"><option value="preset">Theo preset</option><option value="auto">Dissolve đổi cảnh + montage</option><option value="scene">Chỉ khi đổi cảnh</option><option value="off">Tắt (cắt thẳng)</option></select></div>
+      <div><label>Tiếng B-roll</label><select id="seqBrollDb" title="Theo preset = mức tiếng B-roll của thể loại video đã chọn; chọn mức khác để ghi đè"><option value="preset">Theo preset</option><option value="0">0 dB</option><option value="-6">−6 dB</option><option value="-9">−9 dB</option><option value="-12">−12 dB</option><option value="-18">−18 dB</option><option value="-99">Kèm nhưng tắt tiếng</option></select></div>
+    </div>
+    </details>
+    <div class="muted" id="seqInfo" style="font-size:10.5px;margin:-2px 0 6px"></div>
+    <div class="hint" id="scriptRef"></div>
+  </div>
+
+  
+</section>
+
+<section id="scriptTab">
+  <div class="card sc-head">
+    <div class="sc-headrow">
+      <div id="scSource" class="sc-src"></div>
+      <div class="sc-seg" id="scMode" title="Cách làm kịch bản (Cắt theo nhạc đổi luôn preset của folder)">
+        <button data-m="manual">✍️ Tự viết</button><button data-m="script">📝 AI viết</button><button data-m="beat">♪ Cắt theo nhạc</button>
+      </div>
+    </div>
+    <div class="hint" id="scModeNote"></div>
+  </div>
+
+  <!-- ================= TỰ VIẾT / SỬA KỊCH BẢN ================= -->
+  <div class="card" id="scManualCard" style="display:none">
+    <h3>Kịch bản <span class="sp muted" id="scManMeta"></span></h3>
+    <textarea id="scManText" rows="16" spellcheck="false" placeholder="Gõ hoặc dán kịch bản — ví dụ:
+
+# CẢNH 1 – Mở đầu
+[B-ROLL] toàn cảnh showroom, đèn bật dần
+[VO] Hôm nay chúng tôi đến Home Flow để trải nghiệm nhà thông minh.
+KTS: Với tôi, làm kiến trúc không chỉ là tạo ra một căn nhà đẹp.
+
+# CẢNH 2 – Ánh sáng
+NV: Mỗi nút là một **kịch bản ánh sáng** khác nhau.
+[TEXT] 1 chạm — đổi cả không khí căn phòng"></textarea>
+    <div class="row" style="margin-top:6px;gap:6px;flex-wrap:wrap">
+      <button class="btn" id="bScManOpen" title="Mở kịch bản .docx / .md / .txt vào ô để sửa">Mở file…</button>
+      <button class="btn" id="bScManNew" title="Ô trống — kịch bản mới (lưu thành KichBan_TuViet.md trong folder source)">Mới</button>
+      <button class="btn" id="bScManCheck" title="Xem tool hiểu kịch bản thế nào: số cảnh, câu thoại, B-roll, VO">Kiểm tra</button>
+      <span class="sp"></span>
+      <button class="btn" id="bScManSave" title="Lưu (bản trước giữ lại .bak)">Lưu</button>
+      <button class="btn main" id="bScManUse" title="Lưu rồi chạy Align với kịch bản này">Lưu &amp; Align →</button>
+    </div>
+    <div id="scManCheck" class="hint"></div>
+    <input id="script" type="hidden">
+    <label>Từ khóa highlight <span class="muted">(phẩy · trống = lấy chữ **in đậm** trong kịch bản)</span></label>
+    <input id="keywords" placeholder="tiềm năng, nhóm diễn">
+    <details style="margin-top:6px"><summary>Cách viết kịch bản để tool đọc đúng</summary>
+      <div class="hint" style="line-height:1.6">
+        <b># CẢNH 2 – tên cảnh</b> — mở cảnh mới (chuyển cảnh, chương YouTube) ·
+        <b>Tên: lời thoại</b> — câu nói thật, tool tìm đúng đoạn trong source (gần đúng chính tả vẫn khớp) ·
+        <b>[B-ROLL] mô tả</b> — chèn hình theo mô tả ·
+        <b>[VO] lời dẫn</b> — câu đọc voice off (tab Giọng tạo giọng) ·
+        <b>[TEXT] chữ</b> — chữ trên màn hình ·
+        <b>**từ**</b> — từ khóa highlight ·
+        <b>(ghi chú)</b> — bỏ qua khi dựng ·
+        <b>Lưu ý edit: → … lên đầu video</b> — đưa đoạn vừa viết lên làm hook.
+        File Word có bảng 2 cột Hình | Lời cũng đọc được.
+      </div>
+    </details>
+  </div>
+
+  <!-- ================= CẮT THEO NHẠC ================= -->
+  <div class="card" id="scBeatCard" style="display:none">
+    <h3><span class="sc-n">1</span> Bài nhạc</h3>
+    <div class="row"><input id="scBeatMusic" readonly placeholder="Chưa chọn — không nhạc = lưới 120 BPM"><button class="btn" id="bScBeatPick">Chọn…</button><button class="btn" id="bScBeatClear" title="Bỏ chọn">✕</button></div>
+    <div class="hint" id="scBeatInfo"></div>
+    <h3 style="margin-top:10px"><span class="sc-n">2</span> Kiểu cắt</h3>
+    <div class="grid2">
+      <div><label>Kiểu montage</label><select id="scBeatPreset"></select></div>
+      <div><label>Độ dài</label><select id="scBeatLen"><option value="0">Hết bài / theo preset</option><option value="30">30 giây</option><option value="60">60 giây</option><option value="90">90 giây</option><option value="120">2 phút</option><option value="180">3 phút</option><option value="240">4 phút</option></select></div>
+      <div><label>Nhịp cắt</label><select id="scBeatPace"><option value="1">Theo preset</option><option value="1.4">Chậm (shot dài hơn)</option><option value="0.7">Nhanh</option><option value="0.5">Rất nhanh</option></select></div>
+      <div><label>Câu nói thật chèn trên nhạc</label><select id="scBeatSpeech"><option value="0">Không — chỉ nhạc</option><option value="1">1 câu</option><option value="2">2 câu</option><option value="3">3 câu</option></select></div>
+    </div>
+    <div class="opts"><label class="chk"><input type="checkbox" id="scBeatEnergy"> Nhịp theo năng lượng bài (đoạn cao cắt dày, đoạn trầm giãn)</label></div>
+    <h3 style="margin-top:10px"><span class="sc-n">3</span> Dựng</h3>
+    <div class="row"><button class="btn main" id="bScBeatRun">♪ Cắt theo nhạc</button><button class="btn" id="bScBeatBuild" disabled>Build sequence →</button><button class="btn" id="bScBeatReport" disabled>Report</button></div>
+    <div class="sc-shuf">
+      <button class="btn" id="bScBeatShuffle" disabled title="Xáo lại shot (seed ngẫu nhiên) — vẫn chỉ lấy đoạn ổn định, cắt đúng beat; tránh lặp đúng clip của bản trước. Bản cũ được giữ trong ô Bản.">🎲 Shuffle</button>
+      <select id="scBeatShufMode" title="Xáo những gì"><option value="pics">Đổi hình, giữ nhịp</option><option value="rhythm">Đổi hình + nhịp cắt</option></select>
+      <select id="scBeatShufAmt" title="Mức xáo"><option value="0.35">Nhẹ</option><option value="0.65">Vừa</option><option value="1">Mạnh</option></select>
+      <select id="scBeatVer" title="Các bản đã cắt / shuffle — chọn để quay lại bản đó rồi Build"></select>
+    </div>
+    <div id="scBeatResult" class="hint"></div>
+    <div id="scBeatTable" class="sc-scroll"></div>
+  </div>
+
+  <!-- ================= KỊCH BẢN AI ================= -->
+  <div class="card" id="scBriefCard">
+    <h3><span class="sc-n">1</span> Brief</h3>
+    <div class="grid2">
+      <div><label>Format & thời lượng</label><input id="scDuration" list="scDurList" placeholder="vd: Dọc 9:16 · 60–90 giây"></div>
+      <div><label>Thể loại & mạch kể</label><select id="scType"></select></div>
+      <div><label>Voice off</label><select id="scVo"><option>Không VO</option><option>Không VO — chỉ nhạc + 2–3 câu thoại thật</option><option>Có VO — ngôi 'mình / nhà mình', thưa (~40%)</option><option>Có VO — người dẫn trung tính</option></select></div>
+      <div><label>CTA cuối video</label><input id="scCta" list="scCtaList" placeholder="Không CTA / nội dung CTA"></div>
+    </div>
+    <label>Tên riêng · tên kênh · điều cần tránh</label>
+    <input id="scNotes" placeholder="vd: Tuyết Vy & Tấn Phát · 02.08.2026 · không lộ biển số xe">
+    <datalist id="scDurList"><option value="Dọc 9:16 · 30–45 giây"><option value="Dọc 9:16 · 60–90 giây"><option value="Ngang 16:9 · 2–3 phút"><option value="Ngang 16:9 · 3–4 phút"><option value="Ngang 16:9 · 5–8 phút"><option value="Ngang 16:9 · 10 phút"></datalist>
+    <datalist id="scCtaList"><option value="Không CTA"><option value="Có CTA — mời đăng ký / theo dõi kênh"></datalist>
+    <div class="opts"><label class="chk"><input type="checkbox" id="scVision"> Kiểm tra hình bằng AI vision sau khi viết</label></div>
+  </div>
+
+  <div class="card" id="scRunCard">
+    <h3><span class="sc-n">2</span> Viết kịch bản <span class="sp muted" id="scRunMeta"></span></h3>
+    <div class="row"><button class="btn main" id="bScWrite">Viết kịch bản</button><button class="btn" id="bScRewrite" title="Bỏ dàn ý / shot list đã lưu, gọi AI lại từ đầu">Viết lại từ đầu</button></div>
+    <ol class="sc-steps" id="scSteps"></ol>
+    <div class="sc-err" id="scErr" style="display:none"></div>
+  </div>
+
+  <div class="card" id="scResultCard">
+    <h3><span class="sc-n">3</span> Kết quả</h3>
+    <div class="row sc-acts"><button class="btn main" id="bScAlign" disabled>Dùng để Align →</button><button class="btn" id="bScOpen" disabled>Mở .md</button><button class="btn" id="bScTable" disabled>Bảng đọc</button><button class="btn" id="bScVision" disabled>Kiểm tra hình</button><button class="btn" id="bScSheets" disabled>Contact sheet</button></div>
+    <div id="scResult"></div>
+    <div id="scTable" class="sc-scroll"></div>
+  </div>
+
+  <!-- ================= CÔNG CỤ KHÁC ================= -->
+  <details class="card sc-tools" id="scTools">
+    <summary>Công cụ khác <span class="muted">— plan mẫu · label màu source · marker timeline</span></summary>
+    <div class="sc-sub">
+      <h4>Plan mẫu <span class="muted">(phụ đề, SFX, hiệu ứng mặc định khi Align)</span></h4>
+      <select id="base"></select>
+    </div>
+    <div class="sc-sub">
+      <h4>Label màu source trong Project</h4>
+      <div class="row"><select id="scGroup"></select><button class="btn" id="bScLabel">Gán màu</button></div>
+      <div id="scLegend" class="opts"></div>
+      <div class="opts"><label class="chk"><input type="checkbox" id="scImport"> Import clip chưa có vào project (bin theo thư mục)</label><label class="chk"><input type="checkbox" id="scAutoLabel"> Tự gán màu sau mỗi lần Phân tích</label></div>
+      <div id="scLabelStatus" class="hint"></div>
+    </div>
+    <div class="sc-sub">
+      <h4>Marker mô tả lên sequence đang mở</h4>
+      <div class="row"><select id="scMkMode"><option value="shot">Từng shot + đầu chương</option><option value="chapter">Chỉ đầu chương</option></select><button class="btn" id="bScMarkers">Thêm marker</button><button class="btn" id="bScMkClear" title="Xóa marker tên bắt đầu bằng 'NX '">Xóa marker NX</button></div>
+      <div class="hint">Đỏ = chương · xanh lá = b-roll · xanh dương = thoại · cam = AI vision báo cần xem. Chạy lại sẽ thay marker NX cũ.</div>
+      <div id="scMkStatus" class="hint"></div>
+    </div>
+  </details>
+</section>
+
+<section id="revTab">
+  <div class="card">
+    <h3><span class="sc-n">1</span> Video tham khảo</h3>
+    <div class="row"><input id="rvFile" placeholder="Kéo-thả hoặc chọn file mp4 / mov…"><button class="btn" id="bRvPick">Chọn…</button></div>
+    <div class="hint" id="rvInfo"></div>
+    <div class="grid2">
+      <div><label>Độ nhạy cắt shot</label><select id="rvThresh"><option value="0.22">Nhạy — bắt cả cắt mềm</option><option value="0.32">Chuẩn</option><option value="0.45">Chỉ cắt rõ</option></select></div>
+      <div class="opts" style="align-self:end"><label class="chk"><input type="checkbox" id="rvTx"> Transcribe thoại (Whisper)</label></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3><span class="sc-n">2</span> Phân tích</h3>
+    <div class="rv-models">
+      <div><label>Model phân tích (xem video)</label><select id="rvMSee"></select></div>
+      <div><label>Model viết prompt</label><select id="rvMWrite"></select></div>
+      <button class="btn rv-mref" id="bRvMRef" title="Kiểm tra lại Ollama + key Gemini">↻</button>
+    </div>
+    <div class="hint" id="rvMStat"></div>
+    <div class="row"><button class="btn main" id="bRvRun">▶ Phân tích video</button><button class="btn" id="bRvRedo" title="Đo lại video từ đầu (sau khi đổi độ nhạy cắt)">Đo lại</button></div>
+    <ol class="sc-steps" id="rvSteps"></ol>
+    <div class="sc-err" id="rvErr" style="display:none"></div>
+  </div>
+
+  <div class="card" id="rvResultCard" style="display:none">
+    <h3><span class="sc-n">3</span> Ngôn ngữ dựng &amp; shot list</h3>
+    <div class="row sc-acts"><button class="btn" id="bRvMd">Mở .md</button><button class="btn" id="bRvFolder">Mở folder</button></div>
+    <div id="rvResult"></div>
+  </div>
+
+  <div class="card" id="rvPrCard" style="display:none">
+    <h3><span class="sc-n">4</span> Prompt Seedance 2.5</h3>
+    <div class="hint">Viết từ phân tích ở trên (không phân tích lại) — đổi độ dài, mục tiêu, yêu cầu hay model rồi viết lại bao nhiêu lần cũng được.</div>
+    <div class="grid2">
+      <div><label>Mỗi prompt</label><select id="rvSeg"><option value="5">≤ 5 giây</option><option value="8">≤ 8 giây</option><option value="10">≤ 10 giây</option><option value="12">≤ 12 giây</option><option value="15">≤ 15 giây</option></select></div>
+      <div><label>Mục tiêu</label><select id="rvMode"><option value="recreate">Tái tạo sát bản gốc</option><option value="style">Giữ phong cách, đổi nội dung</option></select></div>
+    </div>
+    <label>Yêu cầu riêng <span class="muted">(tuỳ chọn — dùng khi đổi nội dung)</span></label>
+    <textarea id="rvNote" rows="2" placeholder="vd: thay nhân vật thành idol nữ tóc bạch kim · bối cảnh sân thượng Sài Gòn đêm · giữ nhịp và màu"></textarea>
+    <div class="row" style="margin-top:8px"><button class="btn main" id="bRvPrompt">▶ Viết prompt Seedance</button><button class="btn" id="bRvCopyAll">Copy tất cả prompt</button></div>
+    <ol class="sc-steps" id="rvPrSteps"></ol>
+    <div class="sc-err" id="rvPrErr" style="display:none"></div>
+    <div id="rvPrompts"></div>
+  </div>
+
+  <div class="card" id="rvTplCard" style="display:none">
+    <h3><span class="sc-n">5</span> Template sequence</h3>
+    <div class="hint">Dựng lại đúng nhịp cắt, thời lượng từng shot, slow-mo, dissolve, cấu trúc, marker ghi chú kỹ thuật và nhạc dẫn của video tham khảo — chỉ thay source. Hiệu ứng, chữ, SFX áp thẳng lên thẻ clip trên timeline.</div>
+    <div class="grid2">
+      <div><label>Template</label><select id="rvTplPick"></select></div>
+      <div><label>Source</label><select id="rvTplSrc"><option value="cur">Folder source đang mở (tab Chạy)</option><option value="none">Không — chỉ khung slot để tự thay</option></select></div>
+      <div><label>Nhạc / tiếng</label><select id="rvTplMusic"><option value="guide">Tiếng gốc video tham khảo (nhạc dẫn)</option><option value="file">Bài nhạc khác…</option><option value="none">Không</option></select></div>
+      <div><label>Khung hình</label><select id="rvTplSeq"><option value="ref">Theo video tham khảo</option><option value="panel">Theo mục Sequence (tab Chạy)</option></select></div>
+    </div>
+    <div class="opts rv-tplo">
+      <label class="chk" title="Zoom in/out = keyframe Scale trên thẻ clip V1 · punch-in = Scale 112%"><input type="checkbox" id="rvTplFx"> Hiệu ứng (zoom keyframe, punch-in)</label>
+      <label class="chk" title="Chữ đồ hoạ của bản gốc → PNG trên V4, đúng vị trí + thời điểm"><input type="checkbox" id="rvTplText"> Chữ / title</label>
+      <label class="chk" title="SFX đo trên bản gốc → file thật từ thư viện SFX (tab Âm thanh), đỉnh âm khớp thời điểm gốc, A3"><input type="checkbox" id="rvTplSfx"> SFX</label>
+    </div>
+    <div class="row" style="margin-top:8px"><button class="btn main" id="bRvTpl">▶ Tạo template sequence</button><button class="btn" id="bRvTplDir">Mở folder template</button></div>
+    <div class="hint" id="rvTplInfo"></div>
+  </div>
+</section>
+
+  <section id="review">
+  <div class="card">
+    <div class="kpis" id="reviewKpis" style="margin-bottom:6px">
+      <div class="kpi"><span id="kpiDurLabel">Thời lượng dựng</span><b id="kpiDur">0.0s</b><small class="muted" id="kpiTarget"></small><i style="background:var(--grad)"></i></div>
+      <div class="kpi"><span>Phân đoạn A/B</span><b id="kpiSegs">0</b><small class="muted" id="kpiRatio">0 thoại · 0 B-roll</small><i style="background:var(--ok)"></i></div>
+      <div class="kpi"><span>Thẻ thiếu & Lỗi</span><b id="kpiIssues" style="color:var(--warn)">0</b><small class="muted" id="kpiIssuesDesc">0 cần duyệt</small><i style="background:var(--warn)"></i></div>
+    </div>
+
+    <div class="row" style="margin-bottom:6px; flex-wrap:wrap; gap:6px;">
+      <button class="btn" id="bReload" title="Tải lại plan từ file">↺ Tải lại plan</button>
+      <button class="btn" id="bFillGaps" style="display:none; color:var(--warn); border-color:var(--warn);" title="Thay mọi thẻ ▲ THIẾU bằng source khuyến nghị tốt nhất chưa có trên timeline">⚡ Lấp mọi thẻ thiếu</button>
+      <button class="btn main" id="bRebuild" title="Tạo sequence timeline mới trong Premiere Pro">▶ Rebuild Sequence</button>
+      <span class="muted" id="planInfo" style="align-self:center; margin-left:auto; font-size:11px;"></span>
+    </div>
+
+    <div class="rev-filter-bar">
+      <input id="reviewSearch" placeholder="Tìm theo thoại, tên file, từ khóa…" style="flex:2; min-width:130px;">
+      <select id="reviewSceneFilter" style="flex:1; min-width:110px;"><option value="">Tất cả cảnh</option></select>
+      <select id="reviewTypeFilter" style="flex:1; min-width:105px;">
+        <option value="all">Tất cả loại</option>
+        <option value="speech">🗣️ Thoại (A-roll)</option>
+        <option value="broll">🎬 B-roll</option>
+        <option value="gaps">⚠️ Thẻ thiếu (Gaps)</option>
+        <option value="issues">🔍 Cần xem (Điểm thấp)</option>
+      </select>
+      <label class="chk" style="margin:0; font-size:11px;"><input type="checkbox" id="onlyIssues" style="width:auto"> Chỉ lỗi/cần xem</label>
+    </div>
+
+    <div id="reviewWrap"><table id="segTable"></table></div>
+    <div class="hint">Bấm <b>ảnh</b> của đoạn → xem mọi lựa chọn (take khác, B-roll khác, đoạn khác trong clip dài) và đổi 1 click · <b>In/Out ◀ ▶</b> trim ±0.5s · bấm dòng → mở source + nhảy playhead · <b>📍</b> nhảy tới đoạn trên timeline.<br>
+      Khi sequence đang mở là bản dựng của plan này và bật <b>Sửa thẳng sequence</b>: mọi thay đổi áp ngay lên timeline (tự backup <i>_bak_hhmm</i> 1 lần). Sửa tay trên timeline → bấm <b>↻ Đồng bộ</b> (tự chạy khi mở tab) để plan cập nhật theo.</div>
+  </div>
+  <details class="card"><summary>Report lần Align gần nhất</summary><pre id="reportPre" class="muted" style="margin-top:6px">Chưa có report — chạy bước Align.</pre></details>
+</section>
+
+<section id="voice">
+  <div class="card">
+    <div class="vs-top">
+      <span id="vsState" class="vs-pill off">○ VoiceStudio đang tắt</span>
+      <button class="btn main" id="vsStart" title="Chạy backend VoiceStudio (Python, GPU) trên máy">▶ Bật</button>
+      <button class="btn" id="vsStop" title="Tắt backend để trả VRAM cho Whisper / Qwen" disabled>■ Tắt</button>
+      <span class="sp"></span>
+      <button class="btn" id="vsOpenFull" title="Mở giao diện VoiceStudio đầy đủ trong trình duyệt (clone / thiết kế giọng)" disabled>VoiceStudio đầy đủ ↗</button>
+    </div>
+  </div>
+  <div class="card vs-card">
+    <div class="vs-h">Giọng đọc</div>
+    <div class="vs-grid">
+      <label for="vsProfile">Giọng</label><select id="vsProfile"><option value="">Giọng mặc định của VoiceStudio</option></select>
+      <label for="vsLang">Ngôn ngữ</label><select id="vsLang"><option value="vi">Tiếng Việt</option><option value="en">English</option><option value="zh">中文</option></select>
+      <label for="vsSpeed">Tốc độ</label><div class="vs-speed"><input type="range" id="vsSpeed" min="0.8" max="1.3" step="0.05" value="1"><span id="vsSpeedV">1.00×</span></div>
+    </div>
+  </div>
+  <div class="card vs-card">
+    <div class="vs-h">Voice off <span id="vsSrc" class="muted" style="font-weight:400"></span><span class="sp"></span>
+      <button class="btn" id="vsReload" title="Đọc lại câu VO của bản Build gần nhất">↻</button></div>
+    <div id="vsLines"></div>
+    <div class="vs-actions">
+      <button class="btn main" id="vsGenAll" title="Tạo giọng cho mọi câu → <out>/vo/VO_01.wav …" disabled>Tạo giọng tất cả</button>
+      <button class="btn" id="vsGenMissing" title="Chỉ tạo các câu chưa có file">Chỉ câu chưa có</button>
+      <span class="sp"></span>
+      <button class="btn" id="vsPlaceAll" title="Đặt mọi câu đã tạo lên timeline đúng TC">Đặt lên timeline</button>
+      <select id="vsTrack" title="Track audio" style="width:auto"><option value="2">A3</option><option value="3">A4</option><option value="4">A5</option><option value="5">A6</option></select>
+    </div>
+    <div id="vsProg" class="muted"></div>
+  </div>
+  <details class="card vs-card"><summary>Audio khác tạo trong VoiceStudio</summary><div id="vsList"></div></details>
+  <div class="card">
+    <div id="vsSetup" class="muted" style="font-size:var(--fs-s)">Thư mục VoiceStudio: <input id="vsRepo" style="max-width:360px;display:inline-block"></div>
+  </div>
+</section>
+
+<section id="ai">
+  <div class="card">
+    <div class="row" style="margin-bottom:6px">
+      <select id="chatList" title="Lịch sử hội thoại"></select>
+      <button class="btn" id="chatNew" title="Hội thoại mới">＋</button>
+      <button class="btn" id="chatDel" title="Xóa hội thoại">🗑</button>
+    </div>
+    <div class="chips">
+      <button class="btn chip" data-q="Tóm tắt bản dựng hiện tại và chỉ ra 3 điểm yếu nhất.">Nhận xét bản dựng</button>
+      <button class="btn chip" data-q="Đề xuất cắt gọn để đạt thời lượng mục tiêu, liệt kê đoạn nên bỏ/trim.">Cắt gọn nhịp</button>
+      <button class="btn chip" data-q="Viết lại các highlight cho bắt mắt kiểu TikTok, tối đa 5 chữ mỗi cái.">Viết lại highlight</button>
+      <button class="btn chip" data-q="Xem sequence đang mở, kiểm tra vài frame và liệt kê lỗi dựng (jump cut, khoảng đen, chữ lệch khung).">Soát timeline</button>
+      <button class="btn chip" data-q="Đóng các khoảng trống (Close Gap) trên sequence đang mở.">Đóng khoảng trống</button>
+    </div>
+    <div id="chatLog"></div>
+    <textarea id="chatInput" placeholder="Hỏi hoặc giao việc cho AI…"></textarea>
+    <div class="row" style="margin-top:6px"><button class="btn main" id="chatSend">Gửi</button><button class="btn" id="chatStop" style="display:none">Dừng</button></div>
+  </div>
+</section>
+
+<section id="hl">
+  <div class="sc-seg hl-mode" id="hlMode"><button data-m="studio" class="on">🎬 Studio chữ &amp; đồ họa</button><button data-m="jizura" title="Trình JIZURA gốc: dựng chữ theo lời / thoại kiểu lyric video, AI Style cả bài">JIZURA đầy đủ</button></div>
+  <div id="stRoot"></div>
+  <div class="card" id="tfxCard" style="display:none">
+    <div class="tfx-bar">
+      <button class="btn" id="tfxSub" title="Đưa từng câu thoại (phụ đề của bản Build) vào JIZURA dạng LRC — đúng giờ trên sequence">Thoại → JIZURA</button>
+      <button class="btn" id="tfxHl" title="Đưa các highlight của plan vào JIZURA (cần Build lại để có timing)">Highlight → JIZURA</button>
+      <select id="tfxLook" title="Look tổng của chữ — Tự động: theo preset đang chọn + tone AI đọc được"><option value="auto">Look: theo preset</option><option value="explainer">Look: Explainer</option><option value="youtube">Look: YouTube</option><option value="cinematic">Look: Cinematic</option><option value="hype">Look: Hype</option></select>
+      <select id="tfxAi" title="Ai đọc ý nghĩa câu"><option value="auto">AI: Gemini → local</option><option value="local">AI: local (Ollama)</option><option value="rule">Luật (0 token)</option></select>
+      <button class="btn" id="tfxAiStyle" title="Đọc ý nghĩa từng câu (hook, số liệu, bước, so sánh, cảnh báo, trích dẫn, CTA…) → tự chọn layout, hiệu ứng vào/ra, decor, từ khoá nhấn; câu đã gán được khoá">✨ AI Style</button>
+      <select id="tfxAnchor" title="Thời điểm 0 của JIZURA ứng với đâu trên sequence"><option value="zero">Mốc: đầu sequence</option><option value="playhead">Mốc: playhead</option></select>
+      <select id="tfxTrack" title="Track đặt chữ"><option value="2">V3</option><option value="3">V4</option><option value="4">V5</option><option value="5">V6</option></select>
+      <select id="tfxRes" title="Chất lượng render"><option value="seq">Nét (theo sequence)</option><option value="fast">Nhanh (1080p)</option></select>
+      <button class="btn main" id="tfxPlace" title="Render chữ hiện tại của JIZURA thành clip ProRes 4444 nền trong suốt và đặt lên timeline">▶ Đưa vào timeline</button>
+      <button class="btn" id="tfxCancel" style="display:none">Huỷ</button>
+      <span class="muted" id="tfxState">Đang nạp JIZURA…</span>
+    </div>
+    <div id="tfxProg" class="tfx-prog" style="display:none"><div class="bar"><i></i></div><span></span></div>
+    <iframe id="tfxFrame" title="JIZURA — Lyric Motion" allow="clipboard-read; clipboard-write"></iframe>
+  </div>
+</section>
+
+<section id="snd">
+  <div class="card">
+    <div class="muted">Nhạc + SFX tự đặt cho <b>sequence đang mở</b> (dựng bằng tool hay dựng tay đều được). Luôn backup sequence trước khi đặt.</div>
+    <label>Thư viện SFX (nhiều thư mục: ngăn bằng ;)</label>
+    <div class="row"><input id="sfxRoots"><button class="btn" id="bSfxScan">Quét</button></div>
+    <div id="sfxInfo" class="hint"></div>
+    <label>Thư viện nhạc</label>
+    <div class="row"><input id="musicRoot" placeholder="vd D:/Music — tool phân tích BPM, đoạn intro/build/drop/outro"><button class="btn" id="bMusicScan">Quét</button></div>
+    <label>Soundtrack</label>
+    <div class="row"><select id="musicSel"></select><button class="btn" id="bMusicPick" title="Chọn file nhạc">…</button></div>
+    <div id="musicInfo" class="hint"></div>
+    <div class="hint">Chưa có bài hợp? Nhờ Claude (Cowork) tạo nhạc bằng Higgsfield theo mô tả, lưu vào thư mục nhạc rồi Quét lại.</div>
+    <div class="grid2">
+      <div><label>Mức SFX</label><select id="sndDensity"><option value="ask">Hỏi mỗi lần (gợi ý theo nội dung)</option><option value="light">Nhẹ</option><option value="medium">Vừa</option><option value="heavy">Dày</option></select></div>
+      <div><label>Style SFX</label><select id="sndStyle"><option value="auto">Auto theo nhạc</option><option value="clean">Clean</option><option value="cinematic">Cinematic</option><option value="tech">Tech / glitch</option><option value="fun">Fun / meme</option><option value="hard">Hard</option></select></div>
+    </div>
+    <label>Lớp SFX</label>
+    <div class="opts" id="sndLayers">
+      <label class="chk"><input type="checkbox" id="L_whoosh"> Whoosh chuyển cảnh</label>
+      <label class="chk"><input type="checkbox" id="L_riser"> Riser vào drop</label>
+      <label class="chk"><input type="checkbox" id="L_hit"> Hit ở drop</label>
+      <label class="chk"><input type="checkbox" id="L_pop"> Pop khi hiện chữ</label>
+      <label class="chk"><input type="checkbox" id="L_ambience"> Ambience nền</label>
+    </div>
+    <details style="margin-top:6px"><summary class="muted">Track & mức âm</summary>
+      <div class="grid2">
+        <div><label>Track nhạc (A…)</label><input id="sndMusicTrack"></div>
+        <div><label>Track SFX (A…, luân phiên)</label><input id="sndSfxTracks"></div>
+        <div><label>Track ambience</label><input id="sndAmbTrack"></div>
+        <div><label>Mức nhạc (dB)</label><input id="sndMusicDb"></div>
+        <div><label>Ducking khi có thoại (dB)</label><select id="sndDuckDb" title="Theo preset = mức ducking của thể loại video đã chọn; chọn mức khác để ghi đè"><option value="preset">Theo preset</option><option value="0">0 dB (không duck)</option><option value="-6">−6 dB</option><option value="-9">−9 dB</option><option value="-12">−12 dB</option><option value="-16">−16 dB</option><option value="-18">−18 dB</option><option value="-20">−20 dB</option><option value="-22">−22 dB</option><option value="-26">−26 dB</option></select></div>
+      </div>
+      <label class="chk"><input type="checkbox" id="sndDuck"> Ducking nhạc dưới thoại/âm thanh gốc (A1–A2)</label>
+      <label class="chk"><input type="checkbox" id="sndFit"> Cắt nhạc vừa độ dài sequence (kết ở cuối đoạn nhạc + fade)</label>
+    </details>
+    <div class="row" style="margin-top:8px"><button class="btn" id="bSndPreview">Xem trước</button><button class="btn main" id="bSndPlace">Đặt vào sequence</button></div>
+    <div id="sndStatus" class="hint"></div>
+    <div id="sndPreview" style="margin-top:6px"></div>
+  </div>
+</section>
+
+<section id="set">
+  <div class="card">
+    <h3>AI</h3>
+    <label>AI provider</label>
+    <select id="provider">
+      <option value="gemini">Gemini (Google) — free tier</option>
+      <option value="groq">Groq — siêu tốc LPU (Llama 3.3 70B, free tier)</option>
+      <option value="ollama">Ollama — local, offline, miễn phí</option>
+      <option value="openrouter">OpenRouter — model free</option>
+      <option value="claude">Claude (Anthropic)</option>
+    </select>
+    <div id="keyRow"><label>API key <span id="keyFor" class="muted"></span></label><input id="apiKey" type="password" placeholder="dán key — lưu cục bộ trong panel"></div>
+    <div id="anthropicWsRow" style="display:none;margin-top:6px">
+      <label>Anthropic Workspace ID <span class="muted">(tùy chọn — chỉ cần nếu dùng Organization key)</span></label>
+      <input id="anthropicWs" placeholder="wrk_... (để trống nếu tạo API key bên trong Workspace)">
+      <div class="hint">Nếu gặp lỗi 'not scoped to a workspace': dán Workspace ID (wrk_...) vào đây hoặc tạo key mới từ bên trong Workspace trên console.anthropic.com.</div>
+    </div>
+    <label>Model</label>
+    <div class="row"><select id="modelSel"><option value="">(mặc định)</option></select><button class="btn" id="bModels" title="Tải danh sách model">↻</button></div>
+    <input id="model" placeholder="hoặc gõ tên model" style="margin-top:4px">
+    <label>Mức tự chủ của AI khi sửa timeline</label>
+    <select id="autonomy">
+      <option value="ask">Hỏi trước mỗi thay đổi</option>
+      <option value="backup">Tự làm, backup sequence trước (khuyến nghị)</option>
+      <option value="auto">Tự làm hoàn toàn</option>
+    </select>
+    <details style="margin-top:8px"><summary>Model theo từng việc &amp; tùy chọn nâng cao</summary>
+    <div class="muted" style="margin:6px 0 2px">Trống = theo provider chính ở trên</div>
+    <div class="grid3"><span>Phân tích source</span><select id="route_vision_p"><option value="">(theo mặc định)</option><option value="gemini">Gemini</option><option value="groq">Groq</option><option value="claude">Claude</option><option value="openrouter">OpenRouter free</option><option value="ollama">Ollama local</option></select><input id="route_vision_m" placeholder="model"></div>
+    <div class="grid3"><span>Viết kịch bản</span><select id="route_script_p"><option value="">(theo mặc định)</option><option value="gemini">Gemini</option><option value="groq">Groq</option><option value="claude">Claude</option><option value="openrouter">OpenRouter free</option><option value="ollama">Ollama local</option></select><input id="route_script_m" placeholder="model"></div>
+    <div class="grid3"><span>AI Assist (agent)</span><select id="route_chat_p"><option value="">(theo mặc định)</option><option value="gemini">Gemini</option><option value="groq">Groq</option><option value="claude">Claude</option><option value="openrouter">OpenRouter free</option><option value="ollama">Ollama local</option></select><input id="route_chat_m" placeholder="model"></div>
+    <button class="btn" id="bRouteRec" style="margin-top:6px">Áp dụng cấu hình khuyến nghị</button>
+    <div class="hint">Khuyến nghị: phân tích = Ollama qwen3-vl:8b-instruct (local, miễn phí, không quota) · kịch bản = Claude Opus 5.5 / Groq Llama 3.3 70B · agent = Groq Llama 3.3 70B (siêu tốc) hoặc Claude Sonnet 5 · offline = gemma4 local.</div>
+    <label><input type="checkbox" id="localDigest" style="width:auto" checked> Dùng Ollama trên máy để mô tả clip + tóm tắt thoại dài (miễn phí, có cache)</label>
+    <label><input type="checkbox" id="videoAnalysis" style="width:auto" checked> Phân tích source bằng VIDEO + ÂM THANH — chỉ khi model "Phân tích source" là Gemini (Files API, proxy 360p, AI xem chuyển động & nghe tiếng)</label>
+    <div class="hint">Bước 1 · Phân tích chỉ tạo proxy 360p khi bật mục này VÀ model phân tích là Gemini. Ollama / Qwen local không dùng proxy (xem khung hình + mô tả local) nên không tốn thời gian tạo proxy. Tắt = contact sheet (ảnh tĩnh) cho mọi model. Gemini free tier ~20 request/ngày mỗi model — 8 clip/request, tự chuyển model khác khi hết quota.</div>
+    </details>
+  </div>
+  <div id="ollamaBox" class="card" style="display:none;margin-top:8px">
+    <div id="ollamaStatus" class="muted">Ollama: đang kiểm tra…</div>
+    <label>Tải model về máy (tên trên ollama.com/library)</label>
+    <div class="row"><input id="pullName" value="qwen3-vl:8b-instruct"><button class="btn" id="bPull">Tải model</button></div>
+    <div class="hint">Gợi ý cho GPU 12GB: qwen3-vl:8b-instruct (6.1GB, mặc định phân tích) · gemma4:12b-it-qat (7.2GB, đọc ảnh + tool). Tránh qwen3-vl:8b (bản thinking → trả rỗng).</div>
+    <label>Context (num_ctx) — lớn hơn đọc được transcript dài hơn, tốn VRAM hơn</label>
+    <input id="numCtx" value="16384">
+  </div>
+  <div class="card">
+    <h3>Hệ thống</h3>
+    <label><input type="checkbox" id="cuda" style="width:auto"> Transcribe + giải mã video bằng GPU <span class="muted">(NVIDIA CUDA · Mac Apple Silicon: Metal)</span></label>
+    <label>Model nhận giọng nói (Whisper)</label>
+    <select id="whisperModel">
+      <option value="large-v3">large-v3 — chính xác nhất (khuyến nghị cho thoại tiếng Việt)</option>
+      <option value="large-v3-turbo">large-v3-turbo — nhanh ~3–4×, chính xác thấp hơn chút</option>
+      <option value="medium">medium — nhẹ, cho máy không có GPU</option>
+    </select>
+    <details style="margin-top:8px"><summary>Đường dẫn <span class="muted">(bộ cài tự điền)</span></summary>
+      <label>Thư mục engine (nxcut.py + nxcore)</label>
+      <input id="tools" placeholder="E:/tmp/premiere-mcp-bridge/JustinEditSuite">
+      <label>Python</label>
+      <input id="python" placeholder="python">
+      <label>Thư mục output (XML / SRT / highlight)</label>
+      <input id="outRoot" placeholder="E:/tmp/premiere-mcp-bridge">
+    </details>
+    <div class="row" style="margin-top:8px"><button class="btn" id="bSaveSet">Lưu</button><button class="btn main" id="bSysCheck">Kiểm tra hệ thống</button></div>
+    <div id="sysList" style="margin-top:8px"></div>
+    <div class="hint">Cài đặt lưu tại %APPDATA%\JustinEditSuite\settings.json — giữ nguyên khi cập nhật panel.</div>
+  </div>
+  <div class="card" id="learnCard">
+    <h3>Tool đã học <span class="sp muted" id="learnMeta"></span></h3>
+    <div id="learnRules" class="muted">Chưa có dữ liệu — tool học dần từ các bản dựng anh chỉnh và từ XML dự án cũ.</div>
+    <div class="hint" id="learnBook" style="cursor:pointer" title="Mở AI → 📍 Ghi chú → Sổ luật phong cách"></div>
+    <div class="row" style="margin-top:6px;flex-wrap:wrap;gap:4px">
+      <button class="btn" id="bLearnSeq" title="So plan tool dựng với sequence anh đã chỉnh trong Premiere (đang mở)">Học từ timeline đang mở</button>
+      <button class="btn" id="bLearnXml" title="Chọn file XML (Final Cut Pro XML) export từ dự án đã hoàn thiện">Học từ file XML…</button>
+      <button class="btn" id="bLearnReset" title="Xóa toàn bộ dữ liệu đã học">Xóa bộ nhớ học</button>
+    </div>
+    <details style="margin-top:6px"><summary class="muted" style="cursor:pointer">Lịch sử học</summary><div id="learnHist" style="font-size:11px"></div></details>
+  </div>
+</section>
+
+<div id="modal"><div id="modalBox"></div></div>
+<script src="js/CSInterface.js?v=1791714153"></script>
+<script src="js/llm.js?v=1791714153"></script>
+<script src="js/main.js?v=1791714153"></script>
+<script src="js/stylebook.js?v=1791714153"></script>
+<script src="js/queue.js?v=1791714153"></script>
+<script src="js/premiere.js?v=1791714153"></script>
+<script src="js/chats.js?v=1791714153"></script>
+<script src="js/kb.js?v=1791714153"></script>
+<script src="js/sound.js?v=1791714153"></script>
+<script src="js/thumbs.js?v=1791714153"></script>
+<script src="js/dash.js?v=1791714153"></script>
+<script src="js/review.js?v=1791714153"></script>
+<script src="js/ai.js?v=1791714153"></script>
+<script src="js/script.js?v=1791714153"></script>
+<script src="js/reverse.js?v=1791714153"></script>
+<script src="js/session.js?v=1791714153"></script>
+<script src="js/learn.js?v=1791714153"></script>
+<script src="js/textfx.js?v=1791714153"></script>
+<script src="js/motion_tpl.js?v=1791714153"></script>
+<script src="js/motion.js?v=1791714153"></script>
+<script src="js/studio_core.js?v=1791714153"></script>
+<script src="js/studio.js?v=1791714153"></script>
+<script src="js/voice.js?v=1791714153"></script>
+<script src="js/aiworker.js?v=1791714153"></script>
+<script src="js/aiassist.js?v=1791714153"></script>
+<script src="js/aiedit.js?v=1791714153"></script>
+</body>
+</html>

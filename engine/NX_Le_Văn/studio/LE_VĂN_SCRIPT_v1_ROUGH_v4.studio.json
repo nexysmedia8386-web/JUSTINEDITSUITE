@@ -1,0 +1,42 @@
+{
+ "version": 1,
+ "seq": "LE_VĂN_SCRIPT_v1_ROUGH_v4",
+ "base": 2,
+ "items": [
+  {
+   "id": "imv2gw4ujbdu0",
+   "kind": "text",
+   "name": "",
+   "t0": 17.9,
+   "dur": 3,
+   "lane": 0,
+   "x": -0.14,
+   "y": -0.007,
+   "s": 0.51,
+   "rot": 0,
+   "op": 1,
+   "text": "Chữ mới",
+   "emph": [],
+   "impact": false,
+   "style": "noir",
+   "font": "",
+   "layout": "center",
+   "enter": "blurStagger",
+   "hold": "float",
+   "exit": "dissolve",
+   "treat": "none",
+   "decor": [],
+   "cam": "push",
+   "inDur": 0,
+   "outDur": 0,
+   "fg": "",
+   "accent": "",
+   "box": "",
+   "motion": 0.7,
+   "glitch": 0.2,
+   "chroma": 0.25,
+   "koma": 0,
+   "seed": 363944552
+  }
+ ]
+}

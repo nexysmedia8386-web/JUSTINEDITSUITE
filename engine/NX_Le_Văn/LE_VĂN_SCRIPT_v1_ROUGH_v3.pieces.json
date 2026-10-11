@@ -1,0 +1,172 @@
+{
+ "name": "LE_VĂN_SCRIPT_v1_ROUGH_v3",
+ "fps": 29.97002997002997,
+ "pieces": [
+  {
+   "seg": 0,
+   "file": "IMG_1443.MOV",
+   "tl_start": 0.0,
+   "tl_end": 3.337,
+   "in": 0.2,
+   "out": 3.55,
+   "track": "V1",
+   "speed": 100.0,
+   "id": "v0"
+  },
+  {
+   "seg": 1,
+   "file": "1JTGFRNAO_3019EQ.mp4",
+   "tl_start": 3.337,
+   "tl_end": 9.977,
+   "in": 21.79,
+   "out": 28.44,
+   "track": "V1",
+   "speed": 100.0,
+   "id": "v1"
+  },
+  {
+   "seg": 2,
+   "file": "1JTGFRNAO_3019EQ.mp4",
+   "tl_start": 9.977,
+   "tl_end": 15.382,
+   "in": 0.37,
+   "out": 5.77,
+   "track": "V1",
+   "speed": 100.0,
+   "id": "v2"
+  },
+  {
+   "seg": 3,
+   "file": "1JTGFRNAO_3019EQ.mp4",
+   "tl_start": 15.382,
+   "tl_end": 21.388,
+   "in": 8.0,
+   "out": 14.0,
+   "track": "V1",
+   "speed": 100.0,
+   "id": "v3"
+  },
+  {
+   "seg": 4,
+   "file": "IMG_1463.MOV",
+   "tl_start": 21.388,
+   "tl_end": 26.56,
+   "in": 0.0,
+   "out": 5.167,
+   "track": "V1",
+   "speed": 100.0,
+   "id": "v4"
+  },
+  {
+   "seg": 5,
+   "file": "IMG_1452.MOV",
+   "tl_start": 26.56,
+   "tl_end": 36.57,
+   "in": 0.2,
+   "out": 10.2,
+   "track": "V1",
+   "speed": 100.0,
+   "id": "v5"
+  },
+  {
+   "seg": 6,
+   "file": "IMG_1451.MOV",
+   "tl_start": 36.57,
+   "tl_end": 41.241,
+   "in": 0.0,
+   "out": 4.68,
+   "track": "V1",
+   "speed": 100.0,
+   "id": "v6"
+  },
+  {
+   "seg": 7,
+   "file": "IMG_1497.MOV",
+   "tl_start": 41.241,
+   "tl_end": 52.586,
+   "in": 0.6,
+   "out": 11.96,
+   "track": "V1",
+   "speed": 100.0,
+   "id": "v7"
+  },
+  {
+   "seg": 8,
+   "file": "IMG_1504.MOV",
+   "tl_start": 52.586,
+   "tl_end": 62.462,
+   "in": 0.09,
+   "out": 9.97,
+   "track": "V1",
+   "speed": 100.0,
+   "id": "v8"
+  },
+  {
+   "seg": 9,
+   "file": "1JTGFRNAO_3019EQ.mp4",
+   "tl_start": 62.462,
+   "tl_end": 66.3,
+   "in": 54.18,
+   "out": 58.02,
+   "track": "V1",
+   "speed": 100.0,
+   "id": "v9"
+  },
+  {
+   "seg": 10,
+   "file": "IMG_1486.MOV",
+   "tl_start": 66.3,
+   "tl_end": 74.308,
+   "in": 0.25,
+   "out": 8.25,
+   "track": "V1",
+   "speed": 100.0,
+   "id": "v10"
+  },
+  {
+   "seg": 11,
+   "file": "1JTGFRNAO_3019EQ.mp4",
+   "tl_start": 74.308,
+   "tl_end": 77.077,
+   "in": 80.84,
+   "out": 83.6,
+   "track": "V1",
+   "speed": 100.0,
+   "id": "v11"
+  },
+  {
+   "seg": 12,
+   "file": "IMG_1513.MOV",
+   "tl_start": 77.077,
+   "tl_end": 82.282,
+   "in": 0.2,
+   "out": 2.8,
+   "track": "V1",
+   "speed": 50.0,
+   "id": "v12"
+  },
+  {
+   "seg": 13,
+   "file": "1JTGFRNAO_3019EQ.mp4",
+   "tl_start": 82.282,
+   "tl_end": 89.022,
+   "in": 83.51,
+   "out": 90.25,
+   "track": "V1",
+   "speed": 100.0,
+   "id": "v13"
+  },
+  {
+   "seg": 14,
+   "file": "1JTGFRNAO_3019EQ.mp4",
+   "tl_start": 89.022,
+   "tl_end": 95.762,
+   "in": 83.51,
+   "out": 90.25,
+   "track": "V1",
+   "speed": 100.0,
+   "id": "v14"
+  }
+ ],
+ "overlays": []
+}

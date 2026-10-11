@@ -1,0 +1,42 @@
+{
+ "version": 1,
+ "seq": "VIDEO_GOPRO_SCRIPT_v17",
+ "base": 2,
+ "items": [
+  {
+   "id": "imv2go82z3f4z",
+   "kind": "text",
+   "name": "",
+   "t0": 0,
+   "dur": 58.8,
+   "lane": 0,
+   "x": 0,
+   "y": 0,
+   "s": 1,
+   "rot": 0,
+   "op": 1,
+   "text": "Chữ mới",
+   "emph": [],
+   "impact": false,
+   "style": "noir",
+   "font": "",
+   "layout": "center",
+   "enter": "blurStagger",
+   "hold": "float",
+   "exit": "dissolve",
+   "treat": "none",
+   "decor": [],
+   "cam": "push",
+   "inDur": 0,
+   "outDur": 0,
+   "fg": "",
+   "accent": "",
+   "box": "",
+   "motion": 0.7,
+   "glitch": 0.2,
+   "chroma": 0.25,
+   "koma": 0,
+   "seed": 451312722
+  }
+ ]
+}

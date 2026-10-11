@@ -1,0 +1,62 @@
+{
+  "id": "beat_cut",
+  "name": "Cut on beat — chỉ nhạc (không thoại, không tiếng môi trường)",
+  "description": "Montage cắt đúng beat: không thoại, tắt tiếng gốc, chỉ lấy đoạn ổn định nhất (tripod/gimbal). Intro/break shot dài, build tăng tốc, drop cắt 1–2 beat; cắt đổi đoạn nhạc luôn trùng đầu ô nhịp. Cần chọn nhạc.",
+  "mode": "beat",
+  "music_driven": true,
+  "disable_transcribe": true,
+  "structure": {
+    "intro": "shot dài 4–8 beat, cảnh mở/toàn, có thể slow-mo",
+    "build": "tăng tốc 4 → 2 beat",
+    "drop": "1–2 beat, cảnh chuyển động/đẹp nhất",
+    "break": "chậm lại, slow-mo",
+    "outro": "shot dài, khép lại"
+  },
+  "target_dur": 0,
+  "pace": 1.0,
+  "min_shot": 0.4,
+  "max_shot": 4.5,
+  "min_stab": 0.6,
+  "w_stab": 0.6,
+  "w_quality": 0.2,
+  "w_motion": 0.1,
+  "w_speech": 0.6,
+  "w_chrono": 0.0,
+  "chrono": "auto",
+  "speech_moments": 0,
+  "nat_sound": false,
+  "music_gain_db": -3.0,
+  "music_fade_out": 1.5,
+  "xfade_slow": false,
+  "auto_slowmo_60p": true,
+  "slowmo_speed": 50,
+  "silence": {
+    "on": false
+  },
+  "punch_in": false,
+  "sfx_density": "none",
+  "skip_shake_roles": [],
+  "skip_transcribe_roles": [
+    "a_roll",
+    "b_roll",
+    "junk"
+  ],
+  "skip_roles": [
+    "junk",
+    "audio_master",
+    "screen"
+  ],
+  "min_speech_rms_db": -32.0,
+  "subs": {
+    "on": false
+  },
+  "transitions": {
+    "on": true,
+    "dur": 0.4,
+    "scene": false,
+    "broll_rate": 0,
+    "fade_in": 0.3,
+    "fade_out": 1.2,
+    "audio": false
+  }
+}

@@ -1,0 +1,1213 @@
+{
+ "name": "LE_VĂN_SCRIPT_v1_ROUGH",
+ "bin": "Le_Văn",
+ "src": "D:/Le Văn",
+ "out": "G:/JustinEditSuite/engine/NX_Le_Văn",
+ "mode": "rough",
+ "preset": "",
+ "seq": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 29.97,
+  "fit": "fill"
+ },
+ "silence": {
+  "on": false
+ },
+ "shake": {
+  "on": false
+ },
+ "subs": {
+  "on": false
+ },
+ "sfx": {
+  "on": false
+ },
+ "highlights_on": false,
+ "punch_in": false,
+ "broll_audio": {
+  "on": true,
+  "gain_db": -6.0
+ },
+ "transitions": {
+  "on": false,
+  "dur": 0.6,
+  "scene": false,
+  "broll_rate": 0,
+  "fade_in": 0,
+  "fade_out": 0,
+  "audio": true
+ },
+ "autofix": {
+  "slowmo": false,
+  "rotate": true
+ },
+ "end_slate": 0,
+ "scene_names": {
+  "14/07 Sáng": "14/07 Sáng",
+  "14/07 Trưa": "14/07 Trưa",
+  "14/07 Tối": "14/07 Tối"
+ },
+ "segments": [
+  {
+   "file": "IMG_1443.MOV",
+   "in": 0.3,
+   "out": 6.1,
+   "tl": [
+    0.0,
+    5.8
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · B-Roll, 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1444.MOV",
+   "in": 0.3,
+   "out": 6.93,
+   "tl": [
+    5.8,
+    12.43
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1445.MOV",
+   "in": 0.3,
+   "out": 12.23,
+   "tl": [
+    12.43,
+    24.36
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1446.MOV",
+   "in": 0.3,
+   "out": 5.33,
+   "tl": [
+    24.36,
+    29.39
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · B-Roll, 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1448.MOV",
+   "in": 0.3,
+   "out": 3.43,
+   "tl": [
+    29.39,
+    32.52
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · B-Roll, 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1449.MOV",
+   "in": 0.3,
+   "out": 7.58,
+   "tl": [
+    32.52,
+    39.8
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · B-Roll, 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1450.MOV",
+   "in": 0.3,
+   "out": 8.4,
+   "tl": [
+    39.8,
+    47.9
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1451.MOV",
+   "in": 0.3,
+   "out": 8.8,
+   "tl": [
+    47.9,
+    56.4
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1452.MOV",
+   "in": 0.3,
+   "out": 15.88,
+   "tl": [
+    56.4,
+    71.98
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · B-Roll, 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1453.MOV",
+   "in": 0.3,
+   "out": 4.6,
+   "tl": [
+    71.98,
+    76.28
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · B-Roll, 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1454.MOV",
+   "in": 0.3,
+   "out": 5.07,
+   "tl": [
+    76.28,
+    81.05
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1455.MOV",
+   "in": 0.3,
+   "out": 9.03,
+   "tl": [
+    81.05,
+    89.78
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1456.MOV",
+   "in": 0.3,
+   "out": 10.5,
+   "tl": [
+    89.78,
+    99.98
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1457.MOV",
+   "in": 0.3,
+   "out": 6.53,
+   "tl": [
+    99.98,
+    106.21
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1458.MOV",
+   "in": 0.3,
+   "out": 6.24,
+   "tl": [
+    106.21,
+    112.15
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1459.MOV",
+   "in": 0.3,
+   "out": 11.08,
+   "tl": [
+    112.15,
+    122.93
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1460.MOV",
+   "in": 0.3,
+   "out": 7.83,
+   "tl": [
+    122.93,
+    130.46
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1461.MOV",
+   "in": 0.3,
+   "out": 9.29,
+   "tl": [
+    130.46,
+    139.45
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1462.MOV",
+   "in": 0.3,
+   "out": 10.58,
+   "tl": [
+    139.45,
+    149.73
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1463.MOV",
+   "in": 0.3,
+   "out": 4.87,
+   "tl": [
+    149.73,
+    154.3
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1464.MOV",
+   "in": 0.3,
+   "out": 13.37,
+   "tl": [
+    154.3,
+    167.37
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1466.MOV",
+   "in": 0.3,
+   "out": 18.91,
+   "tl": [
+    167.37,
+    185.98
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1467.MOV",
+   "in": 0.3,
+   "out": 3.49,
+   "tl": [
+    185.98,
+    189.17
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1468.MOV",
+   "in": 0.3,
+   "out": 5.12,
+   "tl": [
+    189.17,
+    193.99
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1469.MOV",
+   "in": 0.3,
+   "out": 18.91,
+   "tl": [
+    193.99,
+    212.6
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1470.MOV",
+   "in": 0.3,
+   "out": 24.29,
+   "tl": [
+    212.6,
+    236.59
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1471.MOV",
+   "in": 0.3,
+   "out": 6.45,
+   "tl": [
+    236.59,
+    242.74
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1472.MOV",
+   "in": 0.3,
+   "out": 13.08,
+   "tl": [
+    242.74,
+    255.52
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1474.MOV",
+   "in": 0.3,
+   "out": 101.63,
+   "tl": [
+    255.52,
+    356.85
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · B-Roll, 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1475.MOV",
+   "in": 0.3,
+   "out": 10.78,
+   "tl": [
+    356.85,
+    367.33
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · B-Roll, 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1476.MOV",
+   "in": 0.3,
+   "out": 8.12,
+   "tl": [
+    367.33,
+    375.15
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1479.MOV",
+   "in": 0.3,
+   "out": 8.37,
+   "tl": [
+    375.15,
+    383.22
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1480.MOV",
+   "in": 0.3,
+   "out": 5.99,
+   "tl": [
+    383.22,
+    388.91
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · B-Roll, 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1484.MOV",
+   "in": 0.3,
+   "out": 2.99,
+   "tl": [
+    388.91,
+    391.6
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · B-Roll, 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1485.MOV",
+   "in": 0.3,
+   "out": 3.7,
+   "tl": [
+    391.6,
+    395.0
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · B-Roll, 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1486.MOV",
+   "in": 0.3,
+   "out": 9.41,
+   "tl": [
+    395.0,
+    404.11
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · B-Roll, 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1487.MOV",
+   "in": 0.3,
+   "out": 16.62,
+   "tl": [
+    404.11,
+    420.43
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1490.MOV",
+   "in": 0.3,
+   "out": 10.08,
+   "tl": [
+    420.43,
+    430.21
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1491.MOV",
+   "in": 0.3,
+   "out": 7.99,
+   "tl": [
+    430.21,
+    437.9
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1493.MOV",
+   "in": 0.3,
+   "out": 5.45,
+   "tl": [
+    437.9,
+    443.05
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1495.MOV",
+   "in": 0.3,
+   "out": 2.82,
+   "tl": [
+    443.05,
+    445.57
+   ],
+   "scene": "14/07 Sáng",
+   "label": "Cầm tay / có chuyển động máy · B-Roll, 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Lavender",
+   "role": "handheld",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1496.MOV",
+   "in": 0.3,
+   "out": 8.04,
+   "tl": [
+    445.57,
+    453.31
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1497.MOV",
+   "in": 0.3,
+   "out": 12.41,
+   "tl": [
+    453.31,
+    465.42
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1499.MOV",
+   "in": 0.3,
+   "out": 20.12,
+   "tl": [
+    465.42,
+    485.24
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1502.MOV",
+   "in": 0.3,
+   "out": 5.78,
+   "tl": [
+    485.24,
+    490.72
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1504.MOV",
+   "in": 0.3,
+   "out": 5.08,
+   "tl": [
+    490.72,
+    495.5
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1505.MOV",
+   "in": 0.3,
+   "out": 12.58,
+   "tl": [
+    495.5,
+    507.78
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1506.MOV",
+   "in": 0.3,
+   "out": 8.12,
+   "tl": [
+    507.78,
+    515.6
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · B-Roll, 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1507.MOV",
+   "in": 0.3,
+   "out": 9.03,
+   "tl": [
+    515.6,
+    524.33
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1510.MOV",
+   "in": 0.3,
+   "out": 8.29,
+   "tl": [
+    524.33,
+    532.32
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll 50/60p+ (slow-mo được) · A-Roll (Thoại), 50/60p Slow-mo, 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Teal",
+   "role": "slowmo",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1513.MOV",
+   "in": 0.3,
+   "out": 2.7,
+   "tl": [
+    532.32,
+    534.72
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll 50/60p+ (slow-mo được) · B-Roll, 50/60p Slow-mo, 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Teal",
+   "role": "slowmo",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1514.MOV",
+   "in": 0.3,
+   "out": 4.88,
+   "tl": [
+    534.72,
+    539.3
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll 50/60p+ (slow-mo được) · A-Roll (Thoại), 50/60p Slow-mo, 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Teal",
+   "role": "slowmo",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1516.MOV",
+   "in": 0.3,
+   "out": 7.37,
+   "tl": [
+    539.3,
+    546.37
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1517.MOV",
+   "in": 0.3,
+   "out": 4.7,
+   "tl": [
+    546.37,
+    550.77
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1518.MOV",
+   "in": 0.3,
+   "out": 10.86,
+   "tl": [
+    550.77,
+    561.33
+   ],
+   "scene": "14/07 Sáng",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "IMG_1519.MOV",
+   "in": 1.87,
+   "out": 8.83,
+   "tl": [
+    561.33,
+    568.29
+   ],
+   "scene": "14/07 Trưa",
+   "label": "B-roll · A-Roll (Thoại), 4K UHD, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  },
+  {
+   "file": "1JTGFRNAO_3019EQ.mp4",
+   "in": 0.3,
+   "out": 90.4,
+   "tl": [
+    568.29,
+    658.39
+   ],
+   "scene": "14/07 Tối",
+   "label": "B-roll · A-Roll (Thoại), Jtgfrnao, Dọc 9:16, iPhone",
+   "audio": false,
+   "silence": false,
+   "subs": false,
+   "color": "Cerulean",
+   "role": "broll",
+   "flags": [],
+   "exclude": [],
+   "script_line": "",
+   "rotate_fix": 0
+  }
+ ],
+ "overlays": [],
+ "highlights": [],
+ "music": [],
+ "audio_inserts": [],
+ "vo_track": [],
+ "sub_cues": [],
+ "markers": [],
+ "missing": [],
+ "broll_requests": [],
+ "vo_lines": [],
+ "unused_speech": [],
+ "report_notes": [
+  "Rough cut theo giờ quay: 57 đoạn · 10:58 / 11:42 source (94%)",
+  "Vai trò: B-roll 53 (Cerulean) · B-roll 50/60p+ (slow-mo được) 3 (Teal) · Cầm tay / có chuyển động máy 1 (Lavender)",
+  "Bỏ qua: LOẠI 1"
+ ],
+ "seg_markers": false,
+ "flag_markers": false,
+ "chrono": true,
+ "duration": 658.39
+}

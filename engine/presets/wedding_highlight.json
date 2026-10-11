@@ -1,0 +1,63 @@
+{
+  "id": "wedding_highlight",
+  "name": "Wedding Highlight 3–5 phút (theo nhạc + lời thề)",
+  "description": "Highlight cưới theo nhạc: shot chậm có slow-mo ở intro/break, nhanh ở cao trào, đi theo giờ quay (chuẩn bị → lễ → tiệc). Tự chọn 2–4 câu nói cảm xúc (lời thề, phát biểu) đặt lên nhạc, nhạc tự duck, shot đầu là người nói khớp tiếng.",
+  "mode": "beat",
+  "music_driven": true,
+  "script_structure": {
+    "cold_open": "0:00-0:20 (câu lời thề/phát biểu cảm xúc nhất trên nhạc nhẹ, chi tiết nhẫn/váy/tay, slow-mo)",
+    "getting_ready": "0:20-25% (chuẩn bị: cô dâu make-up, chú rể, chi tiết, gia đình — nhịp chậm)",
+    "first_look_ceremony": "25%-55% (first look, rước dâu, nghi lễ, trao nhẫn — câu thề thứ 2 trên nhạc)",
+    "celebration": "55%-85% (tiệc, khách, nhảy, nâng ly — nhạc cao trào, cắt nhanh theo beat)",
+    "ending": "85%-100% (câu nói chốt, cảnh hai người, hoàng hôn/pháo, slow-mo, fade)"
+  },
+  "target_dur": 240,
+  "pace": 1.35,
+  "min_shot": 0.8,
+  "max_shot": 6.0,
+  "min_stab": 0.5,
+  "w_stab": 0.45,
+  "w_quality": 0.3,
+  "w_motion": 0.08,
+  "w_speech": 0.3,
+  "w_chrono": 0.35,
+  "chrono": "auto",
+  "speech_moments": 3,
+  "speaker_shot_s": 3.5,
+  "duck_db": -14.0,
+  "music_gain_db": -4.0,
+  "music_fade_out": 2.5,
+  "xfade_slow": true,
+  "nat_sound": false,
+  "auto_slowmo_60p": true,
+  "slowmo_speed": 50,
+  "silence": {
+    "on": false
+  },
+  "punch_in": false,
+  "sfx_density": "none",
+  "skip_shake_roles": [],
+  "skip_transcribe_roles": [
+    "b_roll",
+    "junk"
+  ],
+  "skip_roles": [
+    "junk",
+    "audio_master",
+    "screen"
+  ],
+  "min_speech_rms_db": -32.0,
+  "subs": {
+    "on": false,
+    "max_chars": 34
+  },
+  "transitions": {
+    "on": true,
+    "dur": 0.8,
+    "scene": false,
+    "broll_rate": 0,
+    "fade_in": 1.0,
+    "fade_out": 2.0,
+    "audio": true
+  }
+}

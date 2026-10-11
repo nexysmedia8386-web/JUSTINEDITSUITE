@@ -1,0 +1,54 @@
+{
+  "id": "documentary",
+  "name": "Phóng sự / Documentary",
+  "description": "Phóng sự theo kịch bản: VO dẫn + phỏng vấn nhân vật + B-roll quan sát giữ tiếng hiện trường (-12dB), J/L-cut dài cho thoại, không slow-mo tự động, cắt im lặng nhẹ giữ nhịp thở, dissolve khi đổi cảnh.",
+  "mode": "script",
+  "script_structure": {
+    "cold_open": "0:00-0:30 (cảnh hiện trường có tiếng thật, chưa VO — kéo người xem vào bối cảnh)",
+    "context": "0:30-15% (VO dẫn: ai, ở đâu, chuyện gì, vì sao quan trọng)",
+    "characters": "15%-60% (nhân vật kể — phỏng vấn xen B-roll quan sát, mỗi ý 1 cảnh minh hoạ)",
+    "turning_point": "60%-80% (mâu thuẫn/khó khăn/bước ngoặt, nhịp chậm lại)",
+    "resolution": "80%-95% (kết quả, câu nói đọng lại của nhân vật)",
+    "closing": "95%-100% (hình ảnh khép lại + thông tin/CTA)"
+  },
+  "silence": {
+    "on": true,
+    "gap": 0.5,
+    "pad_in": 0.12,
+    "pad_out": 0.2,
+    "min_piece": 0.5
+  },
+  "punch_in": false,
+  "auto_slowmo_60p": false,
+  "bgm_ducking_db": -24.0,
+  "broll_nat_gain_db": -12.0,
+  "broll_dur": 4.5,
+  "broll_dur_static": 4.0,
+  "broll_dur_max": 7.0,
+  "sfx_density": "minimal",
+  "j_l_cut": true,
+  "l_cut_s": 0.6,
+  "j_cut_s": 0.5,
+  "chrono": "auto",
+  "skip_shake_roles": [
+    "a_roll"
+  ],
+  "skip_transcribe_roles": [
+    "junk"
+  ],
+  "min_speech_rms_db": -34.0,
+  "subs": {
+    "on": true,
+    "max_chars": 38,
+    "highlight_style": "gold"
+  },
+  "transitions": {
+    "on": true,
+    "dur": 0.8,
+    "scene": true,
+    "broll_rate": 0.15,
+    "fade_in": 1.0,
+    "fade_out": 1.5,
+    "audio": true
+  }
+}
